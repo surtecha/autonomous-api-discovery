@@ -268,7 +268,48 @@ conda run -n api-discovery-ai python -m scripts.discover \
   --strategy gain
 ```
 
-Choose `gain`, `fifo`, or `random` to compare experiment selection. `--runner core` runs the deterministic loop directly; the default runner uses LangGraph. Resume with the original `--session` and artifact directory.
+Choose `gain`, `fifo`, or `random` to compare experiment selection. Use `--seed` to set the reproducible random schedule (default 42). For bounded local-model discovery with `--strategy llm`, see [local LLM verification](docs/local-llm-verification.md). `--runner core` runs the deterministic loop directly; the default runner uses LangGraph. Resume with the original `--session` and artifact directory.
+
+### Choose local or OpenAI inference
+
+Use `--strategy llm` with either provider. The model selects an existing experiment; request authorization, budgets, and evidence validation stay with the discovery engine.
+
+| Provider | Model example | Required setup |
+| --- | --- | --- |
+| Local Ollama | `qwen2.5:7b` | Ollama running at `127.0.0.1:11434`; model downloaded |
+| OpenAI API | `gpt-4.1-mini` | `OPENAI_API_KEY` in the private `.env` file or exported environment, with API quota |
+
+For a standard Ollama installation, start the server and download the model:
+
+```bash
+ollama serve
+# In another terminal:
+ollama pull qwen2.5:7b
+```
+
+With the disposable target from the preceding section running, select the local model:
+
+```bash
+conda run -n api-discovery-ai python -m scripts.discover \
+  --config experiments/configs/ecommerce.json \
+  --output .runtime/local-run-new --strategy llm \
+  --llm-provider ollama --llm-model qwen2.5:7b
+```
+
+To use OpenAI, put `OPENAI_API_KEY` in the ignored private `.env` file, then run:
+
+```bash
+conda run -n api-discovery-ai python -m scripts.discover \
+  --config experiments/configs/ecommerce.json \
+  --output .runtime/openai-run-new --strategy llm --env-file .env \
+  --llm-provider openai --llm-model gpt-4.1-mini
+```
+
+CLI provider/model flags override exported settings. The private file supplies settings missing from the environment. You can also configure `LLM_PROVIDER=ollama` or `openai` and `LLM_MODEL` through the environment. Local mode needs no hosted key and never forwards one to Ollama. Keep real credentials out of commands, source files, and Git.
+
+Both providers use schema-constrained parsed output. Usage includes token counts, valid selections, sanitized failure categories, and model-call latency. The current reservation budget allows three model calls per session, followed by gain fallback. Quota failures are reported; the engine does not automatically switch providers.
+
+The local instructions apply to the host CLI. Docker workers need separate model-server networking configuration. For the downloaded project-local runtime and detailed evidence, see [local LLM verification](docs/local-llm-verification.md).
 
 ### Validate an SDK
 
@@ -281,12 +322,31 @@ conda run -n api-discovery-ai python -m scripts.test_sandbox .runtime/run/sdk
 
 The validator runs generated code inside restricted containers. The discovery worker has no Docker socket; artifact generation and executable SDK validation are separate stages.
 
+### Verified local-model comparison
+
+An additional **80 fresh-process HTTP trials** compared local Qwen2.5 7B assistance, gain, FIFO, and random schedules across four fixtures and five repetitions (seeds 42–46):
+
+- Local-model assistance matched gain/FIFO: **97/103 operations**, **100% endpoint precision**, and **1,015 requests** across its 20 trials.
+- Seeded random used **1,145 requests** and recovered **466 operation instances**, versus **485** for each other strategy across repetitions. Local assistance used **11.35% fewer requests than random**, with no observed advantage over gain/FIFO.
+- **60/60 local selections parsed successfully**, with zero model failures and **31,165 reported tokens**.
+- All **80 SDK bundles** passed **4,914 restricted-container tests**, lint, strict typing, and packaging.
+
+The complex fixture remains at **9/15 operations** and zero job-transition coverage. Local inference incurs no provider API fees; hardware/electricity costs were not measured. Hosted verification returned HTTP 429 / `insufficient_quota`, so no successful hosted run or provider bill is claimed. The provider-switching implementation passed **77 regression tests and 30 subtests**, including PostgreSQL and Docker checks.
+
+[Full results and limitations](experiments/reports/local-model-20261115/results.md) · [Machine-readable comparison](experiments/reports/local-model-20261115/comparison.json)
+
 ## Reproduce the experiments
 
 ```bash
 # Real HTTP discovery, independent scoring and SDK validation: all 12 runs.
 conda run --no-capture-output -n api-discovery-ai \
-  python -m scripts.benchmark --output experiments/reports/http
+  python -m scripts.benchmark --output .runtime/http-new
+
+# Four fixtures × four strategies × five repetitions, using local inference.
+LLM_PROVIDER=ollama LLM_MODEL=qwen2.5:7b \
+  conda run --no-capture-output -n api-discovery-ai \
+  python -m scripts.benchmark --output .runtime/comparison-new \
+  --repetitions 5 --strategies fifo random gain llm
 
 # Generate the in-process fixture bundles and exercise their clients over live HTTP.
 conda run -n api-discovery-ai python -m scripts.fixture_diagnostics
@@ -295,6 +355,8 @@ conda run -n api-discovery-ai python -m scripts.live_sdk
 # Run the full application, browser, container, benchmark and security suite.
 conda run --no-capture-output -n api-discovery-ai python -m scripts.verify
 ```
+
+Benchmark output directories must be new; existing reports are never replaced by the benchmark command.
 
 Full verification additionally requires Git, Gitleaks, and OpenSSL. [Deployment](docs/deployment.md) covers configuration, ports, credentials, telemetry, and shutdown.
 
