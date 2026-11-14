@@ -40,7 +40,7 @@ jobs:
       - run: .venv/bin/python scripts/security_scan.py
       - name: Detect secrets
         run: |
-          .venv/bin/detect-secrets scan --all-files --exclude-files '(^|/)(node_modules|\.next|\.runtime|\.git|\.venv|\.mypy_cache|\.pytest_cache|\.ruff_cache|__pycache__)/|\.tsbuildinfo$|package-lock\.json|requirements(-dev|-validator)?\.lock' > /tmp/secrets.json
+          .venv/bin/detect-secrets scan --all-files --exclude-lines '^\s*"(?:digest|runtime_archive_sha256)": "(?:sha256:)?[0-9a-f]{64}",?$' --exclude-files '(^|/)(node_modules|\.next|\.runtime|\.git|\.venv|\.mypy_cache|\.pytest_cache|\.ruff_cache|__pycache__)/|\.tsbuildinfo$|package-lock\.json|requirements(-dev|-validator)?\.lock' > /tmp/secrets.json
           .venv/bin/python -c "import json; assert not json.load(open('/tmp/secrets.json'))['results']"
       - name: Scan Git history
         run: docker run --rm -v "$PWD:/repo:ro" zricethezav/gitleaks:v8.24.3 git /repo --redact

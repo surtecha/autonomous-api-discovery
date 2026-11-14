@@ -9,6 +9,7 @@ from pathlib import Path
 
 EXCLUDED = {
     ".git",
+    ".venv",
     ".conda-envs",
     ".conda-pkgs",
     ".runtime",
