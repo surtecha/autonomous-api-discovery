@@ -1,0 +1,56 @@
+test_authentication_create_cancel_and_artifact_bounds (test_backend.BackendTests.test_authentication_create_cancel_and_artifact_bounds) ... skipped 'Backend dependencies and PostgreSQL test database are required'
+test_restricted_container (test_container.ContainerIsolationTests.test_restricted_container) ... skipped 'Explicit sandbox execution and Docker validator image are required'
+test_all_targets_have_real_state (test_core.InferenceTests.test_all_targets_have_real_state) ... ok
+test_array_empty_unknown (test_core.InferenceTests.test_array_empty_unknown) ... ok
+test_bool_not_integer (test_core.InferenceTests.test_bool_not_integer) ... ok
+test_canonical_matching (test_core.InferenceTests.test_canonical_matching) ... ok
+test_dedup (test_core.InferenceTests.test_dedup) ... ok
+test_discovery_and_artifacts (test_core.InferenceTests.test_discovery_and_artifacts) ... ok
+test_negative_not_confirmed (test_core.InferenceTests.test_negative_not_confirmed) ... ok
+test_nested_union (test_core.InferenceTests.test_nested_union) ... ok
+test_no_required_claim_from_single_error (test_core.InferenceTests.test_no_required_claim_from_single_error) ... ok
+test_cached_attempt_not_replayed (test_core.PersistenceTests.test_cached_attempt_not_replayed) ... ok
+test_cancel_and_restore (test_core.PersistenceTests.test_cancel_and_restore) ... ok
+test_uncertain_attempt_stops (test_core.PersistenceTests.test_uncertain_attempt_stops) ... ok
+test_bad_origins (test_core.SecurityTests.test_bad_origins) ... ok
+test_control_injection (test_core.SecurityTests.test_control_injection) ... ok
+test_default_target (test_core.SecurityTests.test_default_target) ... ok
+test_injection_data (test_core.SecurityTests.test_injection_data) ... ok
+test_metadata_blocked (test_core.SecurityTests.test_metadata_blocked) ... ok
+test_path_attacks (test_core.SecurityTests.test_path_attacks) ... ok
+test_rebinding_mixed_answers (test_core.SecurityTests.test_rebinding_mixed_answers) ... ok
+test_redaction_before_observation (test_core.SecurityTests.test_redaction_before_observation) ... ok
+test_redirect_rejected (test_core.SecurityTests.test_redirect_rejected) ... ok
+test_remote_mutation_blocked (test_core.SecurityTests.test_remote_mutation_blocked) ... ok
+test_request_budget (test_core.SecurityTests.test_request_budget) ... ok
+test_size_budget (test_core.SecurityTests.test_size_budget) ... ok
+test_time_budget (test_core.SecurityTests.test_time_budget) ... ok
+test_unrelated_loopback (test_core.SecurityTests.test_unrelated_loopback) ... ok
+test_persistent_graph_completion_and_resume (test_extended.GraphTests.test_persistent_graph_completion_and_resume) ... skipped 'LangGraph dependency is not installed'
+test_arbitrary_response_text_is_removed (test_extended.PropertyTests.test_arbitrary_response_text_is_removed) ... skipped 'Property testing dependencies are not installed'
+test_inferred_schema_accepts_observed_json (test_extended.PropertyTests.test_inferred_schema_accepts_observed_json) ... skipped 'Property testing dependencies are not installed'
+test_complex_ambiguous_error_not_invented (test_extended.TargetBehaviorTests.test_complex_ambiguous_error_not_invented) ... ok
+test_conflicting_required_evidence_remains_uncertain (test_extended.TargetBehaviorTests.test_conflicting_required_evidence_remains_uncertain) ... ok
+test_control_char_origin_rejected (test_extended.TargetBehaviorTests.test_control_char_origin_rejected) ... ok
+test_fifo_random_gain_real_outcomes (test_extended.TargetBehaviorTests.test_fifo_random_gain_real_outcomes) ... ok
+test_invalid_state_has_no_side_effect (test_extended.TargetBehaviorTests.test_invalid_state_has_no_side_effect) ... ok
+test_malformed_control_fields_do_not_execute (test_extended.TargetBehaviorTests.test_malformed_control_fields_do_not_execute) ... ok
+test_pagination (test_extended.TargetBehaviorTests.test_pagination) ... ok
+test_reference_validation (test_extended.TargetBehaviorTests.test_reference_validation) ... ok
+test_reset_is_process_replacement (test_extended.TargetBehaviorTests.test_reset_is_process_replacement) ... ok
+test_versioned_resource_ids_are_not_conflated (test_extended.TargetBehaviorTests.test_versioned_resource_ids_are_not_conflated) ... ok
+test_credential_header_injection (test_gateway_failures.GatewayFailureTests.test_credential_header_injection) ... ok
+test_dns_failure_consumes_budget (test_gateway_failures.GatewayFailureTests.test_dns_failure_consumes_budget) ... ok
+test_html_never_enters_evidence (test_gateway_failures.GatewayFailureTests.test_html_never_enters_evidence) ... ok
+test_invalid_json_retains_no_text (test_gateway_failures.GatewayFailureTests.test_invalid_json_retains_no_text) ... ok
+test_ipv6_metadata_and_mapped_loopback (test_gateway_failures.GatewayFailureTests.test_ipv6_metadata_and_mapped_loopback) ... ok
+test_oversized_response_is_rejected (test_gateway_failures.GatewayFailureTests.test_oversized_response_is_rejected) ... ok
+test_transport_failure_consumes_budget (test_gateway_failures.GatewayFailureTests.test_transport_failure_consumes_budget) ... ok
+test_invalid_index_falls_back (test_model.ModelSelectionTests.test_invalid_index_falls_back) ... skipped 'Pydantic is required for model-output validation'
+test_model_receives_no_response_content (test_model.ModelSelectionTests.test_model_receives_no_response_content) ... skipped 'Pydantic is required for model-output validation'
+test_timeout_reservation_is_not_refunded (test_model.ModelSelectionTests.test_timeout_reservation_is_not_refunded) ... skipped 'Pydantic is required for model-output validation'
+
+----------------------------------------------------------------------
+Ran 51 tests in 0.058s
+
+OK (skipped=8)

@@ -1,0 +1,6 @@
+{
+  "artifact_bundles": 12,
+  "static_consistency": "passed",
+  "generated_code_executed": false,
+  "openapi_standard_validation": "not_performed_by_this_check"
+}

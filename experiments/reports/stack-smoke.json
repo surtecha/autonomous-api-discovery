@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "session_isolation": "passed",
+  "cancellation": "passed",
+  "sessions": [
+    {
+      "target": "ecommerce",
+      "session": "f9c6e907-bf2b-49e4-a05c-ded5f96d01df",
+      "status": "complete",
+      "result": {
+        "operations": 32,
+        "requests": 66,
+        "transitions": 3,
+        "validation": {
+          "source_ast": "passed",
+          "openapi_validation": "passed",
+          "sdk_tests": "not_run",
+          "sdk_lint": "not_run",
+          "sdk_types": "not_run",
+          "sdk_packaging": "not_run",
+          "execution": "requires_restricted_container"
+        }
+      },
+      "first_created_identifier": 1
+    },
+    {
+      "target": "subscriptions",
+      "session": "0c2a46f0-28e9-4041-ba2e-9c4e8be5c62d",
+      "status": "complete",
+      "result": {
+        "operations": 24,
+        "requests": 47,
+        "transitions": 3,
+        "validation": {
+          "source_ast": "passed",
+          "openapi_validation": "passed",
+          "sdk_tests": "not_run",
+          "sdk_lint": "not_run",
+          "sdk_types": "not_run",
+          "sdk_packaging": "not_run",
+          "execution": "requires_restricted_container"
+        }
+      },
+      "first_created_identifier": 1
+    },
+    {
+      "target": "warehouse",
+      "session": "1ffcc2ef-811e-4469-8918-33c11e5c00e7",
+      "status": "complete",
+      "result": {
+        "operations": 32,
+        "requests": 71,
+        "transitions": 2,
+        "validation": {
+          "source_ast": "passed",
+          "openapi_validation": "passed",
+          "sdk_tests": "not_run",
+          "sdk_lint": "not_run",
+          "sdk_types": "not_run",
+          "sdk_packaging": "not_run",
+          "execution": "requires_restricted_container"
+        }
+      },
+      "first_created_identifier": 1
+    },
+    {
+      "target": "complex",
+      "session": "742754de-4b73-4fe1-a196-97399ba897e2",
+      "status": "complete",
+      "result": {
+        "operations": 9,
+        "requests": 19,
+        "transitions": 0,
+        "validation": {
+          "source_ast": "passed",
+          "openapi_validation": "passed",
+          "sdk_tests": "not_run",
+          "sdk_lint": "not_run",
+          "sdk_types": "not_run",
+          "sdk_packaging": "not_run",
+          "execution": "requires_restricted_container"
+        }
+      },
+      "first_created_identifier": 1
+    },
+    {
+      "target": "ecommerce",
+      "session": "412f5aef-6f7b-4867-b364-535f37726826",
+      "status": "complete",
+      "result": {
+        "operations": 32,
+        "requests": 66,
+        "transitions": 3,
+        "validation": {
+          "source_ast": "passed",
+          "openapi_validation": "passed",
+          "sdk_tests": "not_run",
+          "sdk_lint": "not_run",
+          "sdk_types": "not_run",
+          "sdk_packaging": "not_run",
+          "execution": "requires_restricted_container"
+        }
+      },
+      "first_created_identifier": 1
+    }
+  ]
+}

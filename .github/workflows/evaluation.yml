@@ -1,0 +1,18 @@
+name: Controlled evaluation
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  local-targets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m venv .venv
+      - run: .venv/bin/python -m pip install -r requirements-dev.lock && .venv/bin/python -m pip install --no-deps --no-build-isolation -e .
+      - run: docker build -f infrastructure/docker/validator.Dockerfile -t api-discovery-validator:local .
+      - run: .venv/bin/python -m scripts.benchmark --output experiments/reports/http

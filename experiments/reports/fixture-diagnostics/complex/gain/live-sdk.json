@@ -1,0 +1,25 @@
+{
+  "target": "complex",
+  "status": "passed",
+  "transport": "container_loopback_http",
+  "external_network": false,
+  "test_counts": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "output": "...                                                                      [100%]\n3 passed in 0.23s\n",
+  "baseline": {
+    "sdk_tests": "passed",
+    "test_counts": {
+      "tests": 30,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "sdk_lint": "passed",
+    "sdk_types": "passed",
+    "sdk_packaging": "passed"
+  }
+}

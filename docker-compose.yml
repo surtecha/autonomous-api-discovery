@@ -1,0 +1,123 @@
+name: api-discovery
+x-app: &app
+  restart: on-failure
+  build:
+    context: .
+    dockerfile: infrastructure/docker/api.Dockerfile
+  read_only: true
+  user: "65532:65532"
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  tmpfs: ["/tmp:rw,noexec,nosuid,size=64m"]
+  mem_limit: 512m
+  cpus: 1
+  pids_limit: 128
+  environment: &app-env
+    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+    BACKEND_API_TOKEN: ${BACKEND_API_TOKEN:?Set BACKEND_API_TOKEN}
+    POLICY_FILE: /app/experiments/configs/docker-registry.json
+    DISCOVERY_TELEMETRY: ${DISCOVERY_TELEMETRY:-off}
+  volumes: [artifacts:/app/.runtime/artifacts]
+  depends_on:
+    postgres:
+      condition: service_healthy
+x-target: &target
+  restart: unless-stopped
+  build:
+    context: .
+    dockerfile: infrastructure/docker/target.Dockerfile
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  mem_limit: 128m
+  cpus: 0.5
+  pids_limit: 32
+services:
+  postgres:
+    restart: unless-stopped
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: discovery
+      POSTGRES_USER: discovery
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+    volumes: [postgres-data:/var/lib/postgresql/data]
+    networks: [control]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U discovery -d discovery"]
+      interval: 5s
+      retries: 10
+    security_opt: [no-new-privileges:true]
+  migrate:
+    <<: *app
+    restart: "no"
+    command: [alembic, upgrade, head]
+    networks: [control]
+  api:
+    <<: *app
+    ports: ["127.0.0.1:${API_PORT:-8000}:8000"]
+    networks: [control, ingress]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+  worker:
+    <<: *app
+    command: [python, -m, apps.api.worker]
+    networks: [control, targets]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+  ecommerce:
+    <<: *target
+    command: [ecommerce, --host, "0.0.0.0", --port, "9101"]
+    networks:
+      targets:
+        ipv4_address: 172.30.91.11
+  subscriptions:
+    <<: *target
+    command: [subscriptions, --host, "0.0.0.0", --port, "9102"]
+    networks:
+      targets:
+        ipv4_address: 172.30.91.12
+  warehouse:
+    <<: *target
+    command: [warehouse, --host, "0.0.0.0", --port, "9103"]
+    networks:
+      targets:
+        ipv4_address: 172.30.91.13
+  complex:
+    <<: *target
+    command: [complex, --host, "0.0.0.0", --port, "9104"]
+    networks:
+      targets:
+        ipv4_address: 172.30.91.14
+  web:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: infrastructure/docker/web.Dockerfile
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=64m"]
+    environment:
+      BACKEND_URL: http://api:8000
+      BACKEND_API_TOKEN: ${BACKEND_API_TOKEN:?Set BACKEND_API_TOKEN}
+      WEB_USERNAME: ${WEB_USERNAME:?Set WEB_USERNAME}
+      WEB_PASSWORD: ${WEB_PASSWORD:?Set WEB_PASSWORD}
+      WEB_ORIGIN: http://127.0.0.1:${WEB_PORT:-3000}
+    ports: ["127.0.0.1:${WEB_PORT:-3000}:3000"]
+    networks: [control, ingress]
+    mem_limit: 512m
+networks:
+  ingress:
+    driver: bridge
+  control:
+    internal: true
+  targets:
+    internal: true
+    ipam:
+      config:
+        - subnet: 172.30.91.0/24
+volumes:
+  artifacts:
+  postgres-data:

@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "checks": {
+    "compose": "passed (21.0s)",
+    "validator image": "passed (0.7s)",
+    "python tests": "passed (67 tests, 0 skipped; 22 subtests; final transport suite included)",
+    "python lint": "passed (0.0s)",
+    "python types": "passed (0.5s)",
+    "frontend lint": "passed (1.7s)",
+    "frontend typecheck": "passed (1.0s)",
+    "frontend build": "passed (9.9s)",
+    "frontend test:e2e": "passed (6.3s)",
+    "fixture diagnostics": "passed (1.0s)",
+    "12 fixture SDK bundles": "passed",
+    "live SDK workflows": "passed (14.8s)",
+    "HTTP benchmarks": "passed (83.3s)",
+    "artifact consistency": "passed (0.1s)",
+    "security analysis": "passed (0.2s)",
+    "Python dependency audit": "passed (1.0s)",
+    "frontend dependency audit": "passed (0.8s)",
+    "secret pattern scan": "passed (1.3s)",
+    "release secret scanners": "passed (focused recheck after synthetic fixture annotation)",
+    "full-stack smoke": "passed (all targets, repeated-session isolation, cancellation, artifacts; final deployed source)",
+    "artifact EOF normalization": "passed (AST unchanged across 24 generated clients)",
+    "formatter verification": "passed (AST preserved for 62 Python files; final 67-test suite, lint, typing, and release secret scan passed)"
+  },
+  "completed_at_utc": "2026-11-14T12:52:53.944890+00:00",
+  "verification_notes": [
+    "Full release sweep followed by focused checks of added live HTTP/TLS tests, stack smoke, and reviewed scanner annotations.",
+    "Local verification only; remote CI and hosted-provider execution are not claimed."
+  ]
+}

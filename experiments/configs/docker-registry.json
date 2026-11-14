@@ -1,0 +1,46 @@
+{
+  "ecommerce": {
+    "origin": "http://ecommerce:9101",
+    "pinned_ips": [
+      "172.30.91.11"
+    ],
+    "disposable": true,
+    "authorization": "Project-owned disposable ecommerce Docker service",
+    "max_requests": 100,
+    "duration_seconds": 120,
+    "fixture_sessions": true
+  },
+  "subscriptions": {
+    "origin": "http://subscriptions:9102",
+    "pinned_ips": [
+      "172.30.91.12"
+    ],
+    "disposable": true,
+    "authorization": "Project-owned disposable subscriptions Docker service",
+    "max_requests": 100,
+    "duration_seconds": 120,
+    "fixture_sessions": true
+  },
+  "warehouse": {
+    "origin": "http://warehouse:9103",
+    "pinned_ips": [
+      "172.30.91.13"
+    ],
+    "disposable": true,
+    "authorization": "Project-owned disposable warehouse Docker service",
+    "max_requests": 100,
+    "duration_seconds": 120,
+    "fixture_sessions": true
+  },
+  "complex": {
+    "origin": "http://complex:9104",
+    "pinned_ips": [
+      "172.30.91.14"
+    ],
+    "disposable": true,
+    "authorization": "Project-owned disposable complex Docker service",
+    "max_requests": 100,
+    "duration_seconds": 120,
+    "fixture_sessions": true
+  }
+}

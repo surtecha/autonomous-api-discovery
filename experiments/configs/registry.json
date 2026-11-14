@@ -1,0 +1,42 @@
+{
+  "warehouse": {
+    "origin": "http://127.0.0.1:9103",
+    "pinned_ips": [
+      "127.0.0.1"
+    ],
+    "disposable": true,
+    "authorization": "Project-owned disposable warehouse fixture",
+    "max_requests": 100,
+    "duration_seconds": 120
+  },
+  "complex": {
+    "origin": "http://127.0.0.1:9104",
+    "pinned_ips": [
+      "127.0.0.1"
+    ],
+    "disposable": true,
+    "authorization": "Project-owned disposable complex fixture",
+    "max_requests": 100,
+    "duration_seconds": 120
+  },
+  "ecommerce": {
+    "origin": "http://127.0.0.1:9101",
+    "pinned_ips": [
+      "127.0.0.1"
+    ],
+    "disposable": true,
+    "authorization": "Project-owned disposable ecommerce fixture",
+    "max_requests": 100,
+    "duration_seconds": 120
+  },
+  "subscriptions": {
+    "origin": "http://127.0.0.1:9102",
+    "pinned_ips": [
+      "127.0.0.1"
+    ],
+    "disposable": true,
+    "authorization": "Project-owned disposable subscriptions fixture",
+    "max_requests": 100,
+    "duration_seconds": 120
+  }
+}

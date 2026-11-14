@@ -1,0 +1,13 @@
+FROM node:24-slim AS build
+WORKDIR /app
+COPY apps/web/package*.json ./
+RUN npm ci
+COPY apps/web ./
+RUN npm run build
+FROM node:24-slim
+WORKDIR /app
+COPY --from=build --chown=node:node /app/.next/standalone ./
+COPY --from=build --chown=node:node /app/.next/static ./.next/static
+USER node
+ENV NODE_ENV=production HOSTNAME=0.0.0.0 PORT=3000
+CMD ["node", "server.js"]

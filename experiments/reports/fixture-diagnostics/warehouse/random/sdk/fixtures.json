@@ -1,0 +1,789 @@
+[
+  {
+    "method": "GET",
+    "operation": "get_",
+    "request_model": null,
+    "response_model": "GetResponse",
+    "path": "/",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/warehouses"
+        },
+        {
+          "method": "POST",
+          "href": "/warehouses"
+        },
+        {
+          "method": "GET",
+          "href": "/locations"
+        },
+        {
+          "method": "POST",
+          "href": "/locations"
+        },
+        {
+          "method": "GET",
+          "href": "/stock"
+        },
+        {
+          "method": "POST",
+          "href": "/stock"
+        },
+        {
+          "method": "GET",
+          "href": "/transfers"
+        },
+        {
+          "method": "POST",
+          "href": "/transfers"
+        },
+        {
+          "method": "GET",
+          "href": "/reservations"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations"
+        },
+        {
+          "method": "GET",
+          "href": "/fulfillments"
+        },
+        {
+          "method": "POST",
+          "href": "/fulfillments"
+        },
+        {
+          "method": "GET",
+          "href": "/returns"
+        },
+        {
+          "method": "POST",
+          "href": "/returns"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_warehouses",
+    "request_model": null,
+    "response_model": "OptionsWarehousesResponse",
+    "path": "/warehouses",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/warehouses"
+        },
+        {
+          "method": "POST",
+          "href": "/warehouses"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_transfers",
+    "request_model": null,
+    "response_model": "GetTransfersResponse",
+    "path": "/transfers",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/transfers"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_locations",
+    "request_model": null,
+    "response_model": "GetLocationsResponse",
+    "path": "/locations",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/locations"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_fulfillments",
+    "request_model": null,
+    "response_model": "GetFulfillmentsResponse",
+    "path": "/fulfillments",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/fulfillments"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_reservations",
+    "request_model": null,
+    "response_model": "OptionsReservationsResponse",
+    "path": "/reservations",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/reservations"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_locations",
+    "request_model": null,
+    "response_model": "OptionsLocationsResponse",
+    "path": "/locations",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/locations"
+        },
+        {
+          "method": "POST",
+          "href": "/locations"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_stock",
+    "request_model": null,
+    "response_model": "GetStockResponse",
+    "path": "/stock",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/stock"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_returns",
+    "request_model": null,
+    "response_model": "OptionsReturnsResponse",
+    "path": "/returns",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/returns"
+        },
+        {
+          "method": "POST",
+          "href": "/returns"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_warehouses",
+    "request_model": null,
+    "response_model": "GetWarehousesResponse",
+    "path": "/warehouses",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/warehouses"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_fulfillments",
+    "request_model": null,
+    "response_model": "OptionsFulfillmentsResponse",
+    "path": "/fulfillments",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/fulfillments"
+        },
+        {
+          "method": "POST",
+          "href": "/fulfillments"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_returns",
+    "request_model": null,
+    "response_model": "GetReturnsResponse",
+    "path": "/returns",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/returns"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_warehouses",
+    "request_model": "PostWarehousesRequest",
+    "response_model": "PostWarehousesResponse",
+    "path": "/warehouses",
+    "body": {
+      "name": "probe"
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/warehouses/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_locations",
+    "request_model": "PostLocationsRequest",
+    "response_model": "PostLocationsResponse",
+    "path": "/locations",
+    "body": {
+      "warehouse_id": 1,
+      "name": "probe"
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "warehouse_id": 1,
+      "name": "[redacted]",
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/locations/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_warehouses_id",
+    "request_model": null,
+    "response_model": "GetWarehousesIdResponse",
+    "path": "/warehouses/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/warehouses/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_stock",
+    "request_model": "PostStockRequest",
+    "response_model": "PostStockResponse",
+    "path": "/stock",
+    "body": {
+      "location_id": 1,
+      "quantity": 1
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "location_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/stock/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_reservations",
+    "request_model": null,
+    "response_model": "GetReservationsResponse",
+    "path": "/reservations",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/reservations"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_transfers",
+    "request_model": null,
+    "response_model": "OptionsTransfersResponse",
+    "path": "/transfers",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/transfers"
+        },
+        {
+          "method": "POST",
+          "href": "/transfers"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_locations_id",
+    "request_model": null,
+    "response_model": "GetLocationsIdResponse",
+    "path": "/locations/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "warehouse_id": 1,
+      "name": "[redacted]",
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/locations/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_stock_id",
+    "request_model": null,
+    "response_model": "GetStockIdResponse",
+    "path": "/stock/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "location_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/stock/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_transfers",
+    "request_model": "PostTransfersRequest",
+    "response_model": "PostTransfersResponse",
+    "path": "/transfers",
+    "body": {
+      "stock_id": 1,
+      "location_id": 1,
+      "quantity": 1
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "stock_id": 1,
+      "location_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/transfers/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_transfers_id",
+    "request_model": null,
+    "response_model": "GetTransfersIdResponse",
+    "path": "/transfers/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "stock_id": 1,
+      "location_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/transfers/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_stock",
+    "request_model": null,
+    "response_model": "OptionsStockResponse",
+    "path": "/stock",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/stock"
+        },
+        {
+          "method": "POST",
+          "href": "/stock"
+        }
+      ]
+    }
+  },
+  {
+    "method": "PATCH",
+    "operation": "patch_stock_id",
+    "request_model": "PatchStockIdRequest",
+    "response_model": "PatchStockIdResponse",
+    "path": "/stock/1",
+    "body": {
+      "quantity": 1
+    },
+    "status": 200,
+    "response": {
+      "id": 1,
+      "location_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/stock/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_reservations",
+    "request_model": "PostReservationsRequest",
+    "response_model": "PostReservationsResponse",
+    "path": "/reservations",
+    "body": {
+      "stock_id": 1,
+      "quantity": 1
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "stock_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/reservations/1"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations/1/fulfill"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations/1/return"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_reservations_id_fulfill",
+    "request_model": "PostReservationsIdFulfillRequest",
+    "response_model": "PostReservationsIdFulfillResponse",
+    "path": "/reservations/1/fulfill",
+    "body": {},
+    "status": 200,
+    "response": {
+      "id": 1,
+      "stock_id": 1,
+      "quantity": 1,
+      "status": "fulfilled",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/reservations/1"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations/1/fulfill"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations/1/return"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_reservations_id",
+    "request_model": null,
+    "response_model": "GetReservationsIdResponse",
+    "path": "/reservations/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "stock_id": 1,
+      "quantity": 1,
+      "status": "fulfilled",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/reservations/1"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations/1/fulfill"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations/1/return"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_reservations_id_return",
+    "request_model": "PostReservationsIdReturnRequest",
+    "response_model": "PostReservationsIdReturnResponse",
+    "path": "/reservations/1/return",
+    "body": {},
+    "status": 200,
+    "response": {
+      "id": 1,
+      "stock_id": 1,
+      "quantity": 1,
+      "status": "returned",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/reservations/1"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations/1/fulfill"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations/1/return"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_fulfillments",
+    "request_model": "PostFulfillmentsRequest",
+    "response_model": "PostFulfillmentsResponse",
+    "path": "/fulfillments",
+    "body": {
+      "reservation_id": 1
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "reservation_id": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/fulfillments/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_fulfillments_id",
+    "request_model": null,
+    "response_model": "GetFulfillmentsIdResponse",
+    "path": "/fulfillments/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "reservation_id": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/fulfillments/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_reservations_id",
+    "request_model": null,
+    "response_model": "GetReservationsIdResponse",
+    "path": "/reservations/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "stock_id": 1,
+      "quantity": 1,
+      "status": "returned",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/reservations/1"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations/1/fulfill"
+        },
+        {
+          "method": "POST",
+          "href": "/reservations/1/return"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_returns",
+    "request_model": "PostReturnsRequest",
+    "response_model": "PostReturnsResponse",
+    "path": "/returns",
+    "body": {
+      "fulfillment_id": 1,
+      "quantity": 1
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "fulfillment_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/returns/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_returns_id",
+    "request_model": null,
+    "response_model": "GetReturnsIdResponse",
+    "path": "/returns/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "fulfillment_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/returns/1"
+        }
+      ]
+    }
+  }
+]

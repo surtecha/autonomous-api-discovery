@@ -1,0 +1,11 @@
+.git
+.env
+.env.*
+!.env.example
+.conda-envs
+.conda-pkgs
+.runtime
+**/node_modules
+**/.next
+**/__pycache__
+experiments/reports

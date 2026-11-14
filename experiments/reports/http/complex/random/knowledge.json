@@ -1,0 +1,1284 @@
+{
+  "session_id": "c4575d49-e097-48da-bc49-80f84c1f4a49",
+  "pending": [],
+  "blocked": [
+    {
+      "method": "POST",
+      "path": "/v2/batches",
+      "body": {
+        "job_id": 1,
+        "entries": []
+      },
+      "hypothesis": "Repair structured validation failure",
+      "expected": "Distinguish success, validation, and missing prerequisites",
+      "gain": 2.0,
+      "cost": 1.0,
+      "safety": "mutation",
+      "parent": "exp_35f0c92b8efd217ca405c87d",
+      "omitted": null,
+      "perturbed": null,
+      "revision": 0,
+      "retries": 0
+    }
+  ],
+  "observations": [
+    {
+      "id": "exp_42dcffcec8dea68e4cfc7d1a",
+      "experiment": {
+        "method": "GET",
+        "path": "/",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/v2/accounts"
+          },
+          {
+            "method": "POST",
+            "href": "/v2/accounts"
+          },
+          {
+            "method": "GET",
+            "href": "/v2/jobs"
+          },
+          {
+            "method": "POST",
+            "href": "/v2/jobs"
+          },
+          {
+            "method": "GET",
+            "href": "/v2/batches"
+          },
+          {
+            "method": "POST",
+            "href": "/v2/batches"
+          }
+        ]
+      },
+      "elapsed_ms": 1.2634160229936242,
+      "category": "http"
+    },
+    {
+      "id": "exp_7122b8b3f42a8294b2a0ba16",
+      "experiment": {
+        "method": "GET",
+        "path": "/v2/accounts",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/v2/accounts"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7762910099700093,
+      "category": "http"
+    },
+    {
+      "id": "exp_2b9007d05676948ae58173da",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/v2/batches",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/v2/batches"
+          },
+          {
+            "method": "POST",
+            "href": "/v2/batches"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9390829945914447,
+      "category": "http"
+    },
+    {
+      "id": "exp_4ce6cafc651257d79cc9eb5d",
+      "experiment": {
+        "method": "GET",
+        "path": "/v2/jobs",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/v2/jobs"
+          }
+        ]
+      },
+      "elapsed_ms": 1.7833339516073465,
+      "category": "http"
+    },
+    {
+      "id": "exp_6a87ad24d20f36cb5547f36b",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/v2/accounts",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/v2/accounts"
+          },
+          {
+            "method": "POST",
+            "href": "/v2/accounts"
+          }
+        ]
+      },
+      "elapsed_ms": 2.390334033407271,
+      "category": "http"
+    },
+    {
+      "id": "exp_f06e0bd9d9f6d112a9edb690",
+      "experiment": {
+        "method": "POST",
+        "path": "/v2/jobs",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "account_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "config",
+            "code": "required",
+            "type": "object"
+          },
+          {
+            "field": "mode",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 3.007457999046892,
+      "category": "http"
+    },
+    {
+      "id": "exp_5a3fa10a79f01d850061dd0f",
+      "experiment": {
+        "method": "POST",
+        "path": "/v2/jobs",
+        "body": {
+          "account_id": 1,
+          "config": {},
+          "mode": "probe"
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_f06e0bd9d9f6d112a9edb690",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "account_id",
+            "code": "reference",
+            "resource": "accounts",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/v2/accounts"
+          }
+        ]
+      },
+      "elapsed_ms": 2.5106669636443257,
+      "category": "http"
+    },
+    {
+      "id": "exp_3103350e23dbe261cd402e96",
+      "experiment": {
+        "method": "POST",
+        "path": "/v2/accounts",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          },
+          {
+            "field": "profile",
+            "code": "required",
+            "type": "object"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 3.3417500089854,
+      "category": "http"
+    },
+    {
+      "id": "exp_18447a7eb828c8ce5df0fdc7",
+      "experiment": {
+        "method": "POST",
+        "path": "/v2/accounts",
+        "body": {
+          "name": "probe",
+          "profile": {}
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_3103350e23dbe261cd402e96",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "profile": {},
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/v2/accounts/1"
+          }
+        ]
+      },
+      "elapsed_ms": 3.883333003614098,
+      "category": "http"
+    },
+    {
+      "id": "exp_8a2786255b998cfad7812aae",
+      "experiment": {
+        "method": "GET",
+        "path": "/v2/accounts/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "profile": {},
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/v2/accounts/1"
+          }
+        ]
+      },
+      "elapsed_ms": 2.7180000324733555,
+      "category": "http"
+    },
+    {
+      "id": "exp_24ea74f1809b27685e03c55e",
+      "experiment": {
+        "method": "POST",
+        "path": "/v2/accounts",
+        "body": {
+          "name": [],
+          "profile": {}
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_18447a7eb828c8ce5df0fdc7",
+        "omitted": null,
+        "perturbed": "name",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "type",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 2.6494580088183284,
+      "category": "http"
+    },
+    {
+      "id": "exp_89a9ac52b948526a2c124015",
+      "experiment": {
+        "method": "POST",
+        "path": "/v2/accounts",
+        "body": {
+          "profile": {}
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_18447a7eb828c8ce5df0fdc7",
+        "omitted": "name",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 2.4642080534249544,
+      "category": "http"
+    },
+    {
+      "id": "exp_afe4cc80ee9f0e90fe5a41ac",
+      "experiment": {
+        "method": "GET",
+        "path": "/v2/batches",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 429,
+      "body": {
+        "errors": [
+          {
+            "code": "rate_limit"
+          }
+        ]
+      },
+      "elapsed_ms": 3.079041955061257,
+      "category": "http"
+    },
+    {
+      "id": "exp_df5f49b4e377155e82ef3798",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/v2/jobs",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/v2/jobs"
+          },
+          {
+            "method": "POST",
+            "href": "/v2/jobs"
+          }
+        ]
+      },
+      "elapsed_ms": 2.456374990288168,
+      "category": "http"
+    },
+    {
+      "id": "exp_1057542914ea0172f2afe56e",
+      "experiment": {
+        "method": "GET",
+        "path": "/v2/batches",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.1,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 13,
+        "retries": 1
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/v2/batches"
+          }
+        ]
+      },
+      "elapsed_ms": 0.770959013607353,
+      "category": "http"
+    },
+    {
+      "id": "exp_35f0c92b8efd217ca405c87d",
+      "experiment": {
+        "method": "POST",
+        "path": "/v2/batches",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "job_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "entries",
+            "code": "required",
+            "type": "array"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.6843340233899653,
+      "category": "http"
+    },
+    {
+      "id": "exp_d70e93ff3b7198f2fc92cd83",
+      "experiment": {
+        "method": "POST",
+        "path": "/v2/accounts",
+        "body": {
+          "name": "probe",
+          "profile": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_18447a7eb828c8ce5df0fdc7",
+        "omitted": null,
+        "perturbed": "profile",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "profile",
+            "code": "type",
+            "type": "object"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.6649999995715916,
+      "category": "http"
+    },
+    {
+      "id": "exp_2339a075164f49043436f240",
+      "experiment": {
+        "method": "POST",
+        "path": "/v2/jobs",
+        "body": {
+          "account_id": 1,
+          "config": {},
+          "mode": "probe"
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_18447a7eb828c8ce5df0fdc7",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 9,
+        "retries": 1
+      },
+      "status": 400,
+      "body": {
+        "message": "[redacted]",
+        "errors": []
+      },
+      "elapsed_ms": 0.6105409702286124,
+      "category": "http"
+    },
+    {
+      "id": "exp_539f4d0c7169bded9d51e522",
+      "experiment": {
+        "method": "POST",
+        "path": "/v2/batches",
+        "body": {
+          "job_id": 1,
+          "entries": []
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_35f0c92b8efd217ca405c87d",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "job_id",
+            "code": "reference",
+            "resource": "jobs",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/v2/jobs"
+          }
+        ]
+      },
+      "elapsed_ms": 0.5876250215806067,
+      "category": "http"
+    },
+    {
+      "id": "exp_8caa5e3b8d21f47e24f5698a",
+      "experiment": {
+        "method": "POST",
+        "path": "/v2/accounts",
+        "body": {
+          "name": "probe"
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_18447a7eb828c8ce5df0fdc7",
+        "omitted": "profile",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "profile",
+            "code": "required",
+            "type": "object"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7385829812847078,
+      "category": "http"
+    }
+  ],
+  "seen": [
+    "exp_1057542914ea0172f2afe56e",
+    "exp_18447a7eb828c8ce5df0fdc7",
+    "exp_2339a075164f49043436f240",
+    "exp_24ea74f1809b27685e03c55e",
+    "exp_2b9007d05676948ae58173da",
+    "exp_3103350e23dbe261cd402e96",
+    "exp_35f0c92b8efd217ca405c87d",
+    "exp_42dcffcec8dea68e4cfc7d1a",
+    "exp_4ce6cafc651257d79cc9eb5d",
+    "exp_539f4d0c7169bded9d51e522",
+    "exp_5a3fa10a79f01d850061dd0f",
+    "exp_6a87ad24d20f36cb5547f36b",
+    "exp_7122b8b3f42a8294b2a0ba16",
+    "exp_89a9ac52b948526a2c124015",
+    "exp_8a2786255b998cfad7812aae",
+    "exp_8caa5e3b8d21f47e24f5698a",
+    "exp_afe4cc80ee9f0e90fe5a41ac",
+    "exp_d70e93ff3b7198f2fc92cd83",
+    "exp_df5f49b4e377155e82ef3798",
+    "exp_f06e0bd9d9f6d112a9edb690"
+  ],
+  "operations": {
+    "GET /": {
+      "method": "GET",
+      "path": "/",
+      "evidence": [
+        "exp_42dcffcec8dea68e4cfc7d1a"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /v2/accounts": {
+      "method": "GET",
+      "path": "/v2/accounts",
+      "evidence": [
+        "exp_7122b8b3f42a8294b2a0ba16"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /v2/batches": {
+      "method": "OPTIONS",
+      "path": "/v2/batches",
+      "evidence": [
+        "exp_2b9007d05676948ae58173da"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /v2/jobs": {
+      "method": "GET",
+      "path": "/v2/jobs",
+      "evidence": [
+        "exp_4ce6cafc651257d79cc9eb5d"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /v2/accounts": {
+      "method": "OPTIONS",
+      "path": "/v2/accounts",
+      "evidence": [
+        "exp_6a87ad24d20f36cb5547f36b"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /v2/accounts": {
+      "method": "POST",
+      "path": "/v2/accounts",
+      "evidence": [
+        "exp_18447a7eb828c8ce5df0fdc7"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "profile": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "required": [
+          "name",
+          "profile"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "profile": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "profile",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "name": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_18447a7eb828c8ce5df0fdc7",
+            "exp_24ea74f1809b27685e03c55e",
+            "exp_89a9ac52b948526a2c124015"
+          ],
+          "conflict": false
+        },
+        "profile": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_18447a7eb828c8ce5df0fdc7",
+            "exp_d70e93ff3b7198f2fc92cd83",
+            "exp_8caa5e3b8d21f47e24f5698a"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /v2/accounts/{id}": {
+      "method": "GET",
+      "path": "/v2/accounts/{id}",
+      "evidence": [
+        "exp_8a2786255b998cfad7812aae"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "profile": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "profile",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /v2/jobs": {
+      "method": "OPTIONS",
+      "path": "/v2/jobs",
+      "evidence": [
+        "exp_df5f49b4e377155e82ef3798"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /v2/batches": {
+      "method": "GET",
+      "path": "/v2/batches",
+      "evidence": [
+        "exp_1057542914ea0172f2afe56e"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    }
+  },
+  "resources": {
+    "accounts": [
+      1
+    ]
+  },
+  "transitions": [],
+  "model_usage": {
+    "calls": 0,
+    "tokens": 0,
+    "failures": 0,
+    "latency_ms": 0.0,
+    "budget_tokens": 0,
+    "unmeasured_calls": 0
+  },
+  "relationships": [
+    {
+      "operation": "POST /v2/jobs",
+      "field": "account_id",
+      "resource": "accounts",
+      "evidence": [
+        "exp_5a3fa10a79f01d850061dd0f"
+      ],
+      "verified": false
+    },
+    {
+      "operation": "POST /v2/batches",
+      "field": "job_id",
+      "resource": "jobs",
+      "evidence": [
+        "exp_539f4d0c7169bded9d51e522"
+      ],
+      "verified": false
+    }
+  ],
+  "rejected": [
+    {
+      "experiment": "exp_f06e0bd9d9f6d112a9edb690",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_5a3fa10a79f01d850061dd0f",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_3103350e23dbe261cd402e96",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_24ea74f1809b27685e03c55e",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_89a9ac52b948526a2c124015",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_afe4cc80ee9f0e90fe5a41ac",
+      "status": 429,
+      "meaning": "Rate limited"
+    },
+    {
+      "experiment": "exp_35f0c92b8efd217ca405c87d",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_d70e93ff3b7198f2fc92cd83",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_2339a075164f49043436f240",
+      "status": 400,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_539f4d0c7169bded9d51e522",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_8caa5e3b8d21f47e24f5698a",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    }
+  ],
+  "status": "complete",
+  "strategy": "random"
+}

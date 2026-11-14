@@ -1,0 +1,15 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Generated dependency trees and ignored local runtime state"
+paths = [
+  '''(^|/)node_modules/''',
+  '''(^|/)\.next/''',
+  '''(^|/)\.runtime/''',
+  '''(^|/)\.conda-envs/''',
+  '''(^|/)\.conda-pkgs/''',
+  '''(^|/)\.mypy_cache/''',
+  '''(^|/)\.pytest_cache/''',
+  '''(^|/)__pycache__/'''
+]
