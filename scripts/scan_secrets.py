@@ -36,6 +36,9 @@ def main() -> int:
                 "scan",
                 "--all-files",
                 "--no-verify",
+                # Content hashes identify downloaded artifacts, not credentials.
+                "--exclude-lines",
+                r'^\s*"(?:digest|runtime_archive_sha256)": "(?:sha256:)?[0-9a-f]{64}",?$',
                 "--exclude-files",
                 r"package-lock\.json$|requirements(-dev|-validator)?\.lock$",
                 ".",

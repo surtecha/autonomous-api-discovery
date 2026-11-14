@@ -1,0 +1,3602 @@
+[
+  {
+    "target": "ecommerce",
+    "repetition": 0,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "cf0a6218-9d34-41ff-b043-aebd9a938429",
+      "strategy": "fifo",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 66,
+      "valid_request_rate": 0.5,
+      "requests_per_correct_operation": 2.0625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 8.381919540988747
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 0,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "5852bb09-8a78-434e-8a2d-86715fefba99",
+      "strategy": "random",
+      "discovered_operations": 29,
+      "correct_operations": 29,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.90625,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8647540983606558,
+      "response_schema_type_claims": 244,
+      "state_transition_coverage": 0.6666666666666666,
+      "requests": 82,
+      "valid_request_rate": 0.45121951219512196,
+      "requests_per_correct_operation": 2.8275862068965516,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 86,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 8.231771415972617
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 0,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "7b0b4df0-11da-4613-a8db-82f8a2da6158",
+      "strategy": "gain",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 66,
+      "valid_request_rate": 0.5,
+      "requests_per_correct_operation": 2.0625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 7.559883292007726
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 0,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "40d8900a-29e8-4eb8-b1dd-63d82b9b87e1",
+      "strategy": "fifo",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 47,
+      "valid_request_rate": 0.5106382978723404,
+      "requests_per_correct_operation": 1.9583333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 6.272454499965534
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 0,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "de4904c4-8d0e-407a-bb55-40b00364e5c2",
+      "strategy": "random",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 58,
+      "valid_request_rate": 0.4482758620689655,
+      "requests_per_correct_operation": 2.4166666666666665,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 64,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 6.811257500026841
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 0,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "e3f36010-6706-40ee-ad41-7b77421120da",
+      "strategy": "gain",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 47,
+      "valid_request_rate": 0.5106382978723404,
+      "requests_per_correct_operation": 1.9583333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 6.386871833004989
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 0,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "d4d264de-b2f1-4054-8103-10ffe76a678c",
+      "strategy": "fifo",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8759124087591241,
+      "response_schema_type_claims": 274,
+      "state_transition_coverage": 1.0,
+      "requests": 71,
+      "valid_request_rate": 0.4507042253521127,
+      "requests_per_correct_operation": 2.21875,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 76,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 7.794599500019103
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 0,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "445589e5-616f-4b8c-ac48-0f1b1cc22713",
+      "strategy": "random",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8759124087591241,
+      "response_schema_type_claims": 274,
+      "state_transition_coverage": 1.0,
+      "requests": 78,
+      "valid_request_rate": 0.4230769230769231,
+      "requests_per_correct_operation": 2.4375,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 10.434608499985188
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 0,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "c56453ef-993d-49c0-9261-e7bc1811f1f4",
+      "strategy": "gain",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8759124087591241,
+      "response_schema_type_claims": 274,
+      "state_transition_coverage": 1.0,
+      "requests": 71,
+      "valid_request_rate": 0.4507042253521127,
+      "requests_per_correct_operation": 2.21875,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 76,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 7.880408041994087
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 0,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "39733aea-8152-46f6-8230-989f86e90547",
+      "strategy": "fifo",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 19,
+      "valid_request_rate": 0.47368421052631576,
+      "requests_per_correct_operation": 2.111111111111111,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 4.6012130419840105
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 0,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "531f80d7-6ea4-4432-8e5d-a77e690cf637",
+      "strategy": "random",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 20,
+      "valid_request_rate": 0.45,
+      "requests_per_correct_operation": 2.2222222222222223,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 5.160046666976996
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 0,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "bcde8c4a-8bd5-4973-81d7-5b004c899bb4",
+      "strategy": "gain",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 19,
+      "valid_request_rate": 0.47368421052631576,
+      "requests_per_correct_operation": 2.111111111111111,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 42,
+      "repetition": 0,
+      "elapsed_seconds": 4.866168041015044
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 1,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "7694cc0d-dde1-48e0-a889-a92ccd38a579",
+      "strategy": "fifo",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 66,
+      "valid_request_rate": 0.5,
+      "requests_per_correct_operation": 2.0625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 7.444513624999672
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 1,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "7ea3b9df-00ca-4984-8414-a0d950a3481f",
+      "strategy": "random",
+      "discovered_operations": 28,
+      "correct_operations": 28,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.875,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8771186440677966,
+      "response_schema_type_claims": 236,
+      "state_transition_coverage": 0.3333333333333333,
+      "requests": 81,
+      "valid_request_rate": 0.4444444444444444,
+      "requests_per_correct_operation": 2.892857142857143,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 84,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 8.140174667001702
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 1,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "27472045-4e3c-40ae-b9a5-7274cae66400",
+      "strategy": "gain",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 66,
+      "valid_request_rate": 0.5,
+      "requests_per_correct_operation": 2.0625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 7.624824667000212
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 1,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "82367a18-8b61-4dca-8ea2-e9621595718b",
+      "strategy": "fifo",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 47,
+      "valid_request_rate": 0.5106382978723404,
+      "requests_per_correct_operation": 1.9583333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 6.592962540977169
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 1,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "37331aa2-ce47-45d1-8f0d-0cfa8ba1fd1c",
+      "strategy": "random",
+      "discovered_operations": 23,
+      "correct_operations": 23,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.9583333333333334,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8769230769230769,
+      "response_schema_type_claims": 195,
+      "state_transition_coverage": 0.6666666666666666,
+      "requests": 54,
+      "valid_request_rate": 0.5,
+      "requests_per_correct_operation": 2.347826086956522,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 66,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 6.772695999999996
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 1,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "a92b702e-d962-4c0a-bd55-91dbe2dae330",
+      "strategy": "gain",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 47,
+      "valid_request_rate": 0.5106382978723404,
+      "requests_per_correct_operation": 1.9583333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 6.56867891602451
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 1,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "e8ded2e7-d2b8-447f-ae1e-0e179aa89361",
+      "strategy": "fifo",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8759124087591241,
+      "response_schema_type_claims": 274,
+      "state_transition_coverage": 1.0,
+      "requests": 71,
+      "valid_request_rate": 0.4507042253521127,
+      "requests_per_correct_operation": 2.21875,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 76,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 8.447017833997961
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 1,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "6dd35272-2c65-4e1c-87e6-744564e6297e",
+      "strategy": "random",
+      "discovered_operations": 30,
+      "correct_operations": 30,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.9375,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8671875,
+      "response_schema_type_claims": 256,
+      "state_transition_coverage": 1.0,
+      "requests": 79,
+      "valid_request_rate": 0.4050632911392405,
+      "requests_per_correct_operation": 2.6333333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 76,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 8.400945875036996
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 1,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "21682df8-60e3-4992-be62-22309b9546d1",
+      "strategy": "gain",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8759124087591241,
+      "response_schema_type_claims": 274,
+      "state_transition_coverage": 1.0,
+      "requests": 71,
+      "valid_request_rate": 0.4507042253521127,
+      "requests_per_correct_operation": 2.21875,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 76,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 7.776417832996231
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 1,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "1a19cb57-5b92-4b47-af66-0eca092bed9a",
+      "strategy": "fifo",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 19,
+      "valid_request_rate": 0.47368421052631576,
+      "requests_per_correct_operation": 2.111111111111111,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 4.565626124967821
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 1,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "1b92f0c7-de12-464c-8461-3ddd26bd8d05",
+      "strategy": "random",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 20,
+      "valid_request_rate": 0.45,
+      "requests_per_correct_operation": 2.2222222222222223,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 4.579666999983601
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 1,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "a8825032-abf9-4913-b72a-44145f39f783",
+      "strategy": "gain",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 19,
+      "valid_request_rate": 0.47368421052631576,
+      "requests_per_correct_operation": 2.111111111111111,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 43,
+      "repetition": 1,
+      "elapsed_seconds": 4.6796535000321455
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 2,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "572c462e-0976-4e7c-af9e-754b81f0537b",
+      "strategy": "fifo",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 66,
+      "valid_request_rate": 0.5,
+      "requests_per_correct_operation": 2.0625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 7.430882541986648
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 2,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "81e51cc5-ce35-427a-81cd-c0c1737c7816",
+      "strategy": "random",
+      "discovered_operations": 29,
+      "correct_operations": 29,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.90625,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8647540983606558,
+      "response_schema_type_claims": 244,
+      "state_transition_coverage": 0.6666666666666666,
+      "requests": 73,
+      "valid_request_rate": 0.4520547945205479,
+      "requests_per_correct_operation": 2.5172413793103448,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 7.73419562500203
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 2,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "a43112d3-73a2-47dc-93a2-d4fe79662b32",
+      "strategy": "gain",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 66,
+      "valid_request_rate": 0.5,
+      "requests_per_correct_operation": 2.0625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 8.932522874965798
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 2,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "168f0fa0-d03c-46a8-9baa-17f76fb67a21",
+      "strategy": "fifo",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 47,
+      "valid_request_rate": 0.5106382978723404,
+      "requests_per_correct_operation": 1.9583333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 6.347027625015471
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 2,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "ab0e1e77-7a9e-455d-abdc-36a0d371e93a",
+      "strategy": "random",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 55,
+      "valid_request_rate": 0.45454545454545453,
+      "requests_per_correct_operation": 2.2916666666666665,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 62,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 6.949211874976754
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 2,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "32fa80a2-894d-4204-a9be-2d5bda6c1da8",
+      "strategy": "gain",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 47,
+      "valid_request_rate": 0.5106382978723404,
+      "requests_per_correct_operation": 1.9583333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 6.627319500024896
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 2,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "8c240765-1301-480c-b91e-154d8f73853e",
+      "strategy": "fifo",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8759124087591241,
+      "response_schema_type_claims": 274,
+      "state_transition_coverage": 1.0,
+      "requests": 71,
+      "valid_request_rate": 0.4507042253521127,
+      "requests_per_correct_operation": 2.21875,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 76,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 7.884147625009064
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 2,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "1cb4a400-70f0-422c-b5fa-ccb4de7d7c50",
+      "strategy": "random",
+      "discovered_operations": 30,
+      "correct_operations": 30,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.9375,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8671875,
+      "response_schema_type_claims": 256,
+      "state_transition_coverage": 1.0,
+      "requests": 76,
+      "valid_request_rate": 0.40789473684210525,
+      "requests_per_correct_operation": 2.533333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 74,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 12.139948584022932
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 2,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "9b1b821a-24eb-4963-95cd-fbec1d8b4791",
+      "strategy": "gain",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8759124087591241,
+      "response_schema_type_claims": 274,
+      "state_transition_coverage": 1.0,
+      "requests": 71,
+      "valid_request_rate": 0.4507042253521127,
+      "requests_per_correct_operation": 2.21875,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 76,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 8.306531790993176
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 2,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "173012ff-b5a1-443d-8026-b8a59f2b625a",
+      "strategy": "fifo",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 19,
+      "valid_request_rate": 0.47368421052631576,
+      "requests_per_correct_operation": 2.111111111111111,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 4.817357457999606
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 2,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "cd3e729a-a33b-4cc8-8a88-72842e51edb0",
+      "strategy": "random",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 21,
+      "valid_request_rate": 0.42857142857142855,
+      "requests_per_correct_operation": 2.3333333333333335,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 4.7182379579753615
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 2,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "3e1689e8-6439-40f3-be6c-5b4d378cda1d",
+      "strategy": "gain",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 19,
+      "valid_request_rate": 0.47368421052631576,
+      "requests_per_correct_operation": 2.111111111111111,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 44,
+      "repetition": 2,
+      "elapsed_seconds": 4.7577645420096815
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 3,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "44997898-d610-43d8-b107-222147444564",
+      "strategy": "fifo",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 66,
+      "valid_request_rate": 0.5,
+      "requests_per_correct_operation": 2.0625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 8.330767540959641
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 3,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "a45c1ad9-5166-40ad-86b3-744d139f3097",
+      "strategy": "random",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 77,
+      "valid_request_rate": 0.44155844155844154,
+      "requests_per_correct_operation": 2.40625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 80,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 10.994310875015799
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 3,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "b9f4e83a-2f08-4f37-ac3d-b226dd95eb45",
+      "strategy": "gain",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 66,
+      "valid_request_rate": 0.5,
+      "requests_per_correct_operation": 2.0625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 7.872408374969382
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 3,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "01f6ae5f-854a-4ce9-b2aa-bb6b9e488b1b",
+      "strategy": "fifo",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 47,
+      "valid_request_rate": 0.5106382978723404,
+      "requests_per_correct_operation": 1.9583333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 6.816220625012647
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 3,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "1ece5c11-4c76-4a7d-a90e-6cd1ded5f000",
+      "strategy": "random",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.9068627450980392,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 50,
+      "valid_request_rate": 0.48,
+      "requests_per_correct_operation": 2.0833333333333335,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 7.052050875034183
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 3,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "4e0abeea-7bf9-4a45-b431-c1c1812951c3",
+      "strategy": "gain",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 47,
+      "valid_request_rate": 0.5106382978723404,
+      "requests_per_correct_operation": 1.9583333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 6.573474165983498
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 3,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "f7305978-7c82-4861-b2d5-c3f589d1ad96",
+      "strategy": "fifo",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8759124087591241,
+      "response_schema_type_claims": 274,
+      "state_transition_coverage": 1.0,
+      "requests": 71,
+      "valid_request_rate": 0.4507042253521127,
+      "requests_per_correct_operation": 2.21875,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 76,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 8.807681208010763
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 3,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "7f37c98c-eb2b-4576-9b8e-711584475218",
+      "strategy": "random",
+      "discovered_operations": 30,
+      "correct_operations": 30,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.9375,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8671875,
+      "response_schema_type_claims": 256,
+      "state_transition_coverage": 1.0,
+      "requests": 77,
+      "valid_request_rate": 0.4025974025974026,
+      "requests_per_correct_operation": 2.566666666666667,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 74,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 10.559071957948618
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 3,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "60b6cb68-cef8-4764-bc34-1a5ea83cf8ae",
+      "strategy": "gain",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8759124087591241,
+      "response_schema_type_claims": 274,
+      "state_transition_coverage": 1.0,
+      "requests": 71,
+      "valid_request_rate": 0.4507042253521127,
+      "requests_per_correct_operation": 2.21875,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 76,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 8.594702499976847
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 3,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "96d9abe5-6376-4c5b-8e71-0c0b31520546",
+      "strategy": "fifo",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 19,
+      "valid_request_rate": 0.47368421052631576,
+      "requests_per_correct_operation": 2.111111111111111,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 7.845855999970809
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 3,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "82bdda3e-9bb4-480b-b3ff-74eee4b40a5c",
+      "strategy": "random",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 21,
+      "valid_request_rate": 0.42857142857142855,
+      "requests_per_correct_operation": 2.3333333333333335,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 5.288092125032563
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 3,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "8687dc71-96e4-4a77-87be-df1bbf08d0ec",
+      "strategy": "gain",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 19,
+      "valid_request_rate": 0.47368421052631576,
+      "requests_per_correct_operation": 2.111111111111111,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 45,
+      "repetition": 3,
+      "elapsed_seconds": 5.046730124973692
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 4,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "aa80f8da-580f-4206-be24-2e541e5a22b6",
+      "strategy": "fifo",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 66,
+      "valid_request_rate": 0.5,
+      "requests_per_correct_operation": 2.0625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 7.95383050001692
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 4,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "e0b80529-3ea1-49e8-8823-0a662cd8e119",
+      "strategy": "random",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 84,
+      "valid_request_rate": 0.4642857142857143,
+      "requests_per_correct_operation": 2.625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 90,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 9.436190582986455
+    }
+  },
+  {
+    "target": "ecommerce",
+    "repetition": 4,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "d5dd449c-47cb-423b-bbd7-655501cb8b56",
+      "strategy": "gain",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8768656716417911,
+      "response_schema_type_claims": 268,
+      "state_transition_coverage": 1.0,
+      "requests": 66,
+      "valid_request_rate": 0.5,
+      "requests_per_correct_operation": 2.0625,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 11.811797666014172
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 4,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "4e6d6889-eba5-4567-9a59-bd1faf9fe46b",
+      "strategy": "fifo",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 47,
+      "valid_request_rate": 0.5106382978723404,
+      "requests_per_correct_operation": 1.9583333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 7.833157500019297
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 4,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "7b1b2bbd-b9a7-4db6-ad35-8e4ea46a9a4f",
+      "strategy": "random",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.9068627450980392,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 49,
+      "valid_request_rate": 0.4897959183673469,
+      "requests_per_correct_operation": 2.0416666666666665,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 8.640444250020664
+    }
+  },
+  {
+    "target": "subscriptions",
+    "repetition": 4,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "979148d0-9d06-4659-a681-eff6f96dea59",
+      "strategy": "gain",
+      "discovered_operations": 24,
+      "correct_operations": 24,
+      "ground_truth_operations": 24,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8823529411764706,
+      "response_schema_type_claims": 204,
+      "state_transition_coverage": 1.0,
+      "requests": 47,
+      "valid_request_rate": 0.5106382978723404,
+      "requests_per_correct_operation": 1.9583333333333333,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 8.005021124961786
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 4,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "2e1231ba-d5d9-4199-832f-f7250a36e2c5",
+      "strategy": "fifo",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8759124087591241,
+      "response_schema_type_claims": 274,
+      "state_transition_coverage": 1.0,
+      "requests": 71,
+      "valid_request_rate": 0.4507042253521127,
+      "requests_per_correct_operation": 2.21875,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 76,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 8.592870332999155
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 4,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "42d1ccd1-7a51-4270-b431-ab9d537435ec",
+      "strategy": "random",
+      "discovered_operations": 30,
+      "correct_operations": 30,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.9375,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8661417322834646,
+      "response_schema_type_claims": 254,
+      "state_transition_coverage": 1.0,
+      "requests": 70,
+      "valid_request_rate": 0.42857142857142855,
+      "requests_per_correct_operation": 2.3333333333333335,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 72,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 8.85827316698851
+    }
+  },
+  {
+    "target": "warehouse",
+    "repetition": 4,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "dbfb7f88-db8e-43c8-ad2e-188cc479f001",
+      "strategy": "gain",
+      "discovered_operations": 32,
+      "correct_operations": 32,
+      "ground_truth_operations": 32,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 1.0,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8759124087591241,
+      "response_schema_type_claims": 274,
+      "state_transition_coverage": 1.0,
+      "requests": 71,
+      "valid_request_rate": 0.4507042253521127,
+      "requests_per_correct_operation": 2.21875,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 76,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 8.218119958008174
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 4,
+    "strategy": "fifo",
+    "evaluation": {
+      "session_id": "d49375a6-f5b8-45e5-be3f-829068b8d28e",
+      "strategy": "fifo",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 19,
+      "valid_request_rate": 0.47368421052631576,
+      "requests_per_correct_operation": 2.111111111111111,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 5.2711203749640845
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 4,
+    "strategy": "random",
+    "evaluation": {
+      "session_id": "be42abb3-6a3a-4d4c-a76d-c75d37ede881",
+      "strategy": "random",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.8533333333333334,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 20,
+      "valid_request_rate": 0.45,
+      "requests_per_correct_operation": 2.2222222222222223,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 5.694071542005986
+    }
+  },
+  {
+    "target": "complex",
+    "repetition": 4,
+    "strategy": "gain",
+    "evaluation": {
+      "session_id": "7589acfc-3b30-49b5-9d0a-f361416d6684",
+      "strategy": "gain",
+      "discovered_operations": 9,
+      "correct_operations": 9,
+      "ground_truth_operations": 15,
+      "endpoint_precision": 1.0,
+      "endpoint_recall": 0.6,
+      "request_field_type_accuracy": 1.0,
+      "required_field_accuracy": 1.0,
+      "response_schema_accuracy": 0.7866666666666666,
+      "response_schema_type_claims": 75,
+      "state_transition_coverage": 0.0,
+      "requests": 19,
+      "valid_request_rate": 0.47368421052631576,
+      "requests_per_correct_operation": 2.111111111111111,
+      "unsupported_operations": 0,
+      "model_usage": {
+        "calls": 0,
+        "tokens": 0,
+        "failures": 0,
+        "latency_ms": 0.0,
+        "budget_tokens": 0,
+        "unmeasured_calls": 0
+      },
+      "estimated_llm_cost": null,
+      "sdk_test_pass_rate": 1.0,
+      "limitations": [
+        "Schema scoring covers discovered request fields only",
+        "Response scoring compares structural types on discovered operations, not values or requiredness",
+        "No estimated provider cost without configured pricing"
+      ]
+    },
+    "validation": {
+      "source_ast": "passed",
+      "openapi_validation": "passed",
+      "sdk_tests": "passed",
+      "sdk_lint": "passed",
+      "sdk_types": "passed",
+      "sdk_packaging": "passed",
+      "execution": "requires_restricted_container",
+      "test_counts": {
+        "tests": 30,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": {
+      "transport": "loopback_http",
+      "fresh_target": true,
+      "seed": 46,
+      "repetition": 4,
+      "elapsed_seconds": 5.075335625035223
+    }
+  }
+]

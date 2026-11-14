@@ -20,7 +20,11 @@ class GraphState(TypedDict):
 
 
 def run_graph(
-    session_id: str, policy: TargetPolicy, directory: Path, strategy: str = "gain"
+    session_id: str,
+    policy: TargetPolicy,
+    directory: Path,
+    strategy: str = "gain",
+    random_seed: int = 42,
 ) -> Knowledge:
     from dataclasses import asdict
 
@@ -30,8 +34,15 @@ def run_graph(
 
     from .models import Observation
 
+    model_config = None
+    if strategy == "llm":
+        from .model_config import ModelConfig
+
+        model_config = ModelConfig.from_environment()
+
     store = Store(directory / "evidence.sqlite")
     current = store.load(session_id) or initialize(session_id, strategy=strategy)
+    current.random_seed = random_seed if store.load(session_id) is None else current.random_seed
     store.save(current)
     used, started = store.budget(session_id)
     gateway = JournaledGateway(
@@ -50,18 +61,20 @@ def run_graph(
         if persisted and persisted.model_usage["calls"] > state.model_usage["calls"]:
             state.model_usage = persisted.model_usage
         index = None
-        if strategy == "llm":
-            import os
-
+        if model_config is not None:
             from openai import OpenAI
 
             from .model import rank
 
-            if os.environ.get("OPENAI_API_KEY") and os.environ.get("LLM_MODEL"):
-                with OpenAI(timeout=10, max_retries=0) as client:
-                    index = rank(
-                        state, os.environ["LLM_MODEL"], client, checkpoint=lambda: store.save(state)
-                    )
+            state.model_usage.update(provider=model_config.provider, model=model_config.model)
+            with OpenAI(**model_config.client_options()) as client:
+                index = rank(
+                    state,
+                    model_config.model,
+                    client,
+                    checkpoint=lambda: store.save(state),
+                    api=model_config.api,
+                )
         experiment = state.pending.pop(index) if index is not None else choose(state)
         state.seen.add(experiment.key)
         return {"knowledge": state.to_dict(), "selected": asdict(experiment)}

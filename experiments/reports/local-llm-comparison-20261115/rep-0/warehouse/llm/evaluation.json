@@ -1,0 +1,38 @@
+{
+  "session_id": "89cf02b0-7ac5-4c37-8f9b-c91d06e65d37",
+  "strategy": "llm",
+  "discovered_operations": 32,
+  "correct_operations": 32,
+  "ground_truth_operations": 32,
+  "endpoint_precision": 1.0,
+  "endpoint_recall": 1.0,
+  "request_field_type_accuracy": 1.0,
+  "required_field_accuracy": 1.0,
+  "response_schema_accuracy": 0.8759124087591241,
+  "response_schema_type_claims": 274,
+  "state_transition_coverage": 1.0,
+  "requests": 71,
+  "valid_request_rate": 0.4507042253521127,
+  "requests_per_correct_operation": 2.21875,
+  "unsupported_operations": 0,
+  "model_usage": {
+    "calls": 3,
+    "tokens": 1940,
+    "failures": 0,
+    "latency_ms": 2268.730833893642,
+    "budget_tokens": 6144,
+    "unmeasured_calls": 0,
+    "provider": "ollama",
+    "model": "qwen2.5:7b",
+    "input_tokens": 1914,
+    "output_tokens": 26,
+    "parsed_selections": 3
+  },
+  "estimated_llm_cost": null,
+  "sdk_test_pass_rate": 1.0,
+  "limitations": [
+    "Schema scoring covers discovered request fields only",
+    "Response scoring compares structural types on discovered operations, not values or requiredness",
+    "No estimated provider cost without configured pricing"
+  ]
+}

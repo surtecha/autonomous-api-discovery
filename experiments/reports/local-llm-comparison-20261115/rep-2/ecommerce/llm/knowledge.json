@@ -1,0 +1,4408 @@
+{
+  "session_id": "4b71026b-e0e9-4b66-a6e0-d9795db455f9",
+  "pending": [],
+  "blocked": [],
+  "observations": [
+    {
+      "id": "exp_42dcffcec8dea68e4cfc7d1a",
+      "experiment": {
+        "method": "GET",
+        "path": "/",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/customers"
+          },
+          {
+            "method": "POST",
+            "href": "/customers"
+          },
+          {
+            "method": "GET",
+            "href": "/products"
+          },
+          {
+            "method": "POST",
+            "href": "/products"
+          },
+          {
+            "method": "GET",
+            "href": "/orders"
+          },
+          {
+            "method": "POST",
+            "href": "/orders"
+          },
+          {
+            "method": "GET",
+            "href": "/items"
+          },
+          {
+            "method": "POST",
+            "href": "/items"
+          },
+          {
+            "method": "GET",
+            "href": "/inventory"
+          },
+          {
+            "method": "POST",
+            "href": "/inventory"
+          },
+          {
+            "method": "GET",
+            "href": "/payments"
+          },
+          {
+            "method": "POST",
+            "href": "/payments"
+          },
+          {
+            "method": "GET",
+            "href": "/shipments"
+          },
+          {
+            "method": "POST",
+            "href": "/shipments"
+          }
+        ]
+      },
+      "elapsed_ms": 2.8628750005736947,
+      "category": "http"
+    },
+    {
+      "id": "exp_ed2244ceab1c4f9a0cd86e3c",
+      "experiment": {
+        "method": "GET",
+        "path": "/customers",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/customers"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8403329993598163,
+      "category": "http"
+    },
+    {
+      "id": "exp_d3cd45a6dad3f97ab7779caa",
+      "experiment": {
+        "method": "POST",
+        "path": "/customers",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7769159856252372,
+      "category": "http"
+    },
+    {
+      "id": "exp_5855e2521f44878b186ad96d",
+      "experiment": {
+        "method": "POST",
+        "path": "/customers",
+        "body": {
+          "name": "probe"
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_d3cd45a6dad3f97ab7779caa",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/customers/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.053375017363578,
+      "category": "http"
+    },
+    {
+      "id": "exp_f8a8d004e39481e6072160c7",
+      "experiment": {
+        "method": "POST",
+        "path": "/customers",
+        "body": {},
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_5855e2521f44878b186ad96d",
+        "omitted": "name",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7001249468885362,
+      "category": "http"
+    },
+    {
+      "id": "exp_f6141bd58049ecdabf8625dc",
+      "experiment": {
+        "method": "GET",
+        "path": "/products",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/products"
+          }
+        ]
+      },
+      "elapsed_ms": 1.1164579773321748,
+      "category": "http"
+    },
+    {
+      "id": "exp_1c28b59770b1a62625e91d30",
+      "experiment": {
+        "method": "POST",
+        "path": "/products",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          },
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.0115420445799828,
+      "category": "http"
+    },
+    {
+      "id": "exp_bb4f6e689fa40821c5c566f3",
+      "experiment": {
+        "method": "POST",
+        "path": "/products",
+        "body": {
+          "name": "probe",
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_1c28b59770b1a62625e91d30",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "quantity": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/products/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7770420052111149,
+      "category": "http"
+    },
+    {
+      "id": "exp_356a3cec6ad12e1bf063f76a",
+      "experiment": {
+        "method": "POST",
+        "path": "/products",
+        "body": {
+          "quantity": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_bb4f6e689fa40821c5c566f3",
+        "omitted": "name",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8864579722285271,
+      "category": "http"
+    },
+    {
+      "id": "exp_a8b026bb48bc27c776f31f2e",
+      "experiment": {
+        "method": "POST",
+        "path": "/products",
+        "body": {
+          "name": "probe"
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_bb4f6e689fa40821c5c566f3",
+        "omitted": "quantity",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9345830185338855,
+      "category": "http"
+    },
+    {
+      "id": "exp_de3c7ca8faa0061ec2cf8a9b",
+      "experiment": {
+        "method": "GET",
+        "path": "/orders",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/orders"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8879999513737857,
+      "category": "http"
+    },
+    {
+      "id": "exp_9bd5d0cea3d977e4b5599157",
+      "experiment": {
+        "method": "POST",
+        "path": "/orders",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "customer_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.0199579992331564,
+      "category": "http"
+    },
+    {
+      "id": "exp_7168639d1d60da52ac48a384",
+      "experiment": {
+        "method": "POST",
+        "path": "/orders",
+        "body": {
+          "customer_id": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_9bd5d0cea3d977e4b5599157",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "customer_id": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/orders/1"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/reserve"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/pay"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/ship"
+          }
+        ]
+      },
+      "elapsed_ms": 1.175665995106101,
+      "category": "http"
+    },
+    {
+      "id": "exp_02caf7e3b8c0e3d0b411b481",
+      "experiment": {
+        "method": "POST",
+        "path": "/orders",
+        "body": {},
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_7168639d1d60da52ac48a384",
+        "omitted": "customer_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "customer_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9581249905750155,
+      "category": "http"
+    },
+    {
+      "id": "exp_8f0bb654596998c5d2b99625",
+      "experiment": {
+        "method": "GET",
+        "path": "/items",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/items"
+          }
+        ]
+      },
+      "elapsed_ms": 1.094499952159822,
+      "category": "http"
+    },
+    {
+      "id": "exp_37e09d290538197186c76f26",
+      "experiment": {
+        "method": "POST",
+        "path": "/items",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "order_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "product_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.0723330196924508,
+      "category": "http"
+    },
+    {
+      "id": "exp_586144d4493e8498dc3ef2e1",
+      "experiment": {
+        "method": "POST",
+        "path": "/items",
+        "body": {
+          "order_id": 1,
+          "product_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_37e09d290538197186c76f26",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "order_id": 1,
+        "product_id": 1,
+        "quantity": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/items/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.2291250168345869,
+      "category": "http"
+    },
+    {
+      "id": "exp_71a1cccfe0b888bc53ab4a33",
+      "experiment": {
+        "method": "POST",
+        "path": "/items",
+        "body": {
+          "product_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_586144d4493e8498dc3ef2e1",
+        "omitted": "order_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "order_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.959165976382792,
+      "category": "http"
+    },
+    {
+      "id": "exp_bd304e6cf2d9dde0beea389a",
+      "experiment": {
+        "method": "POST",
+        "path": "/items",
+        "body": {
+          "order_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_586144d4493e8498dc3ef2e1",
+        "omitted": "product_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "product_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.1462080292403698,
+      "category": "http"
+    },
+    {
+      "id": "exp_5b4686f8359efed07f7f2238",
+      "experiment": {
+        "method": "POST",
+        "path": "/items",
+        "body": {
+          "order_id": 1,
+          "product_id": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_586144d4493e8498dc3ef2e1",
+        "omitted": "quantity",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.130458025727421,
+      "category": "http"
+    },
+    {
+      "id": "exp_2788e1c8e95fc4c979232a0d",
+      "experiment": {
+        "method": "GET",
+        "path": "/inventory",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/inventory"
+          }
+        ]
+      },
+      "elapsed_ms": 1.184707973152399,
+      "category": "http"
+    },
+    {
+      "id": "exp_89a48a278bf733c1fc1b8e9e",
+      "experiment": {
+        "method": "POST",
+        "path": "/inventory",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "product_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9389169863425195,
+      "category": "http"
+    },
+    {
+      "id": "exp_2c25a56b150bcca26a6719f5",
+      "experiment": {
+        "method": "POST",
+        "path": "/inventory",
+        "body": {
+          "product_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_89a48a278bf733c1fc1b8e9e",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "product_id": 1,
+        "quantity": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/inventory/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.0958749917335808,
+      "category": "http"
+    },
+    {
+      "id": "exp_9a3cdc81849be710d944a8da",
+      "experiment": {
+        "method": "POST",
+        "path": "/inventory",
+        "body": {
+          "quantity": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_2c25a56b150bcca26a6719f5",
+        "omitted": "product_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "product_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.0395420249551535,
+      "category": "http"
+    },
+    {
+      "id": "exp_48a16304ad49fa0aa83b5fe2",
+      "experiment": {
+        "method": "POST",
+        "path": "/inventory",
+        "body": {
+          "product_id": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_2c25a56b150bcca26a6719f5",
+        "omitted": "quantity",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.153250050265342,
+      "category": "http"
+    },
+    {
+      "id": "exp_45cde40da4f7dbd6eb3d8128",
+      "experiment": {
+        "method": "GET",
+        "path": "/payments",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/payments"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9654159657657146,
+      "category": "http"
+    },
+    {
+      "id": "exp_e064bf2e51927e021125f8ba",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "order_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "amount",
+            "code": "required",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.0637909872457385,
+      "category": "http"
+    },
+    {
+      "id": "exp_7365567d3915cae9bea19d46",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "order_id": 1,
+          "amount": 1.0
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_e064bf2e51927e021125f8ba",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "order_id": 1,
+        "amount": 0.0,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/payments/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9390420163981616,
+      "category": "http"
+    },
+    {
+      "id": "exp_8946d32b4f9f12c208fe9110",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "amount": 1.0
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_7365567d3915cae9bea19d46",
+        "omitted": "order_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "order_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8582909940741956,
+      "category": "http"
+    },
+    {
+      "id": "exp_da71e2ba98cd41a0ba166073",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "order_id": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_7365567d3915cae9bea19d46",
+        "omitted": "amount",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "amount",
+            "code": "required",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9502499597147107,
+      "category": "http"
+    },
+    {
+      "id": "exp_5896d3d0ddfc691295e6ae9d",
+      "experiment": {
+        "method": "GET",
+        "path": "/shipments",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/shipments"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7796669960953295,
+      "category": "http"
+    },
+    {
+      "id": "exp_21e14b576f55506fa5e8c388",
+      "experiment": {
+        "method": "POST",
+        "path": "/shipments",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "order_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9562090272083879,
+      "category": "http"
+    },
+    {
+      "id": "exp_59bb0c3391bb1a26ff77725a",
+      "experiment": {
+        "method": "POST",
+        "path": "/shipments",
+        "body": {
+          "order_id": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_21e14b576f55506fa5e8c388",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 409,
+      "body": {
+        "errors": [
+          {
+            "code": "state"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9277920471504331,
+      "category": "http"
+    },
+    {
+      "id": "exp_a55627f00fd0ce5c26875bf4",
+      "experiment": {
+        "method": "GET",
+        "path": "/customers/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/customers/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.1815420002676547,
+      "category": "http"
+    },
+    {
+      "id": "exp_268450d6c8bc687ad2c37e34",
+      "experiment": {
+        "method": "GET",
+        "path": "/products/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "quantity": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/products/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.0709580383263528,
+      "category": "http"
+    },
+    {
+      "id": "exp_f3a5f93980f8603a9335daf6",
+      "experiment": {
+        "method": "GET",
+        "path": "/orders/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "customer_id": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/orders/1"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/reserve"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/pay"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/ship"
+          }
+        ]
+      },
+      "elapsed_ms": 1.0265829623676836,
+      "category": "http"
+    },
+    {
+      "id": "exp_3ac1330b7eb971ae3d5fb286",
+      "experiment": {
+        "method": "POST",
+        "path": "/orders/1/reserve",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "customer_id": 1,
+        "status": "reserved",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/orders/1"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/reserve"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/pay"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/ship"
+          }
+        ]
+      },
+      "elapsed_ms": 1.2750420137308538,
+      "category": "http"
+    },
+    {
+      "id": "exp_9191b0100c2b49aa2ed90ebd",
+      "experiment": {
+        "method": "POST",
+        "path": "/orders/1/pay",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "customer_id": 1,
+        "status": "paid",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/orders/1"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/reserve"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/pay"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/ship"
+          }
+        ]
+      },
+      "elapsed_ms": 1.3407499645836651,
+      "category": "http"
+    },
+    {
+      "id": "exp_4043a24cbf2a25f68c42903b",
+      "experiment": {
+        "method": "POST",
+        "path": "/orders/1/ship",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 409,
+      "body": {
+        "id": 1,
+        "status": "paid",
+        "errors": [
+          {
+            "code": "state"
+          }
+        ],
+        "links": [
+          {
+            "method": "POST",
+            "href": "/shipments"
+          }
+        ]
+      },
+      "elapsed_ms": 1.2859170092269778,
+      "category": "http"
+    },
+    {
+      "id": "exp_ffd21fded104929b6cdec9ad",
+      "experiment": {
+        "method": "GET",
+        "path": "/items/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "order_id": 1,
+        "product_id": 1,
+        "quantity": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/items/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.2433750089257956,
+      "category": "http"
+    },
+    {
+      "id": "exp_ef1e43972a5275097cbcee77",
+      "experiment": {
+        "method": "GET",
+        "path": "/inventory/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "product_id": 1,
+        "quantity": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/inventory/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.227458007633686,
+      "category": "http"
+    },
+    {
+      "id": "exp_32112236a7b6f6d8cb6d463a",
+      "experiment": {
+        "method": "GET",
+        "path": "/payments/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "order_id": 1,
+        "amount": 0.0,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/payments/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.1778749758377671,
+      "category": "http"
+    },
+    {
+      "id": "exp_6fac042aeb68ace0f8d413cf",
+      "experiment": {
+        "method": "POST",
+        "path": "/shipments",
+        "body": {
+          "order_id": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_3ac1330b7eb971ae3d5fb286",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 37,
+        "retries": 1
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "order_id": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/shipments/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.31929200142622,
+      "category": "http"
+    },
+    {
+      "id": "exp_4f5864cdcef8f085c1c52588",
+      "experiment": {
+        "method": "POST",
+        "path": "/shipments",
+        "body": {},
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_6fac042aeb68ace0f8d413cf",
+        "omitted": "order_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "order_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.2428329791873693,
+      "category": "http"
+    },
+    {
+      "id": "exp_f88786853f3ead33d5e6d457",
+      "experiment": {
+        "method": "GET",
+        "path": "/shipments/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "order_id": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/shipments/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.3797080027870834,
+      "category": "http"
+    },
+    {
+      "id": "exp_740fd5a19baa34002ecd9372",
+      "experiment": {
+        "method": "POST",
+        "path": "/orders/1/ship",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_6fac042aeb68ace0f8d413cf",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 43,
+        "retries": 1
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "customer_id": 1,
+        "status": "shipped",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/orders/1"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/reserve"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/pay"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/ship"
+          }
+        ]
+      },
+      "elapsed_ms": 1.1865829583257437,
+      "category": "http"
+    },
+    {
+      "id": "exp_2912b0ed3ff474af1e006838",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/customers",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/customers"
+          },
+          {
+            "method": "POST",
+            "href": "/customers"
+          }
+        ]
+      },
+      "elapsed_ms": 1.230333000421524,
+      "category": "http"
+    },
+    {
+      "id": "exp_ac734744fdddb4e320536370",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/products",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/products"
+          },
+          {
+            "method": "POST",
+            "href": "/products"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8496670052409172,
+      "category": "http"
+    },
+    {
+      "id": "exp_15c1659ddd3e66b4a8c3dc4a",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/orders",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/orders"
+          },
+          {
+            "method": "POST",
+            "href": "/orders"
+          }
+        ]
+      },
+      "elapsed_ms": 1.3692500069737434,
+      "category": "http"
+    },
+    {
+      "id": "exp_107e3fb3f2e6263e0ae1130e",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/items",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/items"
+          },
+          {
+            "method": "POST",
+            "href": "/items"
+          }
+        ]
+      },
+      "elapsed_ms": 1.421041029971093,
+      "category": "http"
+    },
+    {
+      "id": "exp_b58b866be1a8cb840f8a401e",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/inventory",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/inventory"
+          },
+          {
+            "method": "POST",
+            "href": "/inventory"
+          }
+        ]
+      },
+      "elapsed_ms": 1.1862919782288373,
+      "category": "http"
+    },
+    {
+      "id": "exp_52a766c1d18af7ad7b8f46d8",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/payments",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/payments"
+          },
+          {
+            "method": "POST",
+            "href": "/payments"
+          }
+        ]
+      },
+      "elapsed_ms": 1.253875030670315,
+      "category": "http"
+    },
+    {
+      "id": "exp_fe8800754a39052e53de9318",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/shipments",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/shipments"
+          },
+          {
+            "method": "POST",
+            "href": "/shipments"
+          }
+        ]
+      },
+      "elapsed_ms": 1.1357089970260859,
+      "category": "http"
+    },
+    {
+      "id": "exp_0d821026aa3131013e923f00",
+      "experiment": {
+        "method": "GET",
+        "path": "/orders/1",
+        "body": null,
+        "hypothesis": "Check resource state after failed mutation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 39,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "customer_id": 1,
+        "status": "shipped",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/orders/1"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/reserve"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/pay"
+          },
+          {
+            "method": "POST",
+            "href": "/orders/1/ship"
+          }
+        ]
+      },
+      "elapsed_ms": 1.1791670112870634,
+      "category": "http"
+    },
+    {
+      "id": "exp_db3770c19cb93c5b32776655",
+      "experiment": {
+        "method": "POST",
+        "path": "/customers",
+        "body": {
+          "name": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_5855e2521f44878b186ad96d",
+        "omitted": null,
+        "perturbed": "name",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "type",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.2305830023251474,
+      "category": "http"
+    },
+    {
+      "id": "exp_0d19e4abb7c692e3cdf8a24c",
+      "experiment": {
+        "method": "POST",
+        "path": "/products",
+        "body": {
+          "name": [],
+          "quantity": 1
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_bb4f6e689fa40821c5c566f3",
+        "omitted": null,
+        "perturbed": "name",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "type",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9910419466905296,
+      "category": "http"
+    },
+    {
+      "id": "exp_230aea96f22370c2c4ea596d",
+      "experiment": {
+        "method": "POST",
+        "path": "/products",
+        "body": {
+          "name": "probe",
+          "quantity": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_bb4f6e689fa40821c5c566f3",
+        "omitted": null,
+        "perturbed": "quantity",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9247499983757734,
+      "category": "http"
+    },
+    {
+      "id": "exp_1f756160db30932cd50811f5",
+      "experiment": {
+        "method": "POST",
+        "path": "/orders",
+        "body": {
+          "customer_id": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_7168639d1d60da52ac48a384",
+        "omitted": null,
+        "perturbed": "customer_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "customer_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8202079916372895,
+      "category": "http"
+    },
+    {
+      "id": "exp_5f149563692adee0cb73259c",
+      "experiment": {
+        "method": "POST",
+        "path": "/items",
+        "body": {
+          "order_id": [],
+          "product_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_586144d4493e8498dc3ef2e1",
+        "omitted": null,
+        "perturbed": "order_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "order_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9289580048061907,
+      "category": "http"
+    },
+    {
+      "id": "exp_ac12cbd97103e06acb27a5c6",
+      "experiment": {
+        "method": "POST",
+        "path": "/items",
+        "body": {
+          "order_id": 1,
+          "product_id": [],
+          "quantity": 1
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_586144d4493e8498dc3ef2e1",
+        "omitted": null,
+        "perturbed": "product_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "product_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.046833989676088,
+      "category": "http"
+    },
+    {
+      "id": "exp_8e32b1fa39d504c81977217a",
+      "experiment": {
+        "method": "POST",
+        "path": "/items",
+        "body": {
+          "order_id": 1,
+          "product_id": 1,
+          "quantity": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_586144d4493e8498dc3ef2e1",
+        "omitted": null,
+        "perturbed": "quantity",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.119874999858439,
+      "category": "http"
+    },
+    {
+      "id": "exp_cf8c8d6bc66e9eab9785ab1a",
+      "experiment": {
+        "method": "POST",
+        "path": "/inventory",
+        "body": {
+          "product_id": [],
+          "quantity": 1
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_2c25a56b150bcca26a6719f5",
+        "omitted": null,
+        "perturbed": "product_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "product_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.047083002049476,
+      "category": "http"
+    },
+    {
+      "id": "exp_7cffb752a206a863ea02b28d",
+      "experiment": {
+        "method": "POST",
+        "path": "/inventory",
+        "body": {
+          "product_id": 1,
+          "quantity": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_2c25a56b150bcca26a6719f5",
+        "omitted": null,
+        "perturbed": "quantity",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.0147499851882458,
+      "category": "http"
+    },
+    {
+      "id": "exp_50d045b394fba64c3845064b",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "order_id": [],
+          "amount": 1.0
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_7365567d3915cae9bea19d46",
+        "omitted": null,
+        "perturbed": "order_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "order_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7740409928373992,
+      "category": "http"
+    },
+    {
+      "id": "exp_3930e25178e6dd0961d4efc1",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "order_id": 1,
+          "amount": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_7365567d3915cae9bea19d46",
+        "omitted": null,
+        "perturbed": "amount",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "amount",
+            "code": "type",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9394169901497662,
+      "category": "http"
+    },
+    {
+      "id": "exp_cbb942c0c44c7ba72b6861a5",
+      "experiment": {
+        "method": "POST",
+        "path": "/shipments",
+        "body": {
+          "order_id": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_6fac042aeb68ace0f8d413cf",
+        "omitted": null,
+        "perturbed": "order_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "order_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7642499986104667,
+      "category": "http"
+    }
+  ],
+  "seen": [
+    "exp_02caf7e3b8c0e3d0b411b481",
+    "exp_0d19e4abb7c692e3cdf8a24c",
+    "exp_0d821026aa3131013e923f00",
+    "exp_107e3fb3f2e6263e0ae1130e",
+    "exp_15c1659ddd3e66b4a8c3dc4a",
+    "exp_1c28b59770b1a62625e91d30",
+    "exp_1f756160db30932cd50811f5",
+    "exp_21e14b576f55506fa5e8c388",
+    "exp_230aea96f22370c2c4ea596d",
+    "exp_268450d6c8bc687ad2c37e34",
+    "exp_2788e1c8e95fc4c979232a0d",
+    "exp_2912b0ed3ff474af1e006838",
+    "exp_2c25a56b150bcca26a6719f5",
+    "exp_32112236a7b6f6d8cb6d463a",
+    "exp_356a3cec6ad12e1bf063f76a",
+    "exp_37e09d290538197186c76f26",
+    "exp_3930e25178e6dd0961d4efc1",
+    "exp_3ac1330b7eb971ae3d5fb286",
+    "exp_4043a24cbf2a25f68c42903b",
+    "exp_42dcffcec8dea68e4cfc7d1a",
+    "exp_45cde40da4f7dbd6eb3d8128",
+    "exp_48a16304ad49fa0aa83b5fe2",
+    "exp_4f5864cdcef8f085c1c52588",
+    "exp_50d045b394fba64c3845064b",
+    "exp_52a766c1d18af7ad7b8f46d8",
+    "exp_5855e2521f44878b186ad96d",
+    "exp_586144d4493e8498dc3ef2e1",
+    "exp_5896d3d0ddfc691295e6ae9d",
+    "exp_59bb0c3391bb1a26ff77725a",
+    "exp_5b4686f8359efed07f7f2238",
+    "exp_5f149563692adee0cb73259c",
+    "exp_6fac042aeb68ace0f8d413cf",
+    "exp_7168639d1d60da52ac48a384",
+    "exp_71a1cccfe0b888bc53ab4a33",
+    "exp_7365567d3915cae9bea19d46",
+    "exp_740fd5a19baa34002ecd9372",
+    "exp_7cffb752a206a863ea02b28d",
+    "exp_8946d32b4f9f12c208fe9110",
+    "exp_89a48a278bf733c1fc1b8e9e",
+    "exp_8e32b1fa39d504c81977217a",
+    "exp_8f0bb654596998c5d2b99625",
+    "exp_9191b0100c2b49aa2ed90ebd",
+    "exp_9a3cdc81849be710d944a8da",
+    "exp_9bd5d0cea3d977e4b5599157",
+    "exp_a55627f00fd0ce5c26875bf4",
+    "exp_a8b026bb48bc27c776f31f2e",
+    "exp_ac12cbd97103e06acb27a5c6",
+    "exp_ac734744fdddb4e320536370",
+    "exp_b58b866be1a8cb840f8a401e",
+    "exp_bb4f6e689fa40821c5c566f3",
+    "exp_bd304e6cf2d9dde0beea389a",
+    "exp_cbb942c0c44c7ba72b6861a5",
+    "exp_cf8c8d6bc66e9eab9785ab1a",
+    "exp_d3cd45a6dad3f97ab7779caa",
+    "exp_da71e2ba98cd41a0ba166073",
+    "exp_db3770c19cb93c5b32776655",
+    "exp_de3c7ca8faa0061ec2cf8a9b",
+    "exp_e064bf2e51927e021125f8ba",
+    "exp_ed2244ceab1c4f9a0cd86e3c",
+    "exp_ef1e43972a5275097cbcee77",
+    "exp_f3a5f93980f8603a9335daf6",
+    "exp_f6141bd58049ecdabf8625dc",
+    "exp_f88786853f3ead33d5e6d457",
+    "exp_f8a8d004e39481e6072160c7",
+    "exp_fe8800754a39052e53de9318",
+    "exp_ffd21fded104929b6cdec9ad"
+  ],
+  "operations": {
+    "GET /": {
+      "method": "GET",
+      "path": "/",
+      "evidence": [
+        "exp_42dcffcec8dea68e4cfc7d1a"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /customers": {
+      "method": "GET",
+      "path": "/customers",
+      "evidence": [
+        "exp_ed2244ceab1c4f9a0cd86e3c"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /customers": {
+      "method": "POST",
+      "path": "/customers",
+      "evidence": [
+        "exp_5855e2521f44878b186ad96d"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "name": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_5855e2521f44878b186ad96d",
+            "exp_f8a8d004e39481e6072160c7",
+            "exp_db3770c19cb93c5b32776655"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /products": {
+      "method": "GET",
+      "path": "/products",
+      "evidence": [
+        "exp_f6141bd58049ecdabf8625dc"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /products": {
+      "method": "POST",
+      "path": "/products",
+      "evidence": [
+        "exp_bb4f6e689fa40821c5c566f3"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "name",
+          "quantity"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "quantity",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "name": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_bb4f6e689fa40821c5c566f3",
+            "exp_356a3cec6ad12e1bf063f76a",
+            "exp_0d19e4abb7c692e3cdf8a24c"
+          ],
+          "conflict": false
+        },
+        "quantity": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_bb4f6e689fa40821c5c566f3",
+            "exp_a8b026bb48bc27c776f31f2e",
+            "exp_230aea96f22370c2c4ea596d"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /orders": {
+      "method": "GET",
+      "path": "/orders",
+      "evidence": [
+        "exp_de3c7ca8faa0061ec2cf8a9b"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /orders": {
+      "method": "POST",
+      "path": "/orders",
+      "evidence": [
+        "exp_7168639d1d60da52ac48a384"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "customer_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "customer_id"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "customer_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "customer_id",
+            "id",
+            "links",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "customer_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_7168639d1d60da52ac48a384",
+            "exp_02caf7e3b8c0e3d0b411b481",
+            "exp_1f756160db30932cd50811f5"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /items": {
+      "method": "GET",
+      "path": "/items",
+      "evidence": [
+        "exp_8f0bb654596998c5d2b99625"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /items": {
+      "method": "POST",
+      "path": "/items",
+      "evidence": [
+        "exp_586144d4493e8498dc3ef2e1"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "integer"
+          },
+          "product_id": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "order_id",
+          "product_id",
+          "quantity"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "order_id": {
+              "type": "integer"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "order_id",
+            "product_id",
+            "quantity",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "order_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_586144d4493e8498dc3ef2e1",
+            "exp_71a1cccfe0b888bc53ab4a33",
+            "exp_5f149563692adee0cb73259c"
+          ],
+          "conflict": false
+        },
+        "product_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_586144d4493e8498dc3ef2e1",
+            "exp_bd304e6cf2d9dde0beea389a",
+            "exp_ac12cbd97103e06acb27a5c6"
+          ],
+          "conflict": false
+        },
+        "quantity": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_586144d4493e8498dc3ef2e1",
+            "exp_5b4686f8359efed07f7f2238",
+            "exp_8e32b1fa39d504c81977217a"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /inventory": {
+      "method": "GET",
+      "path": "/inventory",
+      "evidence": [
+        "exp_2788e1c8e95fc4c979232a0d"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /inventory": {
+      "method": "POST",
+      "path": "/inventory",
+      "evidence": [
+        "exp_2c25a56b150bcca26a6719f5"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "product_id",
+          "quantity"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "product_id",
+            "quantity",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "product_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_2c25a56b150bcca26a6719f5",
+            "exp_9a3cdc81849be710d944a8da",
+            "exp_cf8c8d6bc66e9eab9785ab1a"
+          ],
+          "conflict": false
+        },
+        "quantity": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_2c25a56b150bcca26a6719f5",
+            "exp_48a16304ad49fa0aa83b5fe2",
+            "exp_7cffb752a206a863ea02b28d"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /payments": {
+      "method": "GET",
+      "path": "/payments",
+      "evidence": [
+        "exp_45cde40da4f7dbd6eb3d8128"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /payments": {
+      "method": "POST",
+      "path": "/payments",
+      "evidence": [
+        "exp_7365567d3915cae9bea19d46"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "integer"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "amount",
+          "order_id"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "order_id": {
+              "type": "integer"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "amount",
+            "id",
+            "links",
+            "order_id",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "order_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_7365567d3915cae9bea19d46",
+            "exp_8946d32b4f9f12c208fe9110",
+            "exp_50d045b394fba64c3845064b"
+          ],
+          "conflict": false
+        },
+        "amount": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_7365567d3915cae9bea19d46",
+            "exp_da71e2ba98cd41a0ba166073",
+            "exp_3930e25178e6dd0961d4efc1"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /shipments": {
+      "method": "GET",
+      "path": "/shipments",
+      "evidence": [
+        "exp_5896d3d0ddfc691295e6ae9d"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /customers/{id}": {
+      "method": "GET",
+      "path": "/customers/{id}",
+      "evidence": [
+        "exp_a55627f00fd0ce5c26875bf4"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /products/{id}": {
+      "method": "GET",
+      "path": "/products/{id}",
+      "evidence": [
+        "exp_268450d6c8bc687ad2c37e34"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "quantity",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /orders/{id}": {
+      "method": "GET",
+      "path": "/orders/{id}",
+      "evidence": [
+        "exp_f3a5f93980f8603a9335daf6",
+        "exp_0d821026aa3131013e923f00"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "customer_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "customer_id",
+            "id",
+            "links",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /orders/{id}/reserve": {
+      "method": "POST",
+      "path": "/orders/{id}/reserve",
+      "evidence": [
+        "exp_3ac1330b7eb971ae3d5fb286"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "customer_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "customer_id",
+            "id",
+            "links",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /orders/{id}/pay": {
+      "method": "POST",
+      "path": "/orders/{id}/pay",
+      "evidence": [
+        "exp_9191b0100c2b49aa2ed90ebd"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "customer_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "customer_id",
+            "id",
+            "links",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /items/{id}": {
+      "method": "GET",
+      "path": "/items/{id}",
+      "evidence": [
+        "exp_ffd21fded104929b6cdec9ad"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "order_id": {
+              "type": "integer"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "order_id",
+            "product_id",
+            "quantity",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /inventory/{id}": {
+      "method": "GET",
+      "path": "/inventory/{id}",
+      "evidence": [
+        "exp_ef1e43972a5275097cbcee77"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "product_id",
+            "quantity",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /payments/{id}": {
+      "method": "GET",
+      "path": "/payments/{id}",
+      "evidence": [
+        "exp_32112236a7b6f6d8cb6d463a"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "order_id": {
+              "type": "integer"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "amount",
+            "id",
+            "links",
+            "order_id",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /shipments": {
+      "method": "POST",
+      "path": "/shipments",
+      "evidence": [
+        "exp_6fac042aeb68ace0f8d413cf"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "order_id"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "order_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "order_id",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "order_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_6fac042aeb68ace0f8d413cf",
+            "exp_4f5864cdcef8f085c1c52588",
+            "exp_cbb942c0c44c7ba72b6861a5"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /shipments/{id}": {
+      "method": "GET",
+      "path": "/shipments/{id}",
+      "evidence": [
+        "exp_f88786853f3ead33d5e6d457"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "order_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "order_id",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /orders/{id}/ship": {
+      "method": "POST",
+      "path": "/orders/{id}/ship",
+      "evidence": [
+        "exp_740fd5a19baa34002ecd9372"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "customer_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "customer_id",
+            "id",
+            "links",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /customers": {
+      "method": "OPTIONS",
+      "path": "/customers",
+      "evidence": [
+        "exp_2912b0ed3ff474af1e006838"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /products": {
+      "method": "OPTIONS",
+      "path": "/products",
+      "evidence": [
+        "exp_ac734744fdddb4e320536370"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /orders": {
+      "method": "OPTIONS",
+      "path": "/orders",
+      "evidence": [
+        "exp_15c1659ddd3e66b4a8c3dc4a"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /items": {
+      "method": "OPTIONS",
+      "path": "/items",
+      "evidence": [
+        "exp_107e3fb3f2e6263e0ae1130e"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /inventory": {
+      "method": "OPTIONS",
+      "path": "/inventory",
+      "evidence": [
+        "exp_b58b866be1a8cb840f8a401e"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /payments": {
+      "method": "OPTIONS",
+      "path": "/payments",
+      "evidence": [
+        "exp_52a766c1d18af7ad7b8f46d8"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /shipments": {
+      "method": "OPTIONS",
+      "path": "/shipments",
+      "evidence": [
+        "exp_fe8800754a39052e53de9318"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    }
+  },
+  "resources": {
+    "customers": [
+      1
+    ],
+    "products": [
+      1
+    ],
+    "orders": [
+      1
+    ],
+    "items": [
+      1
+    ],
+    "inventory": [
+      1
+    ],
+    "payments": [
+      1
+    ],
+    "shipments": [
+      1
+    ]
+  },
+  "transitions": [
+    {
+      "operation": "POST /orders/{id}/reserve",
+      "from": "draft",
+      "to": "reserved",
+      "evidence": [
+        "exp_f3a5f93980f8603a9335daf6",
+        "exp_3ac1330b7eb971ae3d5fb286"
+      ],
+      "verified": true
+    },
+    {
+      "operation": "POST /orders/{id}/pay",
+      "from": "reserved",
+      "to": "paid",
+      "evidence": [
+        "exp_3ac1330b7eb971ae3d5fb286",
+        "exp_9191b0100c2b49aa2ed90ebd"
+      ],
+      "verified": true
+    },
+    {
+      "operation": "POST /orders/{id}/ship",
+      "from": "paid",
+      "to": "shipped",
+      "evidence": [
+        "exp_4043a24cbf2a25f68c42903b",
+        "exp_740fd5a19baa34002ecd9372"
+      ],
+      "verified": true
+    }
+  ],
+  "model_usage": {
+    "calls": 3,
+    "tokens": 1940,
+    "failures": 0,
+    "latency_ms": 2925.678291998338,
+    "budget_tokens": 6144,
+    "unmeasured_calls": 0,
+    "provider": "ollama",
+    "model": "qwen2.5:7b",
+    "input_tokens": 1914,
+    "output_tokens": 26,
+    "parsed_selections": 3
+  },
+  "relationships": [],
+  "rejected": [
+    {
+      "experiment": "exp_d3cd45a6dad3f97ab7779caa",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_f8a8d004e39481e6072160c7",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_1c28b59770b1a62625e91d30",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_356a3cec6ad12e1bf063f76a",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_a8b026bb48bc27c776f31f2e",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_9bd5d0cea3d977e4b5599157",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_02caf7e3b8c0e3d0b411b481",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_37e09d290538197186c76f26",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_71a1cccfe0b888bc53ab4a33",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_bd304e6cf2d9dde0beea389a",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_5b4686f8359efed07f7f2238",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_89a48a278bf733c1fc1b8e9e",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_9a3cdc81849be710d944a8da",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_48a16304ad49fa0aa83b5fe2",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_e064bf2e51927e021125f8ba",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_8946d32b4f9f12c208fe9110",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_da71e2ba98cd41a0ba166073",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_21e14b576f55506fa5e8c388",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_59bb0c3391bb1a26ff77725a",
+      "status": 409,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_4043a24cbf2a25f68c42903b",
+      "status": 409,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_4f5864cdcef8f085c1c52588",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_db3770c19cb93c5b32776655",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_0d19e4abb7c692e3cdf8a24c",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_230aea96f22370c2c4ea596d",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_1f756160db30932cd50811f5",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_5f149563692adee0cb73259c",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_ac12cbd97103e06acb27a5c6",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_8e32b1fa39d504c81977217a",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_cf8c8d6bc66e9eab9785ab1a",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_7cffb752a206a863ea02b28d",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_50d045b394fba64c3845064b",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_3930e25178e6dd0961d4efc1",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_cbb942c0c44c7ba72b6861a5",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    }
+  ],
+  "status": "complete",
+  "strategy": "llm",
+  "random_seed": 44
+}

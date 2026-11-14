@@ -1,0 +1,18 @@
+{
+  "provider": "ollama",
+  "model": "qwen2.5:7b",
+  "parsed_index": 0,
+  "usage": {
+    "calls": 1,
+    "tokens": 84,
+    "failures": 0,
+    "latency_ms": 5420.44908402022,
+    "budget_tokens": 2048,
+    "unmeasured_calls": 0,
+    "input_tokens": 74,
+    "output_tokens": 10,
+    "parsed_selections": 1
+  },
+  "provider_api_cost_usd": 0,
+  "hardware_electricity_cost_usd": null
+}

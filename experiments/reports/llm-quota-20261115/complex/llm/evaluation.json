@@ -1,0 +1,36 @@
+{
+  "session_id": "4fab41c5-777f-4ee3-adae-71c1f1686459",
+  "strategy": "llm",
+  "discovered_operations": 9,
+  "correct_operations": 9,
+  "ground_truth_operations": 15,
+  "endpoint_precision": 1.0,
+  "endpoint_recall": 0.6,
+  "request_field_type_accuracy": 1.0,
+  "required_field_accuracy": 1.0,
+  "response_schema_accuracy": 0.7866666666666666,
+  "response_schema_type_claims": 75,
+  "state_transition_coverage": 0.0,
+  "requests": 19,
+  "valid_request_rate": 0.47368421052631576,
+  "requests_per_correct_operation": 2.111111111111111,
+  "unsupported_operations": 0,
+  "model_usage": {
+    "calls": 3,
+    "tokens": 0,
+    "failures": 3,
+    "latency_ms": 18374.695541977417,
+    "budget_tokens": 6144,
+    "unmeasured_calls": 3,
+    "failure_categories": {
+      "insufficient_quota": 3
+    }
+  },
+  "estimated_llm_cost": null,
+  "sdk_test_pass_rate": 1.0,
+  "limitations": [
+    "Schema scoring covers discovered request fields only",
+    "Response scoring compares structural types on discovered operations, not values or requiredness",
+    "No estimated provider cost without configured pricing"
+  ]
+}

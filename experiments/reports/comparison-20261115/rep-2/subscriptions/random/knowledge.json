@@ -1,0 +1,3673 @@
+{
+  "session_id": "ab0e1e77-7a9e-455d-abdc-36a0d371e93a",
+  "pending": [],
+  "blocked": [],
+  "observations": [
+    {
+      "id": "exp_42dcffcec8dea68e4cfc7d1a",
+      "experiment": {
+        "method": "GET",
+        "path": "/",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/accounts"
+          },
+          {
+            "method": "POST",
+            "href": "/accounts"
+          },
+          {
+            "method": "GET",
+            "href": "/plans"
+          },
+          {
+            "method": "POST",
+            "href": "/plans"
+          },
+          {
+            "method": "GET",
+            "href": "/subscriptions"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions"
+          },
+          {
+            "method": "GET",
+            "href": "/invoices"
+          },
+          {
+            "method": "POST",
+            "href": "/invoices"
+          },
+          {
+            "method": "GET",
+            "href": "/payments"
+          },
+          {
+            "method": "POST",
+            "href": "/payments"
+          }
+        ]
+      },
+      "elapsed_ms": 1.0991250164806843,
+      "category": "http"
+    },
+    {
+      "id": "exp_13d4fee6d4212e30f629f19d",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/plans",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/plans"
+          },
+          {
+            "method": "POST",
+            "href": "/plans"
+          }
+        ]
+      },
+      "elapsed_ms": 0.6930839736014605,
+      "category": "http"
+    },
+    {
+      "id": "exp_6d96e8dd68ad274bc027da16",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/accounts",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/accounts"
+          },
+          {
+            "method": "POST",
+            "href": "/accounts"
+          }
+        ]
+      },
+      "elapsed_ms": 0.6218749913387001,
+      "category": "http"
+    },
+    {
+      "id": "exp_1f9f8334f5b639114528d932",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/subscriptions",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/subscriptions"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8017499931156635,
+      "category": "http"
+    },
+    {
+      "id": "exp_797405a3397c346551bf20a2",
+      "experiment": {
+        "method": "POST",
+        "path": "/invoices",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "subscription_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "amount",
+            "code": "required",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9460829896852374,
+      "category": "http"
+    },
+    {
+      "id": "exp_345ac2025063dc60657e2f68",
+      "experiment": {
+        "method": "POST",
+        "path": "/accounts",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8091250201687217,
+      "category": "http"
+    },
+    {
+      "id": "exp_45cde40da4f7dbd6eb3d8128",
+      "experiment": {
+        "method": "GET",
+        "path": "/payments",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/payments"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9143750066868961,
+      "category": "http"
+    },
+    {
+      "id": "exp_9fd3e183c16f62e8b6f5827f",
+      "experiment": {
+        "method": "GET",
+        "path": "/subscriptions",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/subscriptions"
+          }
+        ]
+      },
+      "elapsed_ms": 1.0518329800106585,
+      "category": "http"
+    },
+    {
+      "id": "exp_890cb580a12f371250bbfaf9",
+      "experiment": {
+        "method": "GET",
+        "path": "/invoices",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/invoices"
+          }
+        ]
+      },
+      "elapsed_ms": 1.2394579825922847,
+      "category": "http"
+    },
+    {
+      "id": "exp_052f805f568fbffecb037398",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "account_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "plan_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.2333749909885228,
+      "category": "http"
+    },
+    {
+      "id": "exp_35540441371076b6ba46a454",
+      "experiment": {
+        "method": "POST",
+        "path": "/plans",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          },
+          {
+            "field": "amount",
+            "code": "required",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.129375013988465,
+      "category": "http"
+    },
+    {
+      "id": "exp_f564a8fe22ca837801eee50d",
+      "experiment": {
+        "method": "GET",
+        "path": "/plans",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/plans"
+          }
+        ]
+      },
+      "elapsed_ms": 1.0161669924855232,
+      "category": "http"
+    },
+    {
+      "id": "exp_3fe3b9aac69f03e81438a9a6",
+      "experiment": {
+        "method": "GET",
+        "path": "/accounts",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/accounts"
+          }
+        ]
+      },
+      "elapsed_ms": 1.0483749792911112,
+      "category": "http"
+    },
+    {
+      "id": "exp_7bab046116b706d53ada0343",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/invoices",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/invoices"
+          },
+          {
+            "method": "POST",
+            "href": "/invoices"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9707920253276825,
+      "category": "http"
+    },
+    {
+      "id": "exp_92cacd4acd980c46d29e0656",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions",
+        "body": {
+          "account_id": 1,
+          "plan_id": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_052f805f568fbffecb037398",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "account_id",
+            "code": "reference",
+            "resource": "accounts",
+            "type": "integer"
+          },
+          {
+            "field": "plan_id",
+            "code": "reference",
+            "resource": "plans",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/accounts"
+          },
+          {
+            "method": "GET",
+            "href": "/plans"
+          }
+        ]
+      },
+      "elapsed_ms": 1.1559579870663583,
+      "category": "http"
+    },
+    {
+      "id": "exp_e064bf2e51927e021125f8ba",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "invoice_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "amount",
+            "code": "required",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7798339938744903,
+      "category": "http"
+    },
+    {
+      "id": "exp_27bca1e1cb2478d8122ce376",
+      "experiment": {
+        "method": "POST",
+        "path": "/accounts",
+        "body": {
+          "name": "probe"
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_345ac2025063dc60657e2f68",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/accounts/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8749589906074107,
+      "category": "http"
+    },
+    {
+      "id": "exp_e2f08aa923abd4cf4ff5f630",
+      "experiment": {
+        "method": "POST",
+        "path": "/accounts",
+        "body": {},
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_27bca1e1cb2478d8122ce376",
+        "omitted": "name",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7540839724242687,
+      "category": "http"
+    },
+    {
+      "id": "exp_6ed146ad641125f8e237c642",
+      "experiment": {
+        "method": "GET",
+        "path": "/accounts/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/accounts/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.914249976631254,
+      "category": "http"
+    },
+    {
+      "id": "exp_396ff68c9ee16bb1ae3018c0",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "invoice_id": 1,
+          "amount": 1.0
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_e064bf2e51927e021125f8ba",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "invoice_id",
+            "code": "reference",
+            "resource": "invoices",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/invoices"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8587079937569797,
+      "category": "http"
+    },
+    {
+      "id": "exp_93072f2a29ed20839e0ffcf3",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions",
+        "body": {
+          "account_id": 1,
+          "plan_id": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_27bca1e1cb2478d8122ce376",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 17,
+        "retries": 1
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "plan_id",
+            "code": "reference",
+            "resource": "plans",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/plans"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8814590401016176,
+      "category": "http"
+    },
+    {
+      "id": "exp_a44078c03b5d6a154c5ecff3",
+      "experiment": {
+        "method": "POST",
+        "path": "/accounts",
+        "body": {
+          "name": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_27bca1e1cb2478d8122ce376",
+        "omitted": null,
+        "perturbed": "name",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "type",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.013832981698215,
+      "category": "http"
+    },
+    {
+      "id": "exp_52a766c1d18af7ad7b8f46d8",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/payments",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/payments"
+          },
+          {
+            "method": "POST",
+            "href": "/payments"
+          }
+        ]
+      },
+      "elapsed_ms": 1.1491249897517264,
+      "category": "http"
+    },
+    {
+      "id": "exp_326fa567feeaed24e02dcda9",
+      "experiment": {
+        "method": "POST",
+        "path": "/invoices",
+        "body": {
+          "subscription_id": 1,
+          "amount": 1.0
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_797405a3397c346551bf20a2",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "subscription_id",
+            "code": "reference",
+            "resource": "subscriptions",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/subscriptions"
+          }
+        ]
+      },
+      "elapsed_ms": 1.2395000085234642,
+      "category": "http"
+    },
+    {
+      "id": "exp_4913af6c8b932d6b83c820f0",
+      "experiment": {
+        "method": "POST",
+        "path": "/plans",
+        "body": {
+          "name": "probe",
+          "amount": 1.0
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_35540441371076b6ba46a454",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "amount": 0.0,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/plans/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.1247500078752637,
+      "category": "http"
+    },
+    {
+      "id": "exp_8be440da9ed92bdcf7774456",
+      "experiment": {
+        "method": "GET",
+        "path": "/plans/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "amount": 0.0,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/plans/1"
+          }
+        ]
+      },
+      "elapsed_ms": 2.278874977491796,
+      "category": "http"
+    },
+    {
+      "id": "exp_c1f762cf31debf30bf5a11db",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "invoice_id": 1,
+          "amount": 1.0
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_4913af6c8b932d6b83c820f0",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 25,
+        "retries": 1
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "invoice_id",
+            "code": "reference",
+            "resource": "invoices",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/invoices"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9861250291578472,
+      "category": "http"
+    },
+    {
+      "id": "exp_213dccb3a2c34fc69184106a",
+      "experiment": {
+        "method": "POST",
+        "path": "/plans",
+        "body": {
+          "name": [],
+          "amount": 1.0
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_4913af6c8b932d6b83c820f0",
+        "omitted": null,
+        "perturbed": "name",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "type",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.7530419863760471,
+      "category": "http"
+    },
+    {
+      "id": "exp_eef967e99ee2f4780c57e3dd",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions",
+        "body": {
+          "account_id": 1,
+          "plan_id": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_4913af6c8b932d6b83c820f0",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 25,
+        "retries": 2
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "account_id": 1,
+        "plan_id": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/subscriptions/1"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/activate"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/renew"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/cancel"
+          }
+        ]
+      },
+      "elapsed_ms": 1.1155829997733235,
+      "category": "http"
+    },
+    {
+      "id": "exp_438b7661d256561497739260",
+      "experiment": {
+        "method": "GET",
+        "path": "/subscriptions/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "account_id": 1,
+        "plan_id": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/subscriptions/1"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/activate"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/renew"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/cancel"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9501659660600126,
+      "category": "http"
+    },
+    {
+      "id": "exp_c2236b7bc21f166659a58193",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions",
+        "body": {
+          "plan_id": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_eef967e99ee2f4780c57e3dd",
+        "omitted": "account_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "account_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8163329912349582,
+      "category": "http"
+    },
+    {
+      "id": "exp_38516fcb8709be58586add96",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "invoice_id": 1,
+          "amount": 1.0
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_eef967e99ee2f4780c57e3dd",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 29,
+        "retries": 2
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "invoice_id",
+            "code": "reference",
+            "resource": "invoices",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/invoices"
+          }
+        ]
+      },
+      "elapsed_ms": 0.6549580139108002,
+      "category": "http"
+    },
+    {
+      "id": "exp_7d7a636539e7147b0c61e51f",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions/1/renew",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 409,
+      "body": {
+        "id": 1,
+        "status": "draft",
+        "errors": [
+          {
+            "code": "state"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/subscriptions/1"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/activate"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/renew"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/cancel"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8215419948101044,
+      "category": "http"
+    },
+    {
+      "id": "exp_1bd9ac29f37377e073eac7b2",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions/1/activate",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "account_id": 1,
+        "plan_id": 1,
+        "status": "active",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/subscriptions/1"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/activate"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/renew"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/cancel"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7312090019695461,
+      "category": "http"
+    },
+    {
+      "id": "exp_d61b3d506638c028dfbcf46d",
+      "experiment": {
+        "method": "POST",
+        "path": "/plans",
+        "body": {
+          "name": "probe"
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_4913af6c8b932d6b83c820f0",
+        "omitted": "amount",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "amount",
+            "code": "required",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.5964589654468,
+      "category": "http"
+    },
+    {
+      "id": "exp_21e44aa36435eb7a9c5a0692",
+      "experiment": {
+        "method": "POST",
+        "path": "/plans",
+        "body": {
+          "name": "probe",
+          "amount": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_4913af6c8b932d6b83c820f0",
+        "omitted": null,
+        "perturbed": "amount",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "amount",
+            "code": "type",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8165829931385815,
+      "category": "http"
+    },
+    {
+      "id": "exp_528bb2b956005a02fc2a79e9",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions",
+        "body": {
+          "account_id": 1,
+          "plan_id": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_eef967e99ee2f4780c57e3dd",
+        "omitted": null,
+        "perturbed": "plan_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "plan_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.6467080092988908,
+      "category": "http"
+    },
+    {
+      "id": "exp_d469222f57df0f24c981832d",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions/1/renew",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_1bd9ac29f37377e073eac7b2",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 34,
+        "retries": 1
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "account_id": 1,
+        "plan_id": 1,
+        "status": "active",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/subscriptions/1"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/activate"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/renew"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/cancel"
+          }
+        ]
+      },
+      "elapsed_ms": 0.5486659938469529,
+      "category": "http"
+    },
+    {
+      "id": "exp_5747fd678b610a91d5bda1d2",
+      "experiment": {
+        "method": "POST",
+        "path": "/plans",
+        "body": {
+          "amount": 1.0
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_4913af6c8b932d6b83c820f0",
+        "omitted": "name",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7542499806731939,
+      "category": "http"
+    },
+    {
+      "id": "exp_5ba5c75fb04f9a8fb6dc6df3",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions",
+        "body": {
+          "account_id": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_eef967e99ee2f4780c57e3dd",
+        "omitted": "plan_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "plan_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7504999521188438,
+      "category": "http"
+    },
+    {
+      "id": "exp_a5fb932e49bbab1276f5fd60",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions",
+        "body": {
+          "account_id": [],
+          "plan_id": 1
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_eef967e99ee2f4780c57e3dd",
+        "omitted": null,
+        "perturbed": "account_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "account_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.622917024884373,
+      "category": "http"
+    },
+    {
+      "id": "exp_223597882c4265df09284d22",
+      "experiment": {
+        "method": "POST",
+        "path": "/subscriptions/1/cancel",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "account_id": 1,
+        "plan_id": 1,
+        "status": "cancelled",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/subscriptions/1"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/activate"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/renew"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/cancel"
+          }
+        ]
+      },
+      "elapsed_ms": 0.628707988653332,
+      "category": "http"
+    },
+    {
+      "id": "exp_e18431f4c0d0710437faafc3",
+      "experiment": {
+        "method": "POST",
+        "path": "/invoices",
+        "body": {
+          "subscription_id": 1,
+          "amount": 1.0
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_4913af6c8b932d6b83c820f0",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 25,
+        "retries": 1
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "subscription_id": 1,
+        "amount": 0.0,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/invoices/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7017500465735793,
+      "category": "http"
+    },
+    {
+      "id": "exp_d4d608f7313883c039795d09",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "invoice_id": 1,
+          "amount": 1.0
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_1bd9ac29f37377e073eac7b2",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 34,
+        "retries": 3
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "invoice_id": 1,
+        "amount": 0.0,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/payments/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8521249983459711,
+      "category": "http"
+    },
+    {
+      "id": "exp_32112236a7b6f6d8cb6d463a",
+      "experiment": {
+        "method": "GET",
+        "path": "/payments/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "invoice_id": 1,
+        "amount": 0.0,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/payments/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8022920228540897,
+      "category": "http"
+    },
+    {
+      "id": "exp_343b88cf43aceaa8543b91e2",
+      "experiment": {
+        "method": "GET",
+        "path": "/invoices/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "subscription_id": 1,
+        "amount": 0.0,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/invoices/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8030000026337802,
+      "category": "http"
+    },
+    {
+      "id": "exp_0ab3e84e598e47af45c8c039",
+      "experiment": {
+        "method": "POST",
+        "path": "/invoices",
+        "body": {
+          "subscription_id": 1,
+          "amount": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_e18431f4c0d0710437faafc3",
+        "omitted": null,
+        "perturbed": "amount",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "amount",
+            "code": "type",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8276249864138663,
+      "category": "http"
+    },
+    {
+      "id": "exp_559046d79eba86b5db8fa86c",
+      "experiment": {
+        "method": "POST",
+        "path": "/invoices",
+        "body": {
+          "subscription_id": [],
+          "amount": 1.0
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_e18431f4c0d0710437faafc3",
+        "omitted": null,
+        "perturbed": "subscription_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "subscription_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.0392910335212946,
+      "category": "http"
+    },
+    {
+      "id": "exp_53c4436c246433361e124843",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "invoice_id": [],
+          "amount": 1.0
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_d4d608f7313883c039795d09",
+        "omitted": null,
+        "perturbed": "invoice_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "invoice_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9277090430259705,
+      "category": "http"
+    },
+    {
+      "id": "exp_7491f5cf16670c5bd94df551",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "amount": 1.0
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_d4d608f7313883c039795d09",
+        "omitted": "invoice_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "invoice_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.877083046361804,
+      "category": "http"
+    },
+    {
+      "id": "exp_f6620310bf2cc56df1a88575",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "invoice_id": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_d4d608f7313883c039795d09",
+        "omitted": "amount",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "amount",
+            "code": "required",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.6877079722471535,
+      "category": "http"
+    },
+    {
+      "id": "exp_516ac0b542a89800e8596618",
+      "experiment": {
+        "method": "POST",
+        "path": "/invoices",
+        "body": {
+          "amount": 1.0
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_e18431f4c0d0710437faafc3",
+        "omitted": "subscription_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "subscription_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.6570419645868242,
+      "category": "http"
+    },
+    {
+      "id": "exp_33494fea8b862fe0f7eb22a2",
+      "experiment": {
+        "method": "POST",
+        "path": "/invoices",
+        "body": {
+          "subscription_id": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_e18431f4c0d0710437faafc3",
+        "omitted": "amount",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "amount",
+            "code": "required",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.5745419766753912,
+      "category": "http"
+    },
+    {
+      "id": "exp_d97125353411cebaa8676c6e",
+      "experiment": {
+        "method": "GET",
+        "path": "/subscriptions/1",
+        "body": null,
+        "hypothesis": "Check resource state after failed mutation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 33,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "account_id": 1,
+        "plan_id": 1,
+        "status": "cancelled",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/subscriptions/1"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/activate"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/renew"
+          },
+          {
+            "method": "POST",
+            "href": "/subscriptions/1/cancel"
+          }
+        ]
+      },
+      "elapsed_ms": 0.6190419662743807,
+      "category": "http"
+    },
+    {
+      "id": "exp_342aa203116db3ebeb57064d",
+      "experiment": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {
+          "invoice_id": 1,
+          "amount": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_d4d608f7313883c039795d09",
+        "omitted": null,
+        "perturbed": "amount",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "amount",
+            "code": "type",
+            "type": "number"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.6250409642234445,
+      "category": "http"
+    }
+  ],
+  "seen": [
+    "exp_052f805f568fbffecb037398",
+    "exp_0ab3e84e598e47af45c8c039",
+    "exp_13d4fee6d4212e30f629f19d",
+    "exp_1bd9ac29f37377e073eac7b2",
+    "exp_1f9f8334f5b639114528d932",
+    "exp_213dccb3a2c34fc69184106a",
+    "exp_21e44aa36435eb7a9c5a0692",
+    "exp_223597882c4265df09284d22",
+    "exp_27bca1e1cb2478d8122ce376",
+    "exp_32112236a7b6f6d8cb6d463a",
+    "exp_326fa567feeaed24e02dcda9",
+    "exp_33494fea8b862fe0f7eb22a2",
+    "exp_342aa203116db3ebeb57064d",
+    "exp_343b88cf43aceaa8543b91e2",
+    "exp_345ac2025063dc60657e2f68",
+    "exp_35540441371076b6ba46a454",
+    "exp_38516fcb8709be58586add96",
+    "exp_396ff68c9ee16bb1ae3018c0",
+    "exp_3fe3b9aac69f03e81438a9a6",
+    "exp_42dcffcec8dea68e4cfc7d1a",
+    "exp_438b7661d256561497739260",
+    "exp_45cde40da4f7dbd6eb3d8128",
+    "exp_4913af6c8b932d6b83c820f0",
+    "exp_516ac0b542a89800e8596618",
+    "exp_528bb2b956005a02fc2a79e9",
+    "exp_52a766c1d18af7ad7b8f46d8",
+    "exp_53c4436c246433361e124843",
+    "exp_559046d79eba86b5db8fa86c",
+    "exp_5747fd678b610a91d5bda1d2",
+    "exp_5ba5c75fb04f9a8fb6dc6df3",
+    "exp_6d96e8dd68ad274bc027da16",
+    "exp_6ed146ad641125f8e237c642",
+    "exp_7491f5cf16670c5bd94df551",
+    "exp_797405a3397c346551bf20a2",
+    "exp_7bab046116b706d53ada0343",
+    "exp_7d7a636539e7147b0c61e51f",
+    "exp_890cb580a12f371250bbfaf9",
+    "exp_8be440da9ed92bdcf7774456",
+    "exp_92cacd4acd980c46d29e0656",
+    "exp_93072f2a29ed20839e0ffcf3",
+    "exp_9fd3e183c16f62e8b6f5827f",
+    "exp_a44078c03b5d6a154c5ecff3",
+    "exp_a5fb932e49bbab1276f5fd60",
+    "exp_c1f762cf31debf30bf5a11db",
+    "exp_c2236b7bc21f166659a58193",
+    "exp_d469222f57df0f24c981832d",
+    "exp_d4d608f7313883c039795d09",
+    "exp_d61b3d506638c028dfbcf46d",
+    "exp_d97125353411cebaa8676c6e",
+    "exp_e064bf2e51927e021125f8ba",
+    "exp_e18431f4c0d0710437faafc3",
+    "exp_e2f08aa923abd4cf4ff5f630",
+    "exp_eef967e99ee2f4780c57e3dd",
+    "exp_f564a8fe22ca837801eee50d",
+    "exp_f6620310bf2cc56df1a88575"
+  ],
+  "operations": {
+    "GET /": {
+      "method": "GET",
+      "path": "/",
+      "evidence": [
+        "exp_42dcffcec8dea68e4cfc7d1a"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /plans": {
+      "method": "OPTIONS",
+      "path": "/plans",
+      "evidence": [
+        "exp_13d4fee6d4212e30f629f19d"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /accounts": {
+      "method": "OPTIONS",
+      "path": "/accounts",
+      "evidence": [
+        "exp_6d96e8dd68ad274bc027da16"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /subscriptions": {
+      "method": "OPTIONS",
+      "path": "/subscriptions",
+      "evidence": [
+        "exp_1f9f8334f5b639114528d932"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /payments": {
+      "method": "GET",
+      "path": "/payments",
+      "evidence": [
+        "exp_45cde40da4f7dbd6eb3d8128"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /subscriptions": {
+      "method": "GET",
+      "path": "/subscriptions",
+      "evidence": [
+        "exp_9fd3e183c16f62e8b6f5827f"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /invoices": {
+      "method": "GET",
+      "path": "/invoices",
+      "evidence": [
+        "exp_890cb580a12f371250bbfaf9"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /plans": {
+      "method": "GET",
+      "path": "/plans",
+      "evidence": [
+        "exp_f564a8fe22ca837801eee50d"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /accounts": {
+      "method": "GET",
+      "path": "/accounts",
+      "evidence": [
+        "exp_3fe3b9aac69f03e81438a9a6"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /invoices": {
+      "method": "OPTIONS",
+      "path": "/invoices",
+      "evidence": [
+        "exp_7bab046116b706d53ada0343"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /accounts": {
+      "method": "POST",
+      "path": "/accounts",
+      "evidence": [
+        "exp_27bca1e1cb2478d8122ce376"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "name": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_27bca1e1cb2478d8122ce376",
+            "exp_e2f08aa923abd4cf4ff5f630",
+            "exp_a44078c03b5d6a154c5ecff3"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /accounts/{id}": {
+      "method": "GET",
+      "path": "/accounts/{id}",
+      "evidence": [
+        "exp_6ed146ad641125f8e237c642"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /payments": {
+      "method": "OPTIONS",
+      "path": "/payments",
+      "evidence": [
+        "exp_52a766c1d18af7ad7b8f46d8"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /plans": {
+      "method": "POST",
+      "path": "/plans",
+      "evidence": [
+        "exp_4913af6c8b932d6b83c820f0"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "amount",
+          "name"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "amount",
+            "id",
+            "links",
+            "name",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "name": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_4913af6c8b932d6b83c820f0",
+            "exp_213dccb3a2c34fc69184106a",
+            "exp_5747fd678b610a91d5bda1d2"
+          ],
+          "conflict": false
+        },
+        "amount": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_4913af6c8b932d6b83c820f0",
+            "exp_d61b3d506638c028dfbcf46d",
+            "exp_21e44aa36435eb7a9c5a0692"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /plans/{id}": {
+      "method": "GET",
+      "path": "/plans/{id}",
+      "evidence": [
+        "exp_8be440da9ed92bdcf7774456"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "amount",
+            "id",
+            "links",
+            "name",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /subscriptions": {
+      "method": "POST",
+      "path": "/subscriptions",
+      "evidence": [
+        "exp_eef967e99ee2f4780c57e3dd"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "account_id": {
+            "type": "integer"
+          },
+          "plan_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "account_id",
+          "plan_id"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "account_id": {
+              "type": "integer"
+            },
+            "plan_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "account_id",
+            "id",
+            "links",
+            "plan_id",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "account_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_eef967e99ee2f4780c57e3dd",
+            "exp_c2236b7bc21f166659a58193",
+            "exp_a5fb932e49bbab1276f5fd60"
+          ],
+          "conflict": false
+        },
+        "plan_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_eef967e99ee2f4780c57e3dd",
+            "exp_528bb2b956005a02fc2a79e9",
+            "exp_5ba5c75fb04f9a8fb6dc6df3"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /subscriptions/{id}": {
+      "method": "GET",
+      "path": "/subscriptions/{id}",
+      "evidence": [
+        "exp_438b7661d256561497739260",
+        "exp_d97125353411cebaa8676c6e"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "account_id": {
+              "type": "integer"
+            },
+            "plan_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "account_id",
+            "id",
+            "links",
+            "plan_id",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /subscriptions/{id}/activate": {
+      "method": "POST",
+      "path": "/subscriptions/{id}/activate",
+      "evidence": [
+        "exp_1bd9ac29f37377e073eac7b2"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "account_id": {
+              "type": "integer"
+            },
+            "plan_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "account_id",
+            "id",
+            "links",
+            "plan_id",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /subscriptions/{id}/renew": {
+      "method": "POST",
+      "path": "/subscriptions/{id}/renew",
+      "evidence": [
+        "exp_d469222f57df0f24c981832d"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "account_id": {
+              "type": "integer"
+            },
+            "plan_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "account_id",
+            "id",
+            "links",
+            "plan_id",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /subscriptions/{id}/cancel": {
+      "method": "POST",
+      "path": "/subscriptions/{id}/cancel",
+      "evidence": [
+        "exp_223597882c4265df09284d22"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "account_id": {
+              "type": "integer"
+            },
+            "plan_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "account_id",
+            "id",
+            "links",
+            "plan_id",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /invoices": {
+      "method": "POST",
+      "path": "/invoices",
+      "evidence": [
+        "exp_e18431f4c0d0710437faafc3"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "subscription_id": {
+            "type": "integer"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "amount",
+          "subscription_id"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "subscription_id": {
+              "type": "integer"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "amount",
+            "id",
+            "links",
+            "status",
+            "subscription_id"
+          ]
+        }
+      },
+      "fields": {
+        "subscription_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_e18431f4c0d0710437faafc3",
+            "exp_559046d79eba86b5db8fa86c",
+            "exp_516ac0b542a89800e8596618"
+          ],
+          "conflict": false
+        },
+        "amount": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_e18431f4c0d0710437faafc3",
+            "exp_0ab3e84e598e47af45c8c039",
+            "exp_33494fea8b862fe0f7eb22a2"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "POST /payments": {
+      "method": "POST",
+      "path": "/payments",
+      "evidence": [
+        "exp_d4d608f7313883c039795d09"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "invoice_id": {
+            "type": "integer"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "amount",
+          "invoice_id"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice_id": {
+              "type": "integer"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "amount",
+            "id",
+            "invoice_id",
+            "links",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "invoice_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_d4d608f7313883c039795d09",
+            "exp_53c4436c246433361e124843",
+            "exp_7491f5cf16670c5bd94df551"
+          ],
+          "conflict": false
+        },
+        "amount": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_d4d608f7313883c039795d09",
+            "exp_f6620310bf2cc56df1a88575",
+            "exp_342aa203116db3ebeb57064d"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /payments/{id}": {
+      "method": "GET",
+      "path": "/payments/{id}",
+      "evidence": [
+        "exp_32112236a7b6f6d8cb6d463a"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice_id": {
+              "type": "integer"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "amount",
+            "id",
+            "invoice_id",
+            "links",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /invoices/{id}": {
+      "method": "GET",
+      "path": "/invoices/{id}",
+      "evidence": [
+        "exp_343b88cf43aceaa8543b91e2"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "subscription_id": {
+              "type": "integer"
+            },
+            "amount": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "amount",
+            "id",
+            "links",
+            "status",
+            "subscription_id"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    }
+  },
+  "resources": {
+    "accounts": [
+      1
+    ],
+    "plans": [
+      1
+    ],
+    "subscriptions": [
+      1
+    ],
+    "invoices": [
+      1
+    ],
+    "payments": [
+      1
+    ]
+  },
+  "transitions": [
+    {
+      "operation": "POST /subscriptions/{id}/activate",
+      "from": "draft",
+      "to": "active",
+      "evidence": [
+        "exp_7d7a636539e7147b0c61e51f",
+        "exp_1bd9ac29f37377e073eac7b2"
+      ],
+      "verified": true
+    },
+    {
+      "operation": "POST /subscriptions/{id}/renew",
+      "from": "active",
+      "to": "active",
+      "evidence": [
+        "exp_1bd9ac29f37377e073eac7b2",
+        "exp_d469222f57df0f24c981832d"
+      ],
+      "verified": true
+    },
+    {
+      "operation": "POST /subscriptions/{id}/cancel",
+      "from": "active",
+      "to": "cancelled",
+      "evidence": [
+        "exp_d469222f57df0f24c981832d",
+        "exp_223597882c4265df09284d22"
+      ],
+      "verified": true
+    }
+  ],
+  "model_usage": {
+    "calls": 0,
+    "tokens": 0,
+    "failures": 0,
+    "latency_ms": 0.0,
+    "budget_tokens": 0,
+    "unmeasured_calls": 0
+  },
+  "relationships": [
+    {
+      "operation": "POST /subscriptions",
+      "field": "account_id",
+      "resource": "accounts",
+      "evidence": [
+        "exp_92cacd4acd980c46d29e0656",
+        "exp_eef967e99ee2f4780c57e3dd"
+      ],
+      "verified": true
+    },
+    {
+      "operation": "POST /subscriptions",
+      "field": "plan_id",
+      "resource": "plans",
+      "evidence": [
+        "exp_92cacd4acd980c46d29e0656",
+        "exp_eef967e99ee2f4780c57e3dd"
+      ],
+      "verified": true
+    },
+    {
+      "operation": "POST /payments",
+      "field": "invoice_id",
+      "resource": "invoices",
+      "evidence": [
+        "exp_396ff68c9ee16bb1ae3018c0",
+        "exp_d4d608f7313883c039795d09"
+      ],
+      "verified": true
+    },
+    {
+      "operation": "POST /invoices",
+      "field": "subscription_id",
+      "resource": "subscriptions",
+      "evidence": [
+        "exp_326fa567feeaed24e02dcda9",
+        "exp_e18431f4c0d0710437faafc3"
+      ],
+      "verified": true
+    }
+  ],
+  "rejected": [
+    {
+      "experiment": "exp_797405a3397c346551bf20a2",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_345ac2025063dc60657e2f68",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_052f805f568fbffecb037398",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_35540441371076b6ba46a454",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_92cacd4acd980c46d29e0656",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_e064bf2e51927e021125f8ba",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_e2f08aa923abd4cf4ff5f630",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_396ff68c9ee16bb1ae3018c0",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_93072f2a29ed20839e0ffcf3",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_a44078c03b5d6a154c5ecff3",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_326fa567feeaed24e02dcda9",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_c1f762cf31debf30bf5a11db",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_213dccb3a2c34fc69184106a",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_c2236b7bc21f166659a58193",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_38516fcb8709be58586add96",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_7d7a636539e7147b0c61e51f",
+      "status": 409,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_d61b3d506638c028dfbcf46d",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_21e44aa36435eb7a9c5a0692",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_528bb2b956005a02fc2a79e9",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_5747fd678b610a91d5bda1d2",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_5ba5c75fb04f9a8fb6dc6df3",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_a5fb932e49bbab1276f5fd60",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_0ab3e84e598e47af45c8c039",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_559046d79eba86b5db8fa86c",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_53c4436c246433361e124843",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_7491f5cf16670c5bd94df551",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_f6620310bf2cc56df1a88575",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_516ac0b542a89800e8596618",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_33494fea8b862fe0f7eb22a2",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_342aa203116db3ebeb57064d",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    }
+  ],
+  "status": "complete",
+  "strategy": "random",
+  "random_seed": 44
+}

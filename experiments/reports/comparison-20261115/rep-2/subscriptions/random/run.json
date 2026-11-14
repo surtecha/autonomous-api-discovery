@@ -1,0 +1,7 @@
+{
+  "transport": "loopback_http",
+  "fresh_target": true,
+  "seed": 44,
+  "repetition": 2,
+  "elapsed_seconds": 6.949211874976754
+}

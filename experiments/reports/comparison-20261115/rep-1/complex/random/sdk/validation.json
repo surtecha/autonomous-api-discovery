@@ -1,0 +1,15 @@
+{
+  "source_ast": "passed",
+  "openapi_validation": "passed",
+  "sdk_tests": "passed",
+  "sdk_lint": "passed",
+  "sdk_types": "passed",
+  "sdk_packaging": "passed",
+  "execution": "requires_restricted_container",
+  "test_counts": {
+    "tests": 30,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

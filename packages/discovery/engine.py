@@ -38,7 +38,7 @@ def score(state: Knowledge, experiment: Experiment) -> float:
 
 def choose(state: Knowledge) -> Experiment:
     if state.strategy == "random":
-        index = random.Random(len(state.seen) + 42).randrange(len(state.pending))
+        index = random.Random(len(state.seen) + state.random_seed).randrange(len(state.pending))
     elif state.strategy == "fifo":
         index = 0
     else:

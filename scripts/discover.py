@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import uuid
 from pathlib import Path
 
@@ -22,7 +23,32 @@ def main() -> None:
     parser.add_argument("--session", default=None)
     parser.add_argument("--strategy", choices=["gain", "fifo", "random", "llm"], default="gain")
     parser.add_argument("--runner", choices=["graph", "core"], default="graph")
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--llm-provider", choices=["openai", "ollama"])
+    parser.add_argument("--llm-model")
+    parser.add_argument("--env-file", type=Path, help="Load provider settings from a private file")
     args = parser.parse_args()
+    if args.strategy == "llm":
+        if args.runner != "graph":
+            parser.error("--strategy llm requires --runner graph")
+        if args.env_file:
+            if not args.env_file.is_file():
+                parser.error("--env-file must name an existing private configuration file")
+            from dotenv import dotenv_values
+
+            for name, value in dotenv_values(args.env_file).items():
+                if name in {"LLM_PROVIDER", "LLM_MODEL", "OPENAI_API_KEY"} and value is not None:
+                    os.environ.setdefault(name, value)
+        if args.llm_provider:
+            os.environ["LLM_PROVIDER"] = args.llm_provider
+        if args.llm_model:
+            os.environ["LLM_MODEL"] = args.llm_model
+        from packages.discovery.model_config import ModelConfig
+
+        try:
+            ModelConfig.from_environment()
+        except ValueError as error:
+            parser.error(str(error))
     args.config = workspace_path(args.config)
     args.output = workspace_path(args.output)
     policy = TargetPolicy(**json.loads(args.config.read_text()))
@@ -32,10 +58,11 @@ def main() -> None:
     if args.runner == "graph":
         from packages.discovery.graph import run_graph
 
-        state = run_graph(session, policy, args.output, args.strategy)
+        state = run_graph(session, policy, args.output, args.strategy, args.seed)
     else:
         store = Store(args.output / "evidence.sqlite")
         state = store.load(session) or initialize(session, strategy=args.strategy)
+        state.random_seed = args.seed
         store.save(state)
         used, started = store.budget(session)
         gateway = JournaledGateway(
@@ -60,6 +87,7 @@ def main() -> None:
                 "operations": len(state.operations),
                 "requests": len(state.observations),
                 "validation": validation,
+                **({"model_usage": state.model_usage} if args.strategy == "llm" else {}),
             }
         )
     )

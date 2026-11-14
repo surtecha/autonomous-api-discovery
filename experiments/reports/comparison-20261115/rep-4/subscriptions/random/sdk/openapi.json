@@ -1,0 +1,1660 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Observed API contract",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "get_",
+        "x-evidence": [
+          "exp_42dcffcec8dea68e4cfc7d1a"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/invoices": {
+      "get": {
+        "operationId": "get_invoices",
+        "x-evidence": [
+          "exp_890cb580a12f371250bbfaf9"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_invoices",
+        "x-evidence": [
+          "exp_7bab046116b706d53ada0343"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_invoices",
+        "x-evidence": [
+          "exp_326fa567feeaed24e02dcda9"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "subscription_id": {
+                      "type": "integer"
+                    },
+                    "amount": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "id",
+                    "links",
+                    "status",
+                    "subscription_id"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "subscription_id": {
+                    "type": "integer"
+                  },
+                  "amount": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "subscription_id"
+                ],
+                "x-field-evidence": {
+                  "subscription_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_326fa567feeaed24e02dcda9",
+                      "exp_559046d79eba86b5db8fa86c",
+                      "exp_516ac0b542a89800e8596618"
+                    ],
+                    "conflict": false
+                  },
+                  "amount": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_326fa567feeaed24e02dcda9",
+                      "exp_33494fea8b862fe0f7eb22a2",
+                      "exp_0ab3e84e598e47af45c8c039"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/accounts": {
+      "options": {
+        "operationId": "options_accounts",
+        "x-evidence": [
+          "exp_6d96e8dd68ad274bc027da16"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "get_accounts",
+        "x-evidence": [
+          "exp_3fe3b9aac69f03e81438a9a6"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_accounts",
+        "x-evidence": [
+          "exp_27bca1e1cb2478d8122ce376"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ],
+                "x-field-evidence": {
+                  "name": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_27bca1e1cb2478d8122ce376",
+                      "exp_a44078c03b5d6a154c5ecff3",
+                      "exp_e2f08aa923abd4cf4ff5f630"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plans": {
+      "options": {
+        "operationId": "options_plans",
+        "x-evidence": [
+          "exp_13d4fee6d4212e30f629f19d"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_plans",
+        "x-evidence": [
+          "exp_4913af6c8b932d6b83c820f0"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "amount": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "id",
+                    "links",
+                    "name",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "name"
+                ],
+                "x-field-evidence": {
+                  "name": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_4913af6c8b932d6b83c820f0",
+                      "exp_213dccb3a2c34fc69184106a",
+                      "exp_5747fd678b610a91d5bda1d2"
+                    ],
+                    "conflict": false
+                  },
+                  "amount": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_4913af6c8b932d6b83c820f0",
+                      "exp_d61b3d506638c028dfbcf46d",
+                      "exp_21e44aa36435eb7a9c5a0692"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "get_plans",
+        "x-evidence": [
+          "exp_f564a8fe22ca837801eee50d"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "amount": {
+                            "type": "number"
+                          },
+                          "status": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "amount",
+                          "id",
+                          "name",
+                          "status"
+                        ]
+                      }
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscriptions": {
+      "options": {
+        "operationId": "options_subscriptions",
+        "x-evidence": [
+          "exp_1f9f8334f5b639114528d932"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "get_subscriptions",
+        "x-evidence": [
+          "exp_9fd3e183c16f62e8b6f5827f"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_subscriptions",
+        "x-evidence": [
+          "exp_92cacd4acd980c46d29e0656"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "account_id": {
+                      "type": "integer"
+                    },
+                    "plan_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "account_id",
+                    "id",
+                    "links",
+                    "plan_id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "account_id": {
+                    "type": "integer"
+                  },
+                  "plan_id": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "account_id",
+                  "plan_id"
+                ],
+                "x-field-evidence": {
+                  "account_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_92cacd4acd980c46d29e0656",
+                      "exp_a5fb932e49bbab1276f5fd60",
+                      "exp_c2236b7bc21f166659a58193"
+                    ],
+                    "conflict": false
+                  },
+                  "plan_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_92cacd4acd980c46d29e0656",
+                      "exp_5ba5c75fb04f9a8fb6dc6df3",
+                      "exp_528bb2b956005a02fc2a79e9"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/payments": {
+      "get": {
+        "operationId": "get_payments",
+        "x-evidence": [
+          "exp_45cde40da4f7dbd6eb3d8128"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_payments",
+        "x-evidence": [
+          "exp_52a766c1d18af7ad7b8f46d8"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_payments",
+        "x-evidence": [
+          "exp_d48e7f70e4b922a8fa714170"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "invoice_id": {
+                      "type": "integer"
+                    },
+                    "amount": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "id",
+                    "invoice_id",
+                    "links",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "invoice_id": {
+                    "type": "integer"
+                  },
+                  "amount": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "invoice_id"
+                ],
+                "x-field-evidence": {
+                  "invoice_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_d48e7f70e4b922a8fa714170",
+                      "exp_53c4436c246433361e124843",
+                      "exp_7491f5cf16670c5bd94df551"
+                    ],
+                    "conflict": false
+                  },
+                  "amount": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_d48e7f70e4b922a8fa714170",
+                      "exp_342aa203116db3ebeb57064d",
+                      "exp_f6620310bf2cc56df1a88575"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/accounts/{id}": {
+      "get": {
+        "operationId": "get_accounts_id",
+        "x-evidence": [
+          "exp_6ed146ad641125f8e237c642"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/subscriptions/{id}/activate": {
+      "post": {
+        "operationId": "post_subscriptions_id_activate",
+        "x-evidence": [
+          "exp_1bd9ac29f37377e073eac7b2"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "account_id": {
+                      "type": "integer"
+                    },
+                    "plan_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "account_id",
+                    "id",
+                    "links",
+                    "plan_id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "x-field-evidence": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plans/{id}": {
+      "get": {
+        "operationId": "get_plans_id",
+        "x-evidence": [
+          "exp_8be440da9ed92bdcf7774456"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "amount": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "id",
+                    "links",
+                    "name",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/subscriptions/{id}/renew": {
+      "post": {
+        "operationId": "post_subscriptions_id_renew",
+        "x-evidence": [
+          "exp_7d7a636539e7147b0c61e51f"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "account_id": {
+                      "type": "integer"
+                    },
+                    "plan_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "account_id",
+                    "id",
+                    "links",
+                    "plan_id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "x-field-evidence": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscriptions/{id}": {
+      "get": {
+        "operationId": "get_subscriptions_id",
+        "x-evidence": [
+          "exp_438b7661d256561497739260"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "account_id": {
+                      "type": "integer"
+                    },
+                    "plan_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "account_id",
+                    "id",
+                    "links",
+                    "plan_id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/subscriptions/{id}/cancel": {
+      "post": {
+        "operationId": "post_subscriptions_id_cancel",
+        "x-evidence": [
+          "exp_223597882c4265df09284d22"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "account_id": {
+                      "type": "integer"
+                    },
+                    "plan_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "account_id",
+                    "id",
+                    "links",
+                    "plan_id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "x-field-evidence": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/invoices/{id}": {
+      "get": {
+        "operationId": "get_invoices_id",
+        "x-evidence": [
+          "exp_343b88cf43aceaa8543b91e2"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "subscription_id": {
+                      "type": "integer"
+                    },
+                    "amount": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "id",
+                    "links",
+                    "status",
+                    "subscription_id"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/payments/{id}": {
+      "get": {
+        "operationId": "get_payments_id",
+        "x-evidence": [
+          "exp_32112236a7b6f6d8cb6d463a"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "invoice_id": {
+                      "type": "integer"
+                    },
+                    "amount": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "id",
+                    "invoice_id",
+                    "links",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "x-session-id": "7b1b2bbd-b9a7-4db6-ad35-8e4ea46a9a4f",
+  "x-limitations": [
+    "Response required sets describe observed samples, not universal guarantees",
+    "Sensitive fields and arbitrary strings are removed before inference"
+  ]
+}

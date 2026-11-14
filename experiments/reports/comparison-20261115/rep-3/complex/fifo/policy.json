@@ -1,0 +1,10 @@
+{
+  "origin": "http://127.0.0.1:51993",
+  "pinned_ips": [
+    "127.0.0.1"
+  ],
+  "disposable": true,
+  "authorization": "Project-owned disposable complex fixture",
+  "max_requests": 100,
+  "duration_seconds": 120
+}

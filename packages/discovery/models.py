@@ -72,6 +72,7 @@ class Knowledge:
     rejected: list[Json] = field(default_factory=list)
     status: str = "running"
     strategy: str = "gain"
+    random_seed: int = 42
 
     def to_dict(self) -> Json:
         value = asdict(self)
@@ -88,6 +89,7 @@ class Knowledge:
             item["experiment"] = Experiment(**item["experiment"])
             state.observations.append(Observation(**item))
         for name in (
+            "random_seed",
             "operations",
             "resources",
             "transitions",

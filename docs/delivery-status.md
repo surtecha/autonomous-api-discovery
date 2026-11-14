@@ -50,3 +50,7 @@ The complex fixture withholds usable repair evidence for nested job configuratio
 This release is a single-operator local system with a PostgreSQL control plane and SQLite evidence journals. Distributed artifact storage, fully normalized PostgreSQL evidence, enterprise identity/tenant isolation, and a hosted model egress deployment are separate extensions. Python dependency snapshots pin versions without artifact hashes. The measured fixture domain is intentionally smaller than a general enterprise API estate.
 
 GitHub publication is a separate external action. Local completion does not claim a public repository, deployed hosted service, or remote CI execution.
+
+## Local model extension — 15 November 2026
+
+Verified local Qwen2.5 7B structured-output ranking via Ollama after hosted access returned HTTP 429 / `insufficient_quota`. Completed 80 fresh-process trials (four fixtures, four strategies, five repetitions), 60/60 parsed local selections, and 4,914 passing generated-SDK container tests across 80 bundles. Local-model assistance matched gain and FIFO; no superiority over either is claimed. Python regression: 73 passed, zero skips, 28 subtests. Earlier reports were preserved. Full results, usage, limitations, costs and resume metrics: [local-model results](../experiments/reports/local-model-20261115/results.md). This extension does not represent a rerun of the entire release gate.

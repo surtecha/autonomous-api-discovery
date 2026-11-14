@@ -1,0 +1,844 @@
+[
+  {
+    "method": "GET",
+    "operation": "get_",
+    "request_model": null,
+    "response_model": "GetResponse",
+    "path": "/",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/customers"
+        },
+        {
+          "method": "POST",
+          "href": "/customers"
+        },
+        {
+          "method": "GET",
+          "href": "/products"
+        },
+        {
+          "method": "POST",
+          "href": "/products"
+        },
+        {
+          "method": "GET",
+          "href": "/orders"
+        },
+        {
+          "method": "POST",
+          "href": "/orders"
+        },
+        {
+          "method": "GET",
+          "href": "/items"
+        },
+        {
+          "method": "POST",
+          "href": "/items"
+        },
+        {
+          "method": "GET",
+          "href": "/inventory"
+        },
+        {
+          "method": "POST",
+          "href": "/inventory"
+        },
+        {
+          "method": "GET",
+          "href": "/payments"
+        },
+        {
+          "method": "POST",
+          "href": "/payments"
+        },
+        {
+          "method": "GET",
+          "href": "/shipments"
+        },
+        {
+          "method": "POST",
+          "href": "/shipments"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_inventory",
+    "request_model": null,
+    "response_model": "GetInventoryResponse",
+    "path": "/inventory",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/inventory"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_shipments",
+    "request_model": null,
+    "response_model": "OptionsShipmentsResponse",
+    "path": "/shipments",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/shipments"
+        },
+        {
+          "method": "POST",
+          "href": "/shipments"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_products",
+    "request_model": null,
+    "response_model": "GetProductsResponse",
+    "path": "/products",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/products"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_shipments",
+    "request_model": null,
+    "response_model": "GetShipmentsResponse",
+    "path": "/shipments",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/shipments"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_items",
+    "request_model": null,
+    "response_model": "GetItemsResponse",
+    "path": "/items",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/items"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_orders",
+    "request_model": null,
+    "response_model": "GetOrdersResponse",
+    "path": "/orders",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/orders"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_customers",
+    "request_model": null,
+    "response_model": "OptionsCustomersResponse",
+    "path": "/customers",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/customers"
+        },
+        {
+          "method": "POST",
+          "href": "/customers"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_customers",
+    "request_model": null,
+    "response_model": "GetCustomersResponse",
+    "path": "/customers",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/customers"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_items",
+    "request_model": null,
+    "response_model": "OptionsItemsResponse",
+    "path": "/items",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/items"
+        },
+        {
+          "method": "POST",
+          "href": "/items"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_customers",
+    "request_model": "PostCustomersRequest",
+    "response_model": "PostCustomersResponse",
+    "path": "/customers",
+    "body": {
+      "name": "probe"
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/customers/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_orders",
+    "request_model": null,
+    "response_model": "OptionsOrdersResponse",
+    "path": "/orders",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/orders"
+        },
+        {
+          "method": "POST",
+          "href": "/orders"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_products",
+    "request_model": null,
+    "response_model": "OptionsProductsResponse",
+    "path": "/products",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/products"
+        },
+        {
+          "method": "POST",
+          "href": "/products"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_payments",
+    "request_model": null,
+    "response_model": "GetPaymentsResponse",
+    "path": "/payments",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/payments"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_customers_id",
+    "request_model": null,
+    "response_model": "GetCustomersIdResponse",
+    "path": "/customers/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/customers/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_inventory",
+    "request_model": null,
+    "response_model": "OptionsInventoryResponse",
+    "path": "/inventory",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/inventory"
+        },
+        {
+          "method": "POST",
+          "href": "/inventory"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_payments",
+    "request_model": null,
+    "response_model": "OptionsPaymentsResponse",
+    "path": "/payments",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/payments"
+        },
+        {
+          "method": "POST",
+          "href": "/payments"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_products",
+    "request_model": "PostProductsRequest",
+    "response_model": "PostProductsResponse",
+    "path": "/products",
+    "body": {
+      "name": "probe",
+      "quantity": 1
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/products/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_inventory",
+    "request_model": "PostInventoryRequest",
+    "response_model": "PostInventoryResponse",
+    "path": "/inventory",
+    "body": {
+      "product_id": 1,
+      "quantity": 1
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "product_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/inventory/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_orders",
+    "request_model": "PostOrdersRequest",
+    "response_model": "PostOrdersResponse",
+    "path": "/orders",
+    "body": {
+      "customer_id": 1
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "customer_id": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/orders/1"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/reserve"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/pay"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/ship"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_inventory_id",
+    "request_model": null,
+    "response_model": "GetInventoryIdResponse",
+    "path": "/inventory/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "product_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/inventory/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_orders_id",
+    "request_model": null,
+    "response_model": "GetOrdersIdResponse",
+    "path": "/orders/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "customer_id": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/orders/1"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/reserve"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/pay"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/ship"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_items",
+    "request_model": "PostItemsRequest",
+    "response_model": "PostItemsResponse",
+    "path": "/items",
+    "body": {
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 1
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/items/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_orders_id_reserve",
+    "request_model": "PostOrdersIdReserveRequest",
+    "response_model": "PostOrdersIdReserveResponse",
+    "path": "/orders/1/reserve",
+    "body": {},
+    "status": 200,
+    "response": {
+      "id": 1,
+      "customer_id": 1,
+      "status": "reserved",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/orders/1"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/reserve"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/pay"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/ship"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_items_id",
+    "request_model": null,
+    "response_model": "GetItemsIdResponse",
+    "path": "/items/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/items/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_orders_id",
+    "request_model": null,
+    "response_model": "GetOrdersIdResponse",
+    "path": "/orders/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "customer_id": 1,
+      "status": "reserved",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/orders/1"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/reserve"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/pay"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/ship"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_payments",
+    "request_model": "PostPaymentsRequest",
+    "response_model": "PostPaymentsResponse",
+    "path": "/payments",
+    "body": {
+      "order_id": 1,
+      "amount": 1.0
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "order_id": 1,
+      "amount": 0.0,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/payments/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_products_id",
+    "request_model": null,
+    "response_model": "GetProductsIdResponse",
+    "path": "/products/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "quantity": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/products/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_orders_id_pay",
+    "request_model": "PostOrdersIdPayRequest",
+    "response_model": "PostOrdersIdPayResponse",
+    "path": "/orders/1/pay",
+    "body": {},
+    "status": 200,
+    "response": {
+      "id": 1,
+      "customer_id": 1,
+      "status": "paid",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/orders/1"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/reserve"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/pay"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/ship"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_shipments",
+    "request_model": "PostShipmentsRequest",
+    "response_model": "PostShipmentsResponse",
+    "path": "/shipments",
+    "body": {
+      "order_id": 1
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "order_id": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/shipments/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_payments_id",
+    "request_model": null,
+    "response_model": "GetPaymentsIdResponse",
+    "path": "/payments/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "order_id": 1,
+      "amount": 0.0,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/payments/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_shipments_id",
+    "request_model": null,
+    "response_model": "GetShipmentsIdResponse",
+    "path": "/shipments/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "order_id": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/shipments/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_orders_id_ship",
+    "request_model": "PostOrdersIdShipRequest",
+    "response_model": "PostOrdersIdShipResponse",
+    "path": "/orders/1/ship",
+    "body": {},
+    "status": 200,
+    "response": {
+      "id": 1,
+      "customer_id": 1,
+      "status": "shipped",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/orders/1"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/reserve"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/pay"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/ship"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_orders_id",
+    "request_model": null,
+    "response_model": "GetOrdersIdResponse",
+    "path": "/orders/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "customer_id": 1,
+      "status": "shipped",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/orders/1"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/reserve"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/pay"
+        },
+        {
+          "method": "POST",
+          "href": "/orders/1/ship"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,2145 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Observed API contract",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "get_",
+        "x-evidence": [
+          "exp_42dcffcec8dea68e4cfc7d1a"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customers": {
+      "get": {
+        "operationId": "get_customers",
+        "x-evidence": [
+          "exp_ed2244ceab1c4f9a0cd86e3c"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_customers",
+        "x-evidence": [
+          "exp_5855e2521f44878b186ad96d"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ],
+                "x-field-evidence": {
+                  "name": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_5855e2521f44878b186ad96d",
+                      "exp_f8a8d004e39481e6072160c7",
+                      "exp_db3770c19cb93c5b32776655"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_customers",
+        "x-evidence": [
+          "exp_2912b0ed3ff474af1e006838"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "operationId": "get_products",
+        "x-evidence": [
+          "exp_f6141bd58049ecdabf8625dc"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_products",
+        "x-evidence": [
+          "exp_bb4f6e689fa40821c5c566f3"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "quantity",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "quantity": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "name",
+                  "quantity"
+                ],
+                "x-field-evidence": {
+                  "name": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_bb4f6e689fa40821c5c566f3",
+                      "exp_356a3cec6ad12e1bf063f76a",
+                      "exp_0d19e4abb7c692e3cdf8a24c"
+                    ],
+                    "conflict": false
+                  },
+                  "quantity": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_bb4f6e689fa40821c5c566f3",
+                      "exp_a8b026bb48bc27c776f31f2e",
+                      "exp_230aea96f22370c2c4ea596d"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_products",
+        "x-evidence": [
+          "exp_ac734744fdddb4e320536370"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orders": {
+      "get": {
+        "operationId": "get_orders",
+        "x-evidence": [
+          "exp_de3c7ca8faa0061ec2cf8a9b"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_orders",
+        "x-evidence": [
+          "exp_7168639d1d60da52ac48a384"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "customer_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "customer_id",
+                    "id",
+                    "links",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "customer_id": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "customer_id"
+                ],
+                "x-field-evidence": {
+                  "customer_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_7168639d1d60da52ac48a384",
+                      "exp_02caf7e3b8c0e3d0b411b481",
+                      "exp_1f756160db30932cd50811f5"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_orders",
+        "x-evidence": [
+          "exp_15c1659ddd3e66b4a8c3dc4a"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/items": {
+      "get": {
+        "operationId": "get_items",
+        "x-evidence": [
+          "exp_8f0bb654596998c5d2b99625"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_items",
+        "x-evidence": [
+          "exp_586144d4493e8498dc3ef2e1"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "order_id": {
+                      "type": "integer"
+                    },
+                    "product_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "order_id",
+                    "product_id",
+                    "quantity",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "order_id": {
+                    "type": "integer"
+                  },
+                  "product_id": {
+                    "type": "integer"
+                  },
+                  "quantity": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "order_id",
+                  "product_id",
+                  "quantity"
+                ],
+                "x-field-evidence": {
+                  "order_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_586144d4493e8498dc3ef2e1",
+                      "exp_71a1cccfe0b888bc53ab4a33",
+                      "exp_5f149563692adee0cb73259c"
+                    ],
+                    "conflict": false
+                  },
+                  "product_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_586144d4493e8498dc3ef2e1",
+                      "exp_bd304e6cf2d9dde0beea389a",
+                      "exp_ac12cbd97103e06acb27a5c6"
+                    ],
+                    "conflict": false
+                  },
+                  "quantity": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_586144d4493e8498dc3ef2e1",
+                      "exp_5b4686f8359efed07f7f2238",
+                      "exp_8e32b1fa39d504c81977217a"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_items",
+        "x-evidence": [
+          "exp_107e3fb3f2e6263e0ae1130e"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/inventory": {
+      "get": {
+        "operationId": "get_inventory",
+        "x-evidence": [
+          "exp_2788e1c8e95fc4c979232a0d"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_inventory",
+        "x-evidence": [
+          "exp_2c25a56b150bcca26a6719f5"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "product_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "product_id",
+                    "quantity",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "product_id": {
+                    "type": "integer"
+                  },
+                  "quantity": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "product_id",
+                  "quantity"
+                ],
+                "x-field-evidence": {
+                  "product_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_2c25a56b150bcca26a6719f5",
+                      "exp_9a3cdc81849be710d944a8da",
+                      "exp_cf8c8d6bc66e9eab9785ab1a"
+                    ],
+                    "conflict": false
+                  },
+                  "quantity": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_2c25a56b150bcca26a6719f5",
+                      "exp_48a16304ad49fa0aa83b5fe2",
+                      "exp_7cffb752a206a863ea02b28d"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_inventory",
+        "x-evidence": [
+          "exp_b58b866be1a8cb840f8a401e"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/payments": {
+      "get": {
+        "operationId": "get_payments",
+        "x-evidence": [
+          "exp_45cde40da4f7dbd6eb3d8128"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_payments",
+        "x-evidence": [
+          "exp_7365567d3915cae9bea19d46"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "order_id": {
+                      "type": "integer"
+                    },
+                    "amount": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "id",
+                    "links",
+                    "order_id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "order_id": {
+                    "type": "integer"
+                  },
+                  "amount": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "amount",
+                  "order_id"
+                ],
+                "x-field-evidence": {
+                  "order_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_7365567d3915cae9bea19d46",
+                      "exp_8946d32b4f9f12c208fe9110",
+                      "exp_50d045b394fba64c3845064b"
+                    ],
+                    "conflict": false
+                  },
+                  "amount": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_7365567d3915cae9bea19d46",
+                      "exp_da71e2ba98cd41a0ba166073",
+                      "exp_3930e25178e6dd0961d4efc1"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_payments",
+        "x-evidence": [
+          "exp_52a766c1d18af7ad7b8f46d8"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/shipments": {
+      "get": {
+        "operationId": "get_shipments",
+        "x-evidence": [
+          "exp_5896d3d0ddfc691295e6ae9d"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_shipments",
+        "x-evidence": [
+          "exp_6fac042aeb68ace0f8d413cf"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "order_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "order_id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "order_id": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "order_id"
+                ],
+                "x-field-evidence": {
+                  "order_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_6fac042aeb68ace0f8d413cf",
+                      "exp_4f5864cdcef8f085c1c52588",
+                      "exp_cbb942c0c44c7ba72b6861a5"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_shipments",
+        "x-evidence": [
+          "exp_fe8800754a39052e53de9318"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customers/{id}": {
+      "get": {
+        "operationId": "get_customers_id",
+        "x-evidence": [
+          "exp_a55627f00fd0ce5c26875bf4"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/products/{id}": {
+      "get": {
+        "operationId": "get_products_id",
+        "x-evidence": [
+          "exp_268450d6c8bc687ad2c37e34"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "quantity",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/orders/{id}": {
+      "get": {
+        "operationId": "get_orders_id",
+        "x-evidence": [
+          "exp_f3a5f93980f8603a9335daf6",
+          "exp_0d821026aa3131013e923f00"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "customer_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "customer_id",
+                    "id",
+                    "links",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/orders/{id}/reserve": {
+      "post": {
+        "operationId": "post_orders_id_reserve",
+        "x-evidence": [
+          "exp_3ac1330b7eb971ae3d5fb286"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "customer_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "customer_id",
+                    "id",
+                    "links",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "x-field-evidence": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orders/{id}/pay": {
+      "post": {
+        "operationId": "post_orders_id_pay",
+        "x-evidence": [
+          "exp_9191b0100c2b49aa2ed90ebd"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "customer_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "customer_id",
+                    "id",
+                    "links",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "x-field-evidence": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/items/{id}": {
+      "get": {
+        "operationId": "get_items_id",
+        "x-evidence": [
+          "exp_ffd21fded104929b6cdec9ad"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "order_id": {
+                      "type": "integer"
+                    },
+                    "product_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "order_id",
+                    "product_id",
+                    "quantity",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/inventory/{id}": {
+      "get": {
+        "operationId": "get_inventory_id",
+        "x-evidence": [
+          "exp_ef1e43972a5275097cbcee77"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "product_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "product_id",
+                    "quantity",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/payments/{id}": {
+      "get": {
+        "operationId": "get_payments_id",
+        "x-evidence": [
+          "exp_32112236a7b6f6d8cb6d463a"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "order_id": {
+                      "type": "integer"
+                    },
+                    "amount": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "id",
+                    "links",
+                    "order_id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/shipments/{id}": {
+      "get": {
+        "operationId": "get_shipments_id",
+        "x-evidence": [
+          "exp_f88786853f3ead33d5e6d457"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "order_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "order_id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/orders/{id}/ship": {
+      "post": {
+        "operationId": "post_orders_id_ship",
+        "x-evidence": [
+          "exp_740fd5a19baa34002ecd9372"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "customer_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "customer_id",
+                    "id",
+                    "links",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "x-field-evidence": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-session-id": "7b0b4df0-11da-4613-a8db-82f8a2da6158",
+  "x-limitations": [
+    "Response required sets describe observed samples, not universal guarantees",
+    "Sensitive fields and arbitrary strings are removed before inference"
+  ]
+}

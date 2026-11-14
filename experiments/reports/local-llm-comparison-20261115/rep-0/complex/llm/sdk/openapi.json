@@ -1,0 +1,525 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Observed API contract",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "get_",
+        "x-evidence": [
+          "exp_42dcffcec8dea68e4cfc7d1a"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/accounts": {
+      "get": {
+        "operationId": "get_v2_accounts",
+        "x-evidence": [
+          "exp_7122b8b3f42a8294b2a0ba16"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_v2_accounts",
+        "x-evidence": [
+          "exp_18447a7eb828c8ce5df0fdc7"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "profile": {
+                      "type": "object",
+                      "properties": {},
+                      "required": []
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "profile",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "profile": {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                  }
+                },
+                "required": [
+                  "name",
+                  "profile"
+                ],
+                "x-field-evidence": {
+                  "name": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_18447a7eb828c8ce5df0fdc7",
+                      "exp_89a9ac52b948526a2c124015",
+                      "exp_24ea74f1809b27685e03c55e"
+                    ],
+                    "conflict": false
+                  },
+                  "profile": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_18447a7eb828c8ce5df0fdc7",
+                      "exp_8caa5e3b8d21f47e24f5698a",
+                      "exp_d70e93ff3b7198f2fc92cd83"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_v2_accounts",
+        "x-evidence": [
+          "exp_6a87ad24d20f36cb5547f36b"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/jobs": {
+      "get": {
+        "operationId": "get_v2_jobs",
+        "x-evidence": [
+          "exp_4ce6cafc651257d79cc9eb5d"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_v2_jobs",
+        "x-evidence": [
+          "exp_df5f49b4e377155e82ef3798"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/batches": {
+      "get": {
+        "operationId": "get_v2_batches",
+        "x-evidence": [
+          "exp_afe4cc80ee9f0e90fe5a41ac"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_v2_batches",
+        "x-evidence": [
+          "exp_2b9007d05676948ae58173da"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/accounts/{id}": {
+      "get": {
+        "operationId": "get_v2_accounts_id",
+        "x-evidence": [
+          "exp_0826d0114b98a3c3fa7cf6e1"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "profile": {
+                      "type": "object",
+                      "properties": {},
+                      "required": []
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "profile",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "x-session-id": "2b75ee1c-5c3a-4e54-9ab8-10ccfc9da857",
+  "x-limitations": [
+    "Response required sets describe observed samples, not universal guarantees",
+    "Sensitive fields and arbitrary strings are removed before inference"
+  ]
+}

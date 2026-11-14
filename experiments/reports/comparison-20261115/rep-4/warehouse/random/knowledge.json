@@ -1,0 +1,4551 @@
+{
+  "session_id": "42d1ccd1-7a51-4270-b431-ab9d537435ec",
+  "pending": [],
+  "blocked": [],
+  "observations": [
+    {
+      "id": "exp_42dcffcec8dea68e4cfc7d1a",
+      "experiment": {
+        "method": "GET",
+        "path": "/",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/warehouses"
+          },
+          {
+            "method": "POST",
+            "href": "/warehouses"
+          },
+          {
+            "method": "GET",
+            "href": "/locations"
+          },
+          {
+            "method": "POST",
+            "href": "/locations"
+          },
+          {
+            "method": "GET",
+            "href": "/stock"
+          },
+          {
+            "method": "POST",
+            "href": "/stock"
+          },
+          {
+            "method": "GET",
+            "href": "/transfers"
+          },
+          {
+            "method": "POST",
+            "href": "/transfers"
+          },
+          {
+            "method": "GET",
+            "href": "/reservations"
+          },
+          {
+            "method": "POST",
+            "href": "/reservations"
+          },
+          {
+            "method": "GET",
+            "href": "/fulfillments"
+          },
+          {
+            "method": "POST",
+            "href": "/fulfillments"
+          },
+          {
+            "method": "GET",
+            "href": "/returns"
+          },
+          {
+            "method": "POST",
+            "href": "/returns"
+          }
+        ]
+      },
+      "elapsed_ms": 1.3395840069279075,
+      "category": "http"
+    },
+    {
+      "id": "exp_d48962707d112d5ca58b182b",
+      "experiment": {
+        "method": "POST",
+        "path": "/transfers",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "stock_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "location_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7869999972172081,
+      "category": "http"
+    },
+    {
+      "id": "exp_9808689972615162ac279f1a",
+      "experiment": {
+        "method": "GET",
+        "path": "/returns",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/returns"
+          }
+        ]
+      },
+      "elapsed_ms": 2.468499995302409,
+      "category": "http"
+    },
+    {
+      "id": "exp_a2e9c1ac824a7224e6a28a11",
+      "experiment": {
+        "method": "POST",
+        "path": "/warehouses",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.6979170138947666,
+      "category": "http"
+    },
+    {
+      "id": "exp_88c4f41fbb418d31678dc490",
+      "experiment": {
+        "method": "POST",
+        "path": "/fulfillments",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "reservation_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7469579577445984,
+      "category": "http"
+    },
+    {
+      "id": "exp_f67d8deff05ab3d25153862b",
+      "experiment": {
+        "method": "POST",
+        "path": "/stock",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "location_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.2926660128869116,
+      "category": "http"
+    },
+    {
+      "id": "exp_be6a2abc711ed3e554db6c5b",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/transfers",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/transfers"
+          },
+          {
+            "method": "POST",
+            "href": "/transfers"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7760000298731029,
+      "category": "http"
+    },
+    {
+      "id": "exp_67c7efea3495eb737ee240c7",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/stock",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/stock"
+          },
+          {
+            "method": "POST",
+            "href": "/stock"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7678749971091747,
+      "category": "http"
+    },
+    {
+      "id": "exp_a130fdd4d0a96dbb77276116",
+      "experiment": {
+        "method": "POST",
+        "path": "/locations",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "warehouse_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.6672919844277203,
+      "category": "http"
+    },
+    {
+      "id": "exp_a375d2c02b525471ae2ff90a",
+      "experiment": {
+        "method": "GET",
+        "path": "/locations",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/locations"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7566660060547292,
+      "category": "http"
+    },
+    {
+      "id": "exp_bd0bd772546bf5cdf08af9e6",
+      "experiment": {
+        "method": "GET",
+        "path": "/warehouses",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/warehouses"
+          }
+        ]
+      },
+      "elapsed_ms": 0.6592500139959157,
+      "category": "http"
+    },
+    {
+      "id": "exp_50ab0d5ad52435f733bfb60e",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/locations",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/locations"
+          },
+          {
+            "method": "POST",
+            "href": "/locations"
+          }
+        ]
+      },
+      "elapsed_ms": 0.885666988324374,
+      "category": "http"
+    },
+    {
+      "id": "exp_d5bf7980a711b53f34f759b6",
+      "experiment": {
+        "method": "POST",
+        "path": "/returns",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "fulfillment_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7697499822825193,
+      "category": "http"
+    },
+    {
+      "id": "exp_e78b8408149f37885065cb20",
+      "experiment": {
+        "method": "GET",
+        "path": "/reservations",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/reservations"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7172920159064233,
+      "category": "http"
+    },
+    {
+      "id": "exp_89d1ecbcc9ffd8298a4b5c6b",
+      "experiment": {
+        "method": "POST",
+        "path": "/reservations",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "stock_id",
+            "code": "required",
+            "type": "integer"
+          },
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.6986249936744571,
+      "category": "http"
+    },
+    {
+      "id": "exp_5955e2e9c507941100ed4c8b",
+      "experiment": {
+        "method": "POST",
+        "path": "/transfers",
+        "body": {
+          "stock_id": 1,
+          "location_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_d48962707d112d5ca58b182b",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "stock_id",
+            "code": "reference",
+            "resource": "stock",
+            "type": "integer"
+          },
+          {
+            "field": "location_id",
+            "code": "reference",
+            "resource": "locations",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/stock"
+          },
+          {
+            "method": "GET",
+            "href": "/locations"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8219580049626529,
+      "category": "http"
+    },
+    {
+      "id": "exp_733e697b799b93240e919e7c",
+      "experiment": {
+        "method": "POST",
+        "path": "/stock",
+        "body": {
+          "location_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_f67d8deff05ab3d25153862b",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "location_id",
+            "code": "reference",
+            "resource": "locations",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/locations"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8237920119427145,
+      "category": "http"
+    },
+    {
+      "id": "exp_523da2ee8029687f8354861b",
+      "experiment": {
+        "method": "POST",
+        "path": "/warehouses",
+        "body": {
+          "name": "probe"
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_a2e9c1ac824a7224e6a28a11",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/warehouses/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9575000149197876,
+      "category": "http"
+    },
+    {
+      "id": "exp_1e5caa514449821b5a82d031",
+      "experiment": {
+        "method": "POST",
+        "path": "/warehouses",
+        "body": {},
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_523da2ee8029687f8354861b",
+        "omitted": "name",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9672500309534371,
+      "category": "http"
+    },
+    {
+      "id": "exp_40cba4c4e4ac5c76be3008ee",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/returns",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/returns"
+          },
+          {
+            "method": "POST",
+            "href": "/returns"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7650409825146198,
+      "category": "http"
+    },
+    {
+      "id": "exp_e266fc135cd602af5355d942",
+      "experiment": {
+        "method": "GET",
+        "path": "/stock",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/stock"
+          }
+        ]
+      },
+      "elapsed_ms": 0.6487080245278776,
+      "category": "http"
+    },
+    {
+      "id": "exp_f5ef45c1ff6ae933577da9af",
+      "experiment": {
+        "method": "GET",
+        "path": "/transfers",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/transfers"
+          }
+        ]
+      },
+      "elapsed_ms": 0.6646660040132701,
+      "category": "http"
+    },
+    {
+      "id": "exp_fa1c14abc12a829c316b4ecc",
+      "experiment": {
+        "method": "POST",
+        "path": "/warehouses",
+        "body": {
+          "name": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_523da2ee8029687f8354861b",
+        "omitted": null,
+        "perturbed": "name",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "type",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.6347920279949903,
+      "category": "http"
+    },
+    {
+      "id": "exp_e49289eca5a765e54b605fa3",
+      "experiment": {
+        "method": "POST",
+        "path": "/stock",
+        "body": {
+          "location_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_523da2ee8029687f8354861b",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 18,
+        "retries": 1
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "location_id",
+            "code": "reference",
+            "resource": "locations",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/locations"
+          }
+        ]
+      },
+      "elapsed_ms": 0.752542051486671,
+      "category": "http"
+    },
+    {
+      "id": "exp_6ee47a33698bfcd6322c9802",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/reservations",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/reservations"
+          },
+          {
+            "method": "POST",
+            "href": "/reservations"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7084999815560877,
+      "category": "http"
+    },
+    {
+      "id": "exp_f2240c54b73dd8219868d2d9",
+      "experiment": {
+        "method": "POST",
+        "path": "/returns",
+        "body": {
+          "fulfillment_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_d5bf7980a711b53f34f759b6",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "fulfillment_id",
+            "code": "reference",
+            "resource": "fulfillments",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/fulfillments"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7384580094367266,
+      "category": "http"
+    },
+    {
+      "id": "exp_b2bd53bcf3f0892568880303",
+      "experiment": {
+        "method": "GET",
+        "path": "/fulfillments",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "items": [],
+        "total": 0,
+        "links": [
+          {
+            "method": "POST",
+            "href": "/fulfillments"
+          }
+        ]
+      },
+      "elapsed_ms": 0.667833024635911,
+      "category": "http"
+    },
+    {
+      "id": "exp_db194190cec083a1b21b6835",
+      "experiment": {
+        "method": "POST",
+        "path": "/fulfillments",
+        "body": {
+          "reservation_id": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_88c4f41fbb418d31678dc490",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "reservation_id",
+            "code": "reference",
+            "resource": "reservations",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/reservations"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7870830013416708,
+      "category": "http"
+    },
+    {
+      "id": "exp_86a2f82a253e0694ac4ab5fd",
+      "experiment": {
+        "method": "GET",
+        "path": "/warehouses/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "name": "[redacted]",
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/warehouses/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7053749868646264,
+      "category": "http"
+    },
+    {
+      "id": "exp_676eab8603c0ed93198c4f84",
+      "experiment": {
+        "method": "POST",
+        "path": "/reservations",
+        "body": {
+          "stock_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_89d1ecbcc9ffd8298a4b5c6b",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "stock_id",
+            "code": "reference",
+            "resource": "stock",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/stock"
+          }
+        ]
+      },
+      "elapsed_ms": 0.6866659969091415,
+      "category": "http"
+    },
+    {
+      "id": "exp_fa6c0841ed9e89b92f10778e",
+      "experiment": {
+        "method": "POST",
+        "path": "/locations",
+        "body": {
+          "warehouse_id": 1,
+          "name": "probe"
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_a130fdd4d0a96dbb77276116",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "warehouse_id": 1,
+        "name": "[redacted]",
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/locations/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.5930420011281967,
+      "category": "http"
+    },
+    {
+      "id": "exp_1c073d5a9b25f3a784acaf57",
+      "experiment": {
+        "method": "POST",
+        "path": "/stock",
+        "body": {
+          "location_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_fa6c0841ed9e89b92f10778e",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 31,
+        "retries": 2
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "location_id": 1,
+        "quantity": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/stock/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.0279580019414425,
+      "category": "http"
+    },
+    {
+      "id": "exp_8b7b0b04172184bfffc68aa8",
+      "experiment": {
+        "method": "POST",
+        "path": "/reservations",
+        "body": {
+          "stock_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_fa6c0841ed9e89b92f10778e",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 31,
+        "retries": 1
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "stock_id": 1,
+        "quantity": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/reservations/1"
+          },
+          {
+            "method": "POST",
+            "href": "/reservations/1/fulfill"
+          },
+          {
+            "method": "POST",
+            "href": "/reservations/1/return"
+          }
+        ]
+      },
+      "elapsed_ms": 1.3208339805714786,
+      "category": "http"
+    },
+    {
+      "id": "exp_d1aa480d40e6d3e28486bbf6",
+      "experiment": {
+        "method": "POST",
+        "path": "/returns",
+        "body": {
+          "fulfillment_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_fa6c0841ed9e89b92f10778e",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 31,
+        "retries": 1
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "fulfillment_id",
+            "code": "reference",
+            "resource": "fulfillments",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/fulfillments"
+          }
+        ]
+      },
+      "elapsed_ms": 0.650125031825155,
+      "category": "http"
+    },
+    {
+      "id": "exp_52676d37a0fbe7620f91f6fe",
+      "experiment": {
+        "method": "POST",
+        "path": "/locations",
+        "body": {
+          "warehouse_id": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_fa6c0841ed9e89b92f10778e",
+        "omitted": "name",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "required",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9690409642644227,
+      "category": "http"
+    },
+    {
+      "id": "exp_5b5d06c3c61622ad198a7299",
+      "experiment": {
+        "method": "POST",
+        "path": "/reservations",
+        "body": {
+          "stock_id": [],
+          "quantity": 1
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_8b7b0b04172184bfffc68aa8",
+        "omitted": null,
+        "perturbed": "stock_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "stock_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7729160133749247,
+      "category": "http"
+    },
+    {
+      "id": "exp_48d8ec125f9ce85b52fe5f65",
+      "experiment": {
+        "method": "POST",
+        "path": "/fulfillments",
+        "body": {
+          "reservation_id": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_fa6c0841ed9e89b92f10778e",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 31,
+        "retries": 1
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "reservation_id": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/fulfillments/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7968749850988388,
+      "category": "http"
+    },
+    {
+      "id": "exp_222322b90c774d9a7e129025",
+      "experiment": {
+        "method": "POST",
+        "path": "/reservations",
+        "body": {
+          "quantity": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_8b7b0b04172184bfffc68aa8",
+        "omitted": "stock_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "stock_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.1502500274218619,
+      "category": "http"
+    },
+    {
+      "id": "exp_36a031f7fcd22f67c5ed74e9",
+      "experiment": {
+        "method": "POST",
+        "path": "/stock",
+        "body": {
+          "quantity": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_1c073d5a9b25f3a784acaf57",
+        "omitted": "location_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "location_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.6368749891407788,
+      "category": "http"
+    },
+    {
+      "id": "exp_5059e8b7b8f0dc863d95318b",
+      "experiment": {
+        "method": "POST",
+        "path": "/locations",
+        "body": {
+          "warehouse_id": 1,
+          "name": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_fa6c0841ed9e89b92f10778e",
+        "omitted": null,
+        "perturbed": "name",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "name",
+            "code": "type",
+            "type": "string"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.0055839666165411,
+      "category": "http"
+    },
+    {
+      "id": "exp_6a77e9ce796c71cd75cbe583",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/warehouses",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/warehouses"
+          },
+          {
+            "method": "POST",
+            "href": "/warehouses"
+          }
+        ]
+      },
+      "elapsed_ms": 1.3252499629743397,
+      "category": "http"
+    },
+    {
+      "id": "exp_e3874a2ac26f42ad151c87a0",
+      "experiment": {
+        "method": "POST",
+        "path": "/locations",
+        "body": {
+          "name": "probe"
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_fa6c0841ed9e89b92f10778e",
+        "omitted": "warehouse_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "warehouse_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8265000069513917,
+      "category": "http"
+    },
+    {
+      "id": "exp_50770187a61b57c837404538",
+      "experiment": {
+        "method": "POST",
+        "path": "/reservations",
+        "body": {
+          "stock_id": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_8b7b0b04172184bfffc68aa8",
+        "omitted": "quantity",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8113330113701522,
+      "category": "http"
+    },
+    {
+      "id": "exp_39a3a7b3345b67db28d5d7f2",
+      "experiment": {
+        "method": "GET",
+        "path": "/locations/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "warehouse_id": 1,
+        "name": "[redacted]",
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/locations/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.0248749749734998,
+      "category": "http"
+    },
+    {
+      "id": "exp_5ac1c7f84eb8b5d9e748ae28",
+      "experiment": {
+        "method": "GET",
+        "path": "/stock/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "location_id": 1,
+        "quantity": 0,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/stock/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8339170017279685,
+      "category": "http"
+    },
+    {
+      "id": "exp_571f417f3210e4f53e9a3988",
+      "experiment": {
+        "method": "POST",
+        "path": "/transfers",
+        "body": {
+          "stock_id": 1,
+          "location_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_523da2ee8029687f8354861b",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 18,
+        "retries": 1
+      },
+      "status": 409,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "range",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/stock/1"
+          },
+          {
+            "method": "PATCH",
+            "href": "/stock/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9379169787280262,
+      "category": "http"
+    },
+    {
+      "id": "exp_e58623ccb62cce85b782ccdf",
+      "experiment": {
+        "method": "POST",
+        "path": "/reservations/1/fulfill",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "stock_id": 1,
+        "quantity": 1,
+        "status": "fulfilled",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/reservations/1"
+          },
+          {
+            "method": "POST",
+            "href": "/reservations/1/fulfill"
+          },
+          {
+            "method": "POST",
+            "href": "/reservations/1/return"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8829589933156967,
+      "category": "http"
+    },
+    {
+      "id": "exp_5b82cece96dbb56cf85d7589",
+      "experiment": {
+        "method": "POST",
+        "path": "/transfers",
+        "body": {
+          "stock_id": 1,
+          "location_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_e58623ccb62cce85b782ccdf",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 47,
+        "retries": 2
+      },
+      "status": 409,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "range",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/stock/1"
+          },
+          {
+            "method": "PATCH",
+            "href": "/stock/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9059999720193446,
+      "category": "http"
+    },
+    {
+      "id": "exp_cba864392ba62b66e1427bdd",
+      "experiment": {
+        "method": "GET",
+        "path": "/fulfillments/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "reservation_id": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/fulfillments/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7000829791650176,
+      "category": "http"
+    },
+    {
+      "id": "exp_810a105f998cad7b28487239",
+      "experiment": {
+        "method": "POST",
+        "path": "/returns",
+        "body": {
+          "fulfillment_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_48d8ec125f9ce85b52fe5f65",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 37,
+        "retries": 2
+      },
+      "status": 201,
+      "body": {
+        "id": 1,
+        "fulfillment_id": 1,
+        "quantity": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/returns/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.828583026304841,
+      "category": "http"
+    },
+    {
+      "id": "exp_1704cd171badacae7000b132",
+      "experiment": {
+        "method": "GET",
+        "path": "/returns/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "fulfillment_id": 1,
+        "quantity": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/returns/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9066250058822334,
+      "category": "http"
+    },
+    {
+      "id": "exp_fe566a8b8253b90281b8d057",
+      "experiment": {
+        "method": "POST",
+        "path": "/reservations/1/return",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "stock_id": 1,
+        "quantity": 1,
+        "status": "returned",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/reservations/1"
+          },
+          {
+            "method": "POST",
+            "href": "/reservations/1/fulfill"
+          },
+          {
+            "method": "POST",
+            "href": "/reservations/1/return"
+          }
+        ]
+      },
+      "elapsed_ms": 0.8557499968446791,
+      "category": "http"
+    },
+    {
+      "id": "exp_d4dfd12bc49954ee46551e80",
+      "experiment": {
+        "method": "GET",
+        "path": "/reservations/1",
+        "body": null,
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "stock_id": 1,
+        "quantity": 1,
+        "status": "returned",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/reservations/1"
+          },
+          {
+            "method": "POST",
+            "href": "/reservations/1/fulfill"
+          },
+          {
+            "method": "POST",
+            "href": "/reservations/1/return"
+          }
+        ]
+      },
+      "elapsed_ms": 1.132874982431531,
+      "category": "http"
+    },
+    {
+      "id": "exp_da65c096ef1e46955d76ba6c",
+      "experiment": {
+        "method": "POST",
+        "path": "/fulfillments",
+        "body": {
+          "reservation_id": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_48d8ec125f9ce85b52fe5f65",
+        "omitted": null,
+        "perturbed": "reservation_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "reservation_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.0500840144231915,
+      "category": "http"
+    },
+    {
+      "id": "exp_924e8f121d28da13673c2713",
+      "experiment": {
+        "method": "POST",
+        "path": "/stock",
+        "body": {
+          "location_id": [],
+          "quantity": 1
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_1c073d5a9b25f3a784acaf57",
+        "omitted": null,
+        "perturbed": "location_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "location_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.828541989903897,
+      "category": "http"
+    },
+    {
+      "id": "exp_e7c8cbca24dd28c0e80ac604",
+      "experiment": {
+        "method": "POST",
+        "path": "/returns",
+        "body": {
+          "quantity": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_810a105f998cad7b28487239",
+        "omitted": "fulfillment_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "fulfillment_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7484590169042349,
+      "category": "http"
+    },
+    {
+      "id": "exp_f0ea6b0cbc12af097c59c5f4",
+      "experiment": {
+        "method": "POST",
+        "path": "/stock",
+        "body": {
+          "location_id": 1,
+          "quantity": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_1c073d5a9b25f3a784acaf57",
+        "omitted": null,
+        "perturbed": "quantity",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8441659738309681,
+      "category": "http"
+    },
+    {
+      "id": "exp_81eff8660f67de713ff668c9",
+      "experiment": {
+        "method": "POST",
+        "path": "/returns",
+        "body": {
+          "fulfillment_id": [],
+          "quantity": 1
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_810a105f998cad7b28487239",
+        "omitted": null,
+        "perturbed": "fulfillment_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "fulfillment_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9309170418418944,
+      "category": "http"
+    },
+    {
+      "id": "exp_a2a42d8f17979e4d93f8cdcd",
+      "experiment": {
+        "method": "OPTIONS",
+        "path": "/fulfillments",
+        "body": null,
+        "hypothesis": "Inspect advertised HTTP methods",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.2,
+        "cost": 1.0,
+        "safety": "read",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "links": [
+          {
+            "method": "GET",
+            "href": "/fulfillments"
+          },
+          {
+            "method": "POST",
+            "href": "/fulfillments"
+          }
+        ]
+      },
+      "elapsed_ms": 0.9318329975940287,
+      "category": "http"
+    },
+    {
+      "id": "exp_7faadeeb5a72e34184179210",
+      "experiment": {
+        "method": "POST",
+        "path": "/transfers",
+        "body": {
+          "stock_id": 1,
+          "location_id": 1,
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.5,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_810a105f998cad7b28487239",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 50,
+        "retries": 3
+      },
+      "status": 409,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "range",
+            "type": "integer"
+          }
+        ],
+        "links": [
+          {
+            "method": "GET",
+            "href": "/stock/1"
+          },
+          {
+            "method": "PATCH",
+            "href": "/stock/1"
+          }
+        ]
+      },
+      "elapsed_ms": 1.0651249904185534,
+      "category": "http"
+    },
+    {
+      "id": "exp_c01bf576b18cc7cb95d4eed6",
+      "experiment": {
+        "method": "POST",
+        "path": "/returns",
+        "body": {
+          "fulfillment_id": 1,
+          "quantity": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_810a105f998cad7b28487239",
+        "omitted": null,
+        "perturbed": "quantity",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.9599170298315585,
+      "category": "http"
+    },
+    {
+      "id": "exp_aedd3c7f9daf680fc879ab0a",
+      "experiment": {
+        "method": "POST",
+        "path": "/stock",
+        "body": {
+          "location_id": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_1c073d5a9b25f3a784acaf57",
+        "omitted": "quantity",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 1.462042040657252,
+      "category": "http"
+    },
+    {
+      "id": "exp_be0f08bb72dad1d4c58958e1",
+      "experiment": {
+        "method": "POST",
+        "path": "/reservations",
+        "body": {
+          "stock_id": 1,
+          "quantity": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_8b7b0b04172184bfffc68aa8",
+        "omitted": null,
+        "perturbed": "quantity",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8625839836895466,
+      "category": "http"
+    },
+    {
+      "id": "exp_29eed6a7849db54726837684",
+      "experiment": {
+        "method": "PATCH",
+        "path": "/stock/1",
+        "body": {},
+        "hypothesis": "Inspect an advertised operation",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": null,
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7566250278614461,
+      "category": "http"
+    },
+    {
+      "id": "exp_277ba7fd4bcc62d7df6926b5",
+      "experiment": {
+        "method": "PATCH",
+        "path": "/stock/1",
+        "body": {
+          "quantity": 1
+        },
+        "hypothesis": "Repair structured validation failure",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 2.0,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_29eed6a7849db54726837684",
+        "omitted": null,
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 200,
+      "body": {
+        "id": 1,
+        "location_id": 1,
+        "quantity": 1,
+        "status": "draft",
+        "links": [
+          {
+            "method": "GET",
+            "href": "/stock/1"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7450419943779707,
+      "category": "http"
+    },
+    {
+      "id": "exp_d4bc526626e2626b2e289a70",
+      "experiment": {
+        "method": "POST",
+        "path": "/fulfillments",
+        "body": {},
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_48d8ec125f9ce85b52fe5f65",
+        "omitted": "reservation_id",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "reservation_id",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.7662909920327365,
+      "category": "http"
+    },
+    {
+      "id": "exp_d732ddecc63350ee45a12c46",
+      "experiment": {
+        "method": "PATCH",
+        "path": "/stock/1",
+        "body": {},
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_277ba7fd4bcc62d7df6926b5",
+        "omitted": "quantity",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ]
+      },
+      "elapsed_ms": 0.865875044837594,
+      "category": "http"
+    },
+    {
+      "id": "exp_aa4f7decb234446ec18fdd7f",
+      "experiment": {
+        "method": "POST",
+        "path": "/locations",
+        "body": {
+          "warehouse_id": [],
+          "name": "probe"
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_fa6c0841ed9e89b92f10778e",
+        "omitted": null,
+        "perturbed": "warehouse_id",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "warehouse_id",
+            "code": "type",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.782540999352932,
+      "category": "http"
+    },
+    {
+      "id": "exp_abe3f65b246d1513d83aa2c8",
+      "experiment": {
+        "method": "POST",
+        "path": "/returns",
+        "body": {
+          "fulfillment_id": 1
+        },
+        "hypothesis": "Omission tests field necessity",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 1.2,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_810a105f998cad7b28487239",
+        "omitted": "quantity",
+        "perturbed": null,
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "required",
+            "type": "integer"
+          }
+        ],
+        "links": []
+      },
+      "elapsed_ms": 0.8313329890370369,
+      "category": "http"
+    },
+    {
+      "id": "exp_d3c6250d600d057499ae31a5",
+      "experiment": {
+        "method": "PATCH",
+        "path": "/stock/1",
+        "body": {
+          "quantity": []
+        },
+        "hypothesis": "Perturb one field type",
+        "expected": "Distinguish success, validation, and missing prerequisites",
+        "gain": 0.8,
+        "cost": 1.0,
+        "safety": "mutation",
+        "parent": "exp_277ba7fd4bcc62d7df6926b5",
+        "omitted": null,
+        "perturbed": "quantity",
+        "revision": 0,
+        "retries": 0
+      },
+      "status": 422,
+      "body": {
+        "errors": [
+          {
+            "field": "quantity",
+            "code": "type",
+            "type": "integer"
+          }
+        ]
+      },
+      "elapsed_ms": 0.7951250299811363,
+      "category": "http"
+    }
+  ],
+  "seen": [
+    "exp_1704cd171badacae7000b132",
+    "exp_1c073d5a9b25f3a784acaf57",
+    "exp_1e5caa514449821b5a82d031",
+    "exp_222322b90c774d9a7e129025",
+    "exp_277ba7fd4bcc62d7df6926b5",
+    "exp_29eed6a7849db54726837684",
+    "exp_36a031f7fcd22f67c5ed74e9",
+    "exp_39a3a7b3345b67db28d5d7f2",
+    "exp_40cba4c4e4ac5c76be3008ee",
+    "exp_42dcffcec8dea68e4cfc7d1a",
+    "exp_48d8ec125f9ce85b52fe5f65",
+    "exp_5059e8b7b8f0dc863d95318b",
+    "exp_50770187a61b57c837404538",
+    "exp_50ab0d5ad52435f733bfb60e",
+    "exp_523da2ee8029687f8354861b",
+    "exp_52676d37a0fbe7620f91f6fe",
+    "exp_571f417f3210e4f53e9a3988",
+    "exp_5955e2e9c507941100ed4c8b",
+    "exp_5ac1c7f84eb8b5d9e748ae28",
+    "exp_5b5d06c3c61622ad198a7299",
+    "exp_5b82cece96dbb56cf85d7589",
+    "exp_676eab8603c0ed93198c4f84",
+    "exp_67c7efea3495eb737ee240c7",
+    "exp_6a77e9ce796c71cd75cbe583",
+    "exp_6ee47a33698bfcd6322c9802",
+    "exp_733e697b799b93240e919e7c",
+    "exp_7faadeeb5a72e34184179210",
+    "exp_810a105f998cad7b28487239",
+    "exp_81eff8660f67de713ff668c9",
+    "exp_86a2f82a253e0694ac4ab5fd",
+    "exp_88c4f41fbb418d31678dc490",
+    "exp_89d1ecbcc9ffd8298a4b5c6b",
+    "exp_8b7b0b04172184bfffc68aa8",
+    "exp_924e8f121d28da13673c2713",
+    "exp_9808689972615162ac279f1a",
+    "exp_a130fdd4d0a96dbb77276116",
+    "exp_a2a42d8f17979e4d93f8cdcd",
+    "exp_a2e9c1ac824a7224e6a28a11",
+    "exp_a375d2c02b525471ae2ff90a",
+    "exp_aa4f7decb234446ec18fdd7f",
+    "exp_abe3f65b246d1513d83aa2c8",
+    "exp_aedd3c7f9daf680fc879ab0a",
+    "exp_b2bd53bcf3f0892568880303",
+    "exp_bd0bd772546bf5cdf08af9e6",
+    "exp_be0f08bb72dad1d4c58958e1",
+    "exp_be6a2abc711ed3e554db6c5b",
+    "exp_c01bf576b18cc7cb95d4eed6",
+    "exp_cba864392ba62b66e1427bdd",
+    "exp_d1aa480d40e6d3e28486bbf6",
+    "exp_d3c6250d600d057499ae31a5",
+    "exp_d48962707d112d5ca58b182b",
+    "exp_d4bc526626e2626b2e289a70",
+    "exp_d4dfd12bc49954ee46551e80",
+    "exp_d5bf7980a711b53f34f759b6",
+    "exp_d732ddecc63350ee45a12c46",
+    "exp_da65c096ef1e46955d76ba6c",
+    "exp_db194190cec083a1b21b6835",
+    "exp_e266fc135cd602af5355d942",
+    "exp_e3874a2ac26f42ad151c87a0",
+    "exp_e49289eca5a765e54b605fa3",
+    "exp_e58623ccb62cce85b782ccdf",
+    "exp_e78b8408149f37885065cb20",
+    "exp_e7c8cbca24dd28c0e80ac604",
+    "exp_f0ea6b0cbc12af097c59c5f4",
+    "exp_f2240c54b73dd8219868d2d9",
+    "exp_f5ef45c1ff6ae933577da9af",
+    "exp_f67d8deff05ab3d25153862b",
+    "exp_fa1c14abc12a829c316b4ecc",
+    "exp_fa6c0841ed9e89b92f10778e",
+    "exp_fe566a8b8253b90281b8d057"
+  ],
+  "operations": {
+    "GET /": {
+      "method": "GET",
+      "path": "/",
+      "evidence": [
+        "exp_42dcffcec8dea68e4cfc7d1a"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /returns": {
+      "method": "GET",
+      "path": "/returns",
+      "evidence": [
+        "exp_9808689972615162ac279f1a"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /transfers": {
+      "method": "OPTIONS",
+      "path": "/transfers",
+      "evidence": [
+        "exp_be6a2abc711ed3e554db6c5b"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /stock": {
+      "method": "OPTIONS",
+      "path": "/stock",
+      "evidence": [
+        "exp_67c7efea3495eb737ee240c7"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /locations": {
+      "method": "GET",
+      "path": "/locations",
+      "evidence": [
+        "exp_a375d2c02b525471ae2ff90a"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /warehouses": {
+      "method": "GET",
+      "path": "/warehouses",
+      "evidence": [
+        "exp_bd0bd772546bf5cdf08af9e6"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /locations": {
+      "method": "OPTIONS",
+      "path": "/locations",
+      "evidence": [
+        "exp_50ab0d5ad52435f733bfb60e"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /reservations": {
+      "method": "GET",
+      "path": "/reservations",
+      "evidence": [
+        "exp_e78b8408149f37885065cb20"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /warehouses": {
+      "method": "POST",
+      "path": "/warehouses",
+      "evidence": [
+        "exp_523da2ee8029687f8354861b"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "name": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_523da2ee8029687f8354861b",
+            "exp_1e5caa514449821b5a82d031",
+            "exp_fa1c14abc12a829c316b4ecc"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "OPTIONS /returns": {
+      "method": "OPTIONS",
+      "path": "/returns",
+      "evidence": [
+        "exp_40cba4c4e4ac5c76be3008ee"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /stock": {
+      "method": "GET",
+      "path": "/stock",
+      "evidence": [
+        "exp_e266fc135cd602af5355d942"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /transfers": {
+      "method": "GET",
+      "path": "/transfers",
+      "evidence": [
+        "exp_f5ef45c1ff6ae933577da9af"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /reservations": {
+      "method": "OPTIONS",
+      "path": "/reservations",
+      "evidence": [
+        "exp_6ee47a33698bfcd6322c9802"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /fulfillments": {
+      "method": "GET",
+      "path": "/fulfillments",
+      "evidence": [
+        "exp_b2bd53bcf3f0892568880303"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {}
+            },
+            "total": {
+              "type": "integer"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "items",
+            "links",
+            "total"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /warehouses/{id}": {
+      "method": "GET",
+      "path": "/warehouses/{id}",
+      "evidence": [
+        "exp_86a2f82a253e0694ac4ab5fd"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /locations": {
+      "method": "POST",
+      "path": "/locations",
+      "evidence": [
+        "exp_fa6c0841ed9e89b92f10778e"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "warehouse_id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "warehouse_id"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "warehouse_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "status",
+            "warehouse_id"
+          ]
+        }
+      },
+      "fields": {
+        "warehouse_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_fa6c0841ed9e89b92f10778e",
+            "exp_e3874a2ac26f42ad151c87a0",
+            "exp_aa4f7decb234446ec18fdd7f"
+          ],
+          "conflict": false
+        },
+        "name": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_fa6c0841ed9e89b92f10778e",
+            "exp_52676d37a0fbe7620f91f6fe",
+            "exp_5059e8b7b8f0dc863d95318b"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "POST /stock": {
+      "method": "POST",
+      "path": "/stock",
+      "evidence": [
+        "exp_1c073d5a9b25f3a784acaf57"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "location_id": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "location_id",
+          "quantity"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "location_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "location_id",
+            "quantity",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "location_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_1c073d5a9b25f3a784acaf57",
+            "exp_36a031f7fcd22f67c5ed74e9",
+            "exp_924e8f121d28da13673c2713"
+          ],
+          "conflict": false
+        },
+        "quantity": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_1c073d5a9b25f3a784acaf57",
+            "exp_f0ea6b0cbc12af097c59c5f4",
+            "exp_aedd3c7f9daf680fc879ab0a"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "POST /reservations": {
+      "method": "POST",
+      "path": "/reservations",
+      "evidence": [
+        "exp_8b7b0b04172184bfffc68aa8"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "stock_id": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "quantity",
+          "stock_id"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "stock_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "quantity",
+            "status",
+            "stock_id"
+          ]
+        }
+      },
+      "fields": {
+        "stock_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_8b7b0b04172184bfffc68aa8",
+            "exp_5b5d06c3c61622ad198a7299",
+            "exp_222322b90c774d9a7e129025"
+          ],
+          "conflict": false
+        },
+        "quantity": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_8b7b0b04172184bfffc68aa8",
+            "exp_50770187a61b57c837404538",
+            "exp_be0f08bb72dad1d4c58958e1"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "POST /fulfillments": {
+      "method": "POST",
+      "path": "/fulfillments",
+      "evidence": [
+        "exp_48d8ec125f9ce85b52fe5f65"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "reservation_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "reservation_id"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "reservation_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "reservation_id",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "reservation_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_48d8ec125f9ce85b52fe5f65",
+            "exp_da65c096ef1e46955d76ba6c",
+            "exp_d4bc526626e2626b2e289a70"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "OPTIONS /warehouses": {
+      "method": "OPTIONS",
+      "path": "/warehouses",
+      "evidence": [
+        "exp_6a77e9ce796c71cd75cbe583"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /locations/{id}": {
+      "method": "GET",
+      "path": "/locations/{id}",
+      "evidence": [
+        "exp_39a3a7b3345b67db28d5d7f2"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "warehouse_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "name",
+            "status",
+            "warehouse_id"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /stock/{id}": {
+      "method": "GET",
+      "path": "/stock/{id}",
+      "evidence": [
+        "exp_5ac1c7f84eb8b5d9e748ae28"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "location_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "location_id",
+            "quantity",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /reservations/{id}/fulfill": {
+      "method": "POST",
+      "path": "/reservations/{id}/fulfill",
+      "evidence": [
+        "exp_e58623ccb62cce85b782ccdf"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "stock_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "quantity",
+            "status",
+            "stock_id"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /fulfillments/{id}": {
+      "method": "GET",
+      "path": "/fulfillments/{id}",
+      "evidence": [
+        "exp_cba864392ba62b66e1427bdd"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "reservation_id": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "reservation_id",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /returns": {
+      "method": "POST",
+      "path": "/returns",
+      "evidence": [
+        "exp_810a105f998cad7b28487239"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "fulfillment_id": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "fulfillment_id",
+          "quantity"
+        ]
+      },
+      "responses": {
+        "201": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "fulfillment_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "fulfillment_id",
+            "id",
+            "links",
+            "quantity",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "fulfillment_id": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_810a105f998cad7b28487239",
+            "exp_e7c8cbca24dd28c0e80ac604",
+            "exp_81eff8660f67de713ff668c9"
+          ],
+          "conflict": false
+        },
+        "quantity": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_810a105f998cad7b28487239",
+            "exp_c01bf576b18cc7cb95d4eed6",
+            "exp_abe3f65b246d1513d83aa2c8"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    },
+    "GET /returns/{id}": {
+      "method": "GET",
+      "path": "/returns/{id}",
+      "evidence": [
+        "exp_1704cd171badacae7000b132"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "fulfillment_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "fulfillment_id",
+            "id",
+            "links",
+            "quantity",
+            "status"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "POST /reservations/{id}/return": {
+      "method": "POST",
+      "path": "/reservations/{id}/return",
+      "evidence": [
+        "exp_fe566a8b8253b90281b8d057"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "stock_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "quantity",
+            "status",
+            "stock_id"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "GET /reservations/{id}": {
+      "method": "GET",
+      "path": "/reservations/{id}",
+      "evidence": [
+        "exp_d4dfd12bc49954ee46551e80"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "stock_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "quantity",
+            "status",
+            "stock_id"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "OPTIONS /fulfillments": {
+      "method": "OPTIONS",
+      "path": "/fulfillments",
+      "evidence": [
+        "exp_a2a42d8f17979e4d93f8cdcd"
+      ],
+      "request": {},
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "links"
+          ]
+        }
+      },
+      "fields": {},
+      "verified": true
+    },
+    "PATCH /stock/{id}": {
+      "method": "PATCH",
+      "path": "/stock/{id}",
+      "evidence": [
+        "exp_277ba7fd4bcc62d7df6926b5"
+      ],
+      "request": {
+        "type": "object",
+        "properties": {
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "quantity"
+        ]
+      },
+      "responses": {
+        "200": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "location_id": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "href": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "href",
+                  "method"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "links",
+            "location_id",
+            "quantity",
+            "status"
+          ]
+        }
+      },
+      "fields": {
+        "quantity": {
+          "required": true,
+          "confidence": 0.95,
+          "verified": true,
+          "type_verified": true,
+          "evidence": [
+            "exp_277ba7fd4bcc62d7df6926b5",
+            "exp_d732ddecc63350ee45a12c46",
+            "exp_d3c6250d600d057499ae31a5"
+          ],
+          "conflict": false
+        }
+      },
+      "verified": true
+    }
+  },
+  "resources": {
+    "warehouses": [
+      1
+    ],
+    "locations": [
+      1
+    ],
+    "stock": [
+      1
+    ],
+    "reservations": [
+      1
+    ],
+    "fulfillments": [
+      1
+    ],
+    "returns": [
+      1
+    ]
+  },
+  "transitions": [
+    {
+      "operation": "POST /reservations/{id}/fulfill",
+      "from": "draft",
+      "to": "fulfilled",
+      "evidence": [
+        "exp_8b7b0b04172184bfffc68aa8",
+        "exp_e58623ccb62cce85b782ccdf"
+      ],
+      "verified": true
+    },
+    {
+      "operation": "POST /reservations/{id}/return",
+      "from": "fulfilled",
+      "to": "returned",
+      "evidence": [
+        "exp_e58623ccb62cce85b782ccdf",
+        "exp_fe566a8b8253b90281b8d057"
+      ],
+      "verified": true
+    }
+  ],
+  "model_usage": {
+    "calls": 0,
+    "tokens": 0,
+    "failures": 0,
+    "latency_ms": 0.0,
+    "budget_tokens": 0,
+    "unmeasured_calls": 0
+  },
+  "relationships": [
+    {
+      "operation": "POST /transfers",
+      "field": "stock_id",
+      "resource": "stock",
+      "evidence": [
+        "exp_5955e2e9c507941100ed4c8b"
+      ],
+      "verified": false
+    },
+    {
+      "operation": "POST /transfers",
+      "field": "location_id",
+      "resource": "locations",
+      "evidence": [
+        "exp_5955e2e9c507941100ed4c8b"
+      ],
+      "verified": false
+    },
+    {
+      "operation": "POST /stock",
+      "field": "location_id",
+      "resource": "locations",
+      "evidence": [
+        "exp_733e697b799b93240e919e7c",
+        "exp_1c073d5a9b25f3a784acaf57"
+      ],
+      "verified": true
+    },
+    {
+      "operation": "POST /returns",
+      "field": "fulfillment_id",
+      "resource": "fulfillments",
+      "evidence": [
+        "exp_f2240c54b73dd8219868d2d9",
+        "exp_810a105f998cad7b28487239"
+      ],
+      "verified": true
+    },
+    {
+      "operation": "POST /fulfillments",
+      "field": "reservation_id",
+      "resource": "reservations",
+      "evidence": [
+        "exp_db194190cec083a1b21b6835",
+        "exp_48d8ec125f9ce85b52fe5f65"
+      ],
+      "verified": true
+    },
+    {
+      "operation": "POST /reservations",
+      "field": "stock_id",
+      "resource": "stock",
+      "evidence": [
+        "exp_676eab8603c0ed93198c4f84",
+        "exp_8b7b0b04172184bfffc68aa8"
+      ],
+      "verified": true
+    }
+  ],
+  "rejected": [
+    {
+      "experiment": "exp_d48962707d112d5ca58b182b",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_a2e9c1ac824a7224e6a28a11",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_88c4f41fbb418d31678dc490",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_f67d8deff05ab3d25153862b",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_a130fdd4d0a96dbb77276116",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_d5bf7980a711b53f34f759b6",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_89d1ecbcc9ffd8298a4b5c6b",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_5955e2e9c507941100ed4c8b",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_733e697b799b93240e919e7c",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_1e5caa514449821b5a82d031",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_fa1c14abc12a829c316b4ecc",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_e49289eca5a765e54b605fa3",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_f2240c54b73dd8219868d2d9",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_db194190cec083a1b21b6835",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_676eab8603c0ed93198c4f84",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_d1aa480d40e6d3e28486bbf6",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_52676d37a0fbe7620f91f6fe",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_5b5d06c3c61622ad198a7299",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_222322b90c774d9a7e129025",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_36a031f7fcd22f67c5ed74e9",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_5059e8b7b8f0dc863d95318b",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_e3874a2ac26f42ad151c87a0",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_50770187a61b57c837404538",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_571f417f3210e4f53e9a3988",
+      "status": 409,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_5b82cece96dbb56cf85d7589",
+      "status": 409,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_da65c096ef1e46955d76ba6c",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_924e8f121d28da13673c2713",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_e7c8cbca24dd28c0e80ac604",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_f0ea6b0cbc12af097c59c5f4",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_81eff8660f67de713ff668c9",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_7faadeeb5a72e34184179210",
+      "status": 409,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_c01bf576b18cc7cb95d4eed6",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_aedd3c7f9daf680fc879ab0a",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_be0f08bb72dad1d4c58958e1",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_29eed6a7849db54726837684",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_d4bc526626e2626b2e289a70",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_d732ddecc63350ee45a12c46",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_aa4f7decb234446ec18fdd7f",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_abe3f65b246d1513d83aa2c8",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    },
+    {
+      "experiment": "exp_d3c6250d600d057499ae31a5",
+      "status": 422,
+      "meaning": "Failure does not establish endpoint absence"
+    }
+  ],
+  "status": "complete",
+  "strategy": "random",
+  "random_seed": 46
+}

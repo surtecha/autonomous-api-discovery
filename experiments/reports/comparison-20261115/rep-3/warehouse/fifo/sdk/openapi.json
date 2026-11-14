@@ -1,0 +1,2197 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Observed API contract",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "get_",
+        "x-evidence": [
+          "exp_42dcffcec8dea68e4cfc7d1a"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/warehouses": {
+      "get": {
+        "operationId": "get_warehouses",
+        "x-evidence": [
+          "exp_bd0bd772546bf5cdf08af9e6"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_warehouses",
+        "x-evidence": [
+          "exp_6a77e9ce796c71cd75cbe583"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_warehouses",
+        "x-evidence": [
+          "exp_523da2ee8029687f8354861b"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ],
+                "x-field-evidence": {
+                  "name": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_523da2ee8029687f8354861b",
+                      "exp_fa1c14abc12a829c316b4ecc",
+                      "exp_1e5caa514449821b5a82d031"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/locations": {
+      "get": {
+        "operationId": "get_locations",
+        "x-evidence": [
+          "exp_a375d2c02b525471ae2ff90a"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_locations",
+        "x-evidence": [
+          "exp_50ab0d5ad52435f733bfb60e"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_locations",
+        "x-evidence": [
+          "exp_fa6c0841ed9e89b92f10778e"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "warehouse_id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "status",
+                    "warehouse_id"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "warehouse_id": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "warehouse_id"
+                ],
+                "x-field-evidence": {
+                  "warehouse_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_fa6c0841ed9e89b92f10778e",
+                      "exp_aa4f7decb234446ec18fdd7f",
+                      "exp_e3874a2ac26f42ad151c87a0"
+                    ],
+                    "conflict": false
+                  },
+                  "name": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_fa6c0841ed9e89b92f10778e",
+                      "exp_5059e8b7b8f0dc863d95318b",
+                      "exp_52676d37a0fbe7620f91f6fe"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/stock": {
+      "get": {
+        "operationId": "get_stock",
+        "x-evidence": [
+          "exp_e266fc135cd602af5355d942"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_stock",
+        "x-evidence": [
+          "exp_67c7efea3495eb737ee240c7"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_stock",
+        "x-evidence": [
+          "exp_733e697b799b93240e919e7c"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "location_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "location_id",
+                    "quantity",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "location_id": {
+                    "type": "integer"
+                  },
+                  "quantity": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "location_id",
+                  "quantity"
+                ],
+                "x-field-evidence": {
+                  "location_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_733e697b799b93240e919e7c",
+                      "exp_924e8f121d28da13673c2713",
+                      "exp_36a031f7fcd22f67c5ed74e9"
+                    ],
+                    "conflict": false
+                  },
+                  "quantity": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_733e697b799b93240e919e7c",
+                      "exp_f0ea6b0cbc12af097c59c5f4",
+                      "exp_aedd3c7f9daf680fc879ab0a"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transfers": {
+      "get": {
+        "operationId": "get_transfers",
+        "x-evidence": [
+          "exp_f5ef45c1ff6ae933577da9af"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_transfers",
+        "x-evidence": [
+          "exp_be6a2abc711ed3e554db6c5b"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_transfers",
+        "x-evidence": [
+          "exp_5955e2e9c507941100ed4c8b"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "stock_id": {
+                      "type": "integer"
+                    },
+                    "location_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "location_id",
+                    "quantity",
+                    "status",
+                    "stock_id"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "stock_id": {
+                    "type": "integer"
+                  },
+                  "location_id": {
+                    "type": "integer"
+                  },
+                  "quantity": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "location_id",
+                  "quantity",
+                  "stock_id"
+                ],
+                "x-field-evidence": {
+                  "stock_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_5955e2e9c507941100ed4c8b",
+                      "exp_3835202973108d4b94277823",
+                      "exp_b935aabfcb30f4f1f63fb236"
+                    ],
+                    "conflict": false
+                  },
+                  "location_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_5955e2e9c507941100ed4c8b",
+                      "exp_8318cd04b53f3867b8d5f36c",
+                      "exp_3357265de7ba6971bfc318cb"
+                    ],
+                    "conflict": false
+                  },
+                  "quantity": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_5955e2e9c507941100ed4c8b",
+                      "exp_ff535479e42863540c545401",
+                      "exp_a61379e1189673cec8ad0341"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reservations": {
+      "get": {
+        "operationId": "get_reservations",
+        "x-evidence": [
+          "exp_e78b8408149f37885065cb20"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_reservations",
+        "x-evidence": [
+          "exp_6ee47a33698bfcd6322c9802"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_reservations",
+        "x-evidence": [
+          "exp_1ea1c6bfa985ab2f4797a916"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "stock_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "quantity",
+                    "status",
+                    "stock_id"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "stock_id": {
+                    "type": "integer"
+                  },
+                  "quantity": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "quantity",
+                  "stock_id"
+                ],
+                "x-field-evidence": {
+                  "stock_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_1ea1c6bfa985ab2f4797a916",
+                      "exp_5b5d06c3c61622ad198a7299",
+                      "exp_222322b90c774d9a7e129025"
+                    ],
+                    "conflict": false
+                  },
+                  "quantity": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_1ea1c6bfa985ab2f4797a916",
+                      "exp_be0f08bb72dad1d4c58958e1",
+                      "exp_50770187a61b57c837404538"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fulfillments": {
+      "get": {
+        "operationId": "get_fulfillments",
+        "x-evidence": [
+          "exp_b2bd53bcf3f0892568880303"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_fulfillments",
+        "x-evidence": [
+          "exp_a2a42d8f17979e4d93f8cdcd"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_fulfillments",
+        "x-evidence": [
+          "exp_e294b9d69bd15c5efe7b051e"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "reservation_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "reservation_id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "reservation_id": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "reservation_id"
+                ],
+                "x-field-evidence": {
+                  "reservation_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_e294b9d69bd15c5efe7b051e",
+                      "exp_da65c096ef1e46955d76ba6c",
+                      "exp_d4bc526626e2626b2e289a70"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/returns": {
+      "get": {
+        "operationId": "get_returns",
+        "x-evidence": [
+          "exp_9808689972615162ac279f1a"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "links",
+                    "total"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "operationId": "options_returns",
+        "x-evidence": [
+          "exp_40cba4c4e4ac5c76be3008ee"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "links"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_returns",
+        "x-evidence": [
+          "exp_f81cc6f630dce7a42789f520"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "201": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "fulfillment_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "fulfillment_id",
+                    "id",
+                    "links",
+                    "quantity",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "fulfillment_id": {
+                    "type": "integer"
+                  },
+                  "quantity": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "fulfillment_id",
+                  "quantity"
+                ],
+                "x-field-evidence": {
+                  "fulfillment_id": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_f81cc6f630dce7a42789f520",
+                      "exp_81eff8660f67de713ff668c9",
+                      "exp_e7c8cbca24dd28c0e80ac604"
+                    ],
+                    "conflict": false
+                  },
+                  "quantity": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_f81cc6f630dce7a42789f520",
+                      "exp_c01bf576b18cc7cb95d4eed6",
+                      "exp_abe3f65b246d1513d83aa2c8"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/warehouses/{id}": {
+      "get": {
+        "operationId": "get_warehouses_id",
+        "x-evidence": [
+          "exp_86a2f82a253e0694ac4ab5fd"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/locations/{id}": {
+      "get": {
+        "operationId": "get_locations_id",
+        "x-evidence": [
+          "exp_39a3a7b3345b67db28d5d7f2"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "warehouse_id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "name",
+                    "status",
+                    "warehouse_id"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/stock/{id}": {
+      "get": {
+        "operationId": "get_stock_id",
+        "x-evidence": [
+          "exp_5ac1c7f84eb8b5d9e748ae28"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "location_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "location_id",
+                    "quantity",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patch_stock_id",
+        "x-evidence": [
+          "exp_277ba7fd4bcc62d7df6926b5"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "location_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "location_id",
+                    "quantity",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "quantity": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "quantity"
+                ],
+                "x-field-evidence": {
+                  "quantity": {
+                    "required": true,
+                    "confidence": 0.95,
+                    "verified": true,
+                    "type_verified": true,
+                    "evidence": [
+                      "exp_277ba7fd4bcc62d7df6926b5",
+                      "exp_d3c6250d600d057499ae31a5",
+                      "exp_d732ddecc63350ee45a12c46"
+                    ],
+                    "conflict": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transfers/{id}": {
+      "get": {
+        "operationId": "get_transfers_id",
+        "x-evidence": [
+          "exp_0c6c34a26c6dc4bd710eded3"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "stock_id": {
+                      "type": "integer"
+                    },
+                    "location_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "location_id",
+                    "quantity",
+                    "status",
+                    "stock_id"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/reservations/{id}": {
+      "get": {
+        "operationId": "get_reservations_id",
+        "x-evidence": [
+          "exp_d4dfd12bc49954ee46551e80"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "stock_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "quantity",
+                    "status",
+                    "stock_id"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/reservations/{id}/fulfill": {
+      "post": {
+        "operationId": "post_reservations_id_fulfill",
+        "x-evidence": [
+          "exp_e58623ccb62cce85b782ccdf"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "stock_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "quantity",
+                    "status",
+                    "stock_id"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "x-field-evidence": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reservations/{id}/return": {
+      "post": {
+        "operationId": "post_reservations_id_return",
+        "x-evidence": [
+          "exp_fe566a8b8253b90281b8d057"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "stock_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "quantity",
+                    "status",
+                    "stock_id"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "x-field-evidence": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fulfillments/{id}": {
+      "get": {
+        "operationId": "get_fulfillments_id",
+        "x-evidence": [
+          "exp_cba864392ba62b66e1427bdd"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "reservation_id": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "links",
+                    "reservation_id",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    },
+    "/returns/{id}": {
+      "get": {
+        "operationId": "get_returns_id",
+        "x-evidence": [
+          "exp_1704cd171badacae7000b132"
+        ],
+        "x-verification": "observed-success",
+        "responses": {
+          "200": {
+            "description": "Observed sanitized response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "fulfillment_id": {
+                      "type": "integer"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "links": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "method": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "href",
+                          "method"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "fulfillment_id",
+                    "id",
+                    "links",
+                    "quantity",
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "x-session-id": "f7305978-7c82-4861-b2d5-c3f589d1ad96",
+  "x-limitations": [
+    "Response required sets describe observed samples, not universal guarantees",
+    "Sensitive fields and arbitrary strings are removed before inference"
+  ]
+}

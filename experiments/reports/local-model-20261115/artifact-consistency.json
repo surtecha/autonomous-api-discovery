@@ -1,0 +1,20 @@
+{
+  "comparison-20261115": {
+    "artifact_bundles": 60,
+    "static_consistency": "passed",
+    "generated_code_executed": false,
+    "openapi_standard_validation": "not_performed_by_this_check"
+  },
+  "local-llm-comparison-20261115": {
+    "artifact_bundles": 20,
+    "static_consistency": "passed",
+    "generated_code_executed": false,
+    "openapi_standard_validation": "not_performed_by_this_check"
+  },
+  "llm-quota-20261115": {
+    "artifact_bundles": 4,
+    "static_consistency": "passed",
+    "generated_code_executed": false,
+    "openapi_standard_validation": "not_performed_by_this_check"
+  }
+}

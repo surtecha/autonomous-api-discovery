@@ -1,0 +1,204 @@
+[
+  {
+    "method": "GET",
+    "operation": "get_",
+    "request_model": null,
+    "response_model": "GetResponse",
+    "path": "/",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/v2/accounts"
+        },
+        {
+          "method": "POST",
+          "href": "/v2/accounts"
+        },
+        {
+          "method": "GET",
+          "href": "/v2/jobs"
+        },
+        {
+          "method": "POST",
+          "href": "/v2/jobs"
+        },
+        {
+          "method": "GET",
+          "href": "/v2/batches"
+        },
+        {
+          "method": "POST",
+          "href": "/v2/batches"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_v2_jobs",
+    "request_model": null,
+    "response_model": "OptionsV2JobsResponse",
+    "path": "/v2/jobs",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/v2/jobs"
+        },
+        {
+          "method": "POST",
+          "href": "/v2/jobs"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_v2_accounts",
+    "request_model": null,
+    "response_model": "OptionsV2AccountsResponse",
+    "path": "/v2/accounts",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/v2/accounts"
+        },
+        {
+          "method": "POST",
+          "href": "/v2/accounts"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_v2_jobs",
+    "request_model": null,
+    "response_model": "GetV2JobsResponse",
+    "path": "/v2/jobs",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/v2/jobs"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_v2_batches",
+    "request_model": null,
+    "response_model": "OptionsV2BatchesResponse",
+    "path": "/v2/batches",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/v2/batches"
+        },
+        {
+          "method": "POST",
+          "href": "/v2/batches"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_v2_accounts",
+    "request_model": null,
+    "response_model": "GetV2AccountsResponse",
+    "path": "/v2/accounts",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/v2/accounts"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_v2_batches",
+    "request_model": null,
+    "response_model": "GetV2BatchesResponse",
+    "path": "/v2/batches",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/v2/batches"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_v2_accounts",
+    "request_model": "PostV2AccountsRequest",
+    "response_model": "PostV2AccountsResponse",
+    "path": "/v2/accounts",
+    "body": {
+      "name": "probe",
+      "profile": {}
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "profile": {},
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/v2/accounts/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_v2_accounts_id",
+    "request_model": null,
+    "response_model": "GetV2AccountsIdResponse",
+    "path": "/v2/accounts/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "profile": {},
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/v2/accounts/1"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,666 @@
+[
+  {
+    "method": "GET",
+    "operation": "get_",
+    "request_model": null,
+    "response_model": "GetResponse",
+    "path": "/",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/accounts"
+        },
+        {
+          "method": "POST",
+          "href": "/accounts"
+        },
+        {
+          "method": "GET",
+          "href": "/plans"
+        },
+        {
+          "method": "POST",
+          "href": "/plans"
+        },
+        {
+          "method": "GET",
+          "href": "/subscriptions"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions"
+        },
+        {
+          "method": "GET",
+          "href": "/invoices"
+        },
+        {
+          "method": "POST",
+          "href": "/invoices"
+        },
+        {
+          "method": "GET",
+          "href": "/payments"
+        },
+        {
+          "method": "POST",
+          "href": "/payments"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_accounts",
+    "request_model": null,
+    "response_model": "GetAccountsResponse",
+    "path": "/accounts",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/accounts"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_subscriptions",
+    "request_model": null,
+    "response_model": "OptionsSubscriptionsResponse",
+    "path": "/subscriptions",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/subscriptions"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_invoices",
+    "request_model": null,
+    "response_model": "GetInvoicesResponse",
+    "path": "/invoices",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/invoices"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_payments",
+    "request_model": null,
+    "response_model": "OptionsPaymentsResponse",
+    "path": "/payments",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/payments"
+        },
+        {
+          "method": "POST",
+          "href": "/payments"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_plans",
+    "request_model": null,
+    "response_model": "GetPlansResponse",
+    "path": "/plans",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/plans"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_subscriptions",
+    "request_model": null,
+    "response_model": "GetSubscriptionsResponse",
+    "path": "/subscriptions",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/subscriptions"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_plans",
+    "request_model": null,
+    "response_model": "OptionsPlansResponse",
+    "path": "/plans",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/plans"
+        },
+        {
+          "method": "POST",
+          "href": "/plans"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_accounts",
+    "request_model": null,
+    "response_model": "OptionsAccountsResponse",
+    "path": "/accounts",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/accounts"
+        },
+        {
+          "method": "POST",
+          "href": "/accounts"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_payments",
+    "request_model": null,
+    "response_model": "GetPaymentsResponse",
+    "path": "/payments",
+    "body": null,
+    "status": 200,
+    "response": {
+      "items": [],
+      "total": 0,
+      "links": [
+        {
+          "method": "POST",
+          "href": "/payments"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_plans",
+    "request_model": "PostPlansRequest",
+    "response_model": "PostPlansResponse",
+    "path": "/plans",
+    "body": {
+      "name": "probe",
+      "amount": 1.0
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "amount": 0.0,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/plans/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_plans_id",
+    "request_model": null,
+    "response_model": "GetPlansIdResponse",
+    "path": "/plans/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "amount": 0.0,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/plans/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "OPTIONS",
+    "operation": "options_invoices",
+    "request_model": null,
+    "response_model": "OptionsInvoicesResponse",
+    "path": "/invoices",
+    "body": null,
+    "status": 200,
+    "response": {
+      "links": [
+        {
+          "method": "GET",
+          "href": "/invoices"
+        },
+        {
+          "method": "POST",
+          "href": "/invoices"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_accounts",
+    "request_model": "PostAccountsRequest",
+    "response_model": "PostAccountsResponse",
+    "path": "/accounts",
+    "body": {
+      "name": "probe"
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/accounts/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_accounts_id",
+    "request_model": null,
+    "response_model": "GetAccountsIdResponse",
+    "path": "/accounts/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "name": "[redacted]",
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/accounts/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_subscriptions",
+    "request_model": "PostSubscriptionsRequest",
+    "response_model": "PostSubscriptionsResponse",
+    "path": "/subscriptions",
+    "body": {
+      "account_id": 1,
+      "plan_id": 1
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "account_id": 1,
+      "plan_id": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/subscriptions/1"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/activate"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/renew"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/cancel"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_invoices",
+    "request_model": "PostInvoicesRequest",
+    "response_model": "PostInvoicesResponse",
+    "path": "/invoices",
+    "body": {
+      "subscription_id": 1,
+      "amount": 1.0
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "subscription_id": 1,
+      "amount": 0.0,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/invoices/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_subscriptions_id",
+    "request_model": null,
+    "response_model": "GetSubscriptionsIdResponse",
+    "path": "/subscriptions/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "account_id": 1,
+      "plan_id": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/subscriptions/1"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/activate"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/renew"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/cancel"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_subscriptions_id",
+    "request_model": null,
+    "response_model": "GetSubscriptionsIdResponse",
+    "path": "/subscriptions/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "account_id": 1,
+      "plan_id": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/subscriptions/1"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/activate"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/renew"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/cancel"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_payments",
+    "request_model": "PostPaymentsRequest",
+    "response_model": "PostPaymentsResponse",
+    "path": "/payments",
+    "body": {
+      "invoice_id": 1,
+      "amount": 1.0
+    },
+    "status": 201,
+    "response": {
+      "id": 1,
+      "invoice_id": 1,
+      "amount": 0.0,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/payments/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_subscriptions_id",
+    "request_model": null,
+    "response_model": "GetSubscriptionsIdResponse",
+    "path": "/subscriptions/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "account_id": 1,
+      "plan_id": 1,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/subscriptions/1"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/activate"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/renew"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/cancel"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_subscriptions_id_activate",
+    "request_model": "PostSubscriptionsIdActivateRequest",
+    "response_model": "PostSubscriptionsIdActivateResponse",
+    "path": "/subscriptions/1/activate",
+    "body": {},
+    "status": 200,
+    "response": {
+      "id": 1,
+      "account_id": 1,
+      "plan_id": 1,
+      "status": "active",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/subscriptions/1"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/activate"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/renew"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/cancel"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_invoices_id",
+    "request_model": null,
+    "response_model": "GetInvoicesIdResponse",
+    "path": "/invoices/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "subscription_id": 1,
+      "amount": 0.0,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/invoices/1"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_subscriptions_id_renew",
+    "request_model": "PostSubscriptionsIdRenewRequest",
+    "response_model": "PostSubscriptionsIdRenewResponse",
+    "path": "/subscriptions/1/renew",
+    "body": {},
+    "status": 200,
+    "response": {
+      "id": 1,
+      "account_id": 1,
+      "plan_id": 1,
+      "status": "active",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/subscriptions/1"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/activate"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/renew"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/cancel"
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "operation": "post_subscriptions_id_cancel",
+    "request_model": "PostSubscriptionsIdCancelRequest",
+    "response_model": "PostSubscriptionsIdCancelResponse",
+    "path": "/subscriptions/1/cancel",
+    "body": {},
+    "status": 200,
+    "response": {
+      "id": 1,
+      "account_id": 1,
+      "plan_id": 1,
+      "status": "cancelled",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/subscriptions/1"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/activate"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/renew"
+        },
+        {
+          "method": "POST",
+          "href": "/subscriptions/1/cancel"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "operation": "get_payments_id",
+    "request_model": null,
+    "response_model": "GetPaymentsIdResponse",
+    "path": "/payments/1",
+    "body": null,
+    "status": 200,
+    "response": {
+      "id": 1,
+      "invoice_id": 1,
+      "amount": 0.0,
+      "status": "draft",
+      "links": [
+        {
+          "method": "GET",
+          "href": "/payments/1"
+        }
+      ]
+    }
+  }
+]

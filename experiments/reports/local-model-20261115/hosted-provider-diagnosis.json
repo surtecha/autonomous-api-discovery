@@ -1,0 +1,10 @@
+{
+  "status": 429,
+  "error_type": "insufficient_quota",
+  "parsed_structured_output": false,
+  "diagnostic_calls": 2,
+  "reported_usage_available": false,
+  "verified_provider_bill_usd": null,
+  "classification_fix": "Check nested and direct provider error type as well as code",
+  "fresh_fixture_runs": "../llm-quota-20261115/summary.json"
+}
